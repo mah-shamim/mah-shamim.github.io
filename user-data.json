@@ -1,12 +1,25 @@
 {
   "userFirstName": "MD ARIFUL",
   "userLastName": "HAQUE",
-  "userHeading": "Lead Developer",
+  "userFullName": "MD ARIFUL HAQUE",
+  "userHeading": [
+    "Lead Developer",
+    "Technical Lead",
+    "Senior Software Engineer",
+    "Web App Developer"
+  ],
+  "userTags": [
+    "Laravel",
+    "Digital Ocean",
+    "Docker",
+    "Oracle",
+    "VueJS"
+  ],
+  "userFreelanceAvailable": true,
   "userEmail": "mah.shamim@gmail.com",
-  "userAddress": "36/2, Nawab Yousuf Road, Naya Bazar, Dhaka–1100",
+  "userAddress": "36/2, Nawab Yousuf Road, Naya Bazar, Dhaka",
   "userPhoneNumber": "+8801614747054",
-  "id": 229225,
-  "resumeId": 229225,
+  "userIntroduction": "Hello! I’m Ariful Haque.<br>To work in a highly innovative and challenging atmosphere where there is an opportunity of self-assessment and self-improvement in both individual and group based work. That will ultimately lead to the further development of the higher educational sector of the world.",
   "uuid": "947d69eb-28e1-497a-83e6-c3349d2bd60b",
   "templateId": 4,
   "cvName": "MD's Resume",
@@ -15,124 +28,113 @@
   "updatedAfterReview": false,
   "createdAt": "2024-04-11T17:14:47.969Z",
   "updatedAt": "2024-05-09T18:09:14.744Z",
-  "templateUrl": "https://hackerresume-prod.s3.us-east-1.amazonaws.com/thumbnails/12608430/947d69eb-28e1-497a-83e6-c3349d2bd60b.png",
+  "templateUrl": "./docs/arif-haque-resume.pdf",
   "awards": [],
   "certifications": [
     {
-      "id": 260225,
+      "title": "Problem Solving (Intermediate) Certificate",
       "description": "Problem Solving (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/2f919611e166",
-      "sortOrderId": 0,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:44:58.979Z",
+      "position": 0,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:44:58.979Z"
     },
     {
-      "id": 260227,
+      "title": "SQL (Intermediate) Certificate",
       "description": "SQL (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/e708974ac65d",
-      "sortOrderId": 1,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:46:26.998Z",
+      "position": 1,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:46:26.998Z"
     },
     {
-      "id": 260228,
+      "title": "SQL (Advanced) Certificate",
       "description": "SQL (Advanced) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/c1a244a031e6",
-      "sortOrderId": 2,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:46:49.813Z",
+      "position": 2,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:46:49.813Z"
     },
     {
-      "id": 260229,
+      "title": "Rest API (Intermediate) Certificate",
       "description": "Rest API (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/6ac97e432c5e",
-      "sortOrderId": 3,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:46:53.006Z",
+      "position": 3,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:46:53.006Z"
     },
     {
-      "id": 260230,
+      "title": "JavaScript (Intermediate) Certificate",
       "description": "JavaScript (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/resume/api/generate/resume",
-      "sortOrderId": 4,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:47:00.652Z",
+      "position": 4,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:47:00.652Z"
     },
     {
-      "id": 260232,
+      "title": "CI/CD For Beginners",
       "description": "CI/CD For Beginners",
       "issuedBy": "Simplilearn",
       "url": "https://simpli-web.app.link/e/I74CsGLqIIb",
-      "sortOrderId": 5,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:50:40.731Z",
+      "position": 5,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:50:40.731Z"
     },
     {
-      "id": 260234,
+      "title": "SQL Injection For Beginners",
       "description": "SQL Injection For Beginners",
-      "issuedBy": "simplilearn",
+      "issuedBy": "Simplilearn",
       "url": "https://simpli-web.app.link/e/5Ct79L1qIIb",
-      "sortOrderId": 6,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:52:04.765Z",
+      "position": 6,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:52:04.765Z"
     },
     {
-      "id": 260240,
+      "title": "AWS Certified Solutions Architect-Associate (SAA)",
       "description": "AWS Certified Solutions Architect-Associate (SAA)",
       "issuedBy": "Linux Pathshala Limited",
       "url": "https://drive.google.com/file/d/1UDyhccwWS_K46zmxJYq0D8OLY2fAq5XK/view?usp=sharing",
-      "sortOrderId": 7,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:59:11.662Z",
+      "position": 7,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:59:11.662Z"
     },
     {
-      "id": 260237,
+      "title": "Certified DevOps Engineer",
       "description": "Certified DevOps Engineer",
       "issuedBy": "Page Cloud Academy",
       "url": "https://drive.google.com/file/d/1BnYows-D5hSU2NNs03pohaJZYC2tnkxU/view?usp=sharing",
-      "sortOrderId": 8,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:54:19.603Z",
+      "position": 8,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:54:19.603Z"
     },
     {
-      "id": 260238,
+      "title": "Post Graduate Program in DevOps",
       "description": "Post Graduate Program in DevOps",
       "issuedBy": "Edureka",
       "url": "",
-      "sortOrderId": 9,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:57:34.152Z",
+      "position": 9,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:57:34.152Z"
     },
     {
-      "id": 260239,
+      "title": "AWS Masters Certification Program",
       "description": "AWS Masters Certification Program",
       "issuedBy": "Edureka",
       "url": "",
-      "sortOrderId": 10,
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T18:57:59.320Z",
+      "position": 10,
+      "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:57:59.320Z"
     }
   ],
   "education": [
     {
-      "id": 502149,
       "degree": "Masters",
+      "description": "some text",
       "startDate": "June 2010",
       "completionDate": "December 2012",
       "institution": "Ahsanullah University of Science and Technology (AUST)",
@@ -140,14 +142,13 @@
       "score": "3.18",
       "scoreType": "CGPA",
       "studyType": "Business Administration in MIS",
-      "sortOrderId": 0,
-      "resumeId": 229225,
+      "position": 0,
       "createdAt": "2024-04-11T17:20:37.093Z",
       "updatedAt": "2024-04-11T17:20:37.093Z"
     },
     {
-      "id": 502152,
       "degree": "Bachelors",
+      "description": "some text",
       "startDate": "April 2003",
       "completionDate": "May 2007",
       "institution": "University Of Development Alternative (UODA)",
@@ -155,15 +156,13 @@
       "score": "3.14",
       "scoreType": "GPA",
       "studyType": "Computer Science & Engineering",
-      "sortOrderId": 1,
-      "resumeId": 229225,
+      "position": 1,
       "createdAt": "2024-04-11T17:28:05.045Z",
       "updatedAt": "2024-04-11T17:28:05.045Z"
     }
   ],
   "work": [
     {
-      "id": 311673,
       "description": "- Conducting day-to-day project coordination, planning, and implementation across multiple teams\n- Create functional and technical application documents\n- Design, coding, code review, unit test, integration test, deployment(Digital Ocean, AWS), CI/CD, and release process management\n- Performance analysis and improvement in large scale and high traffic application\n- Software architecting, design REST API\n- Inter team communication and decision making with other tech teams, product teams\n- Design highly available and scalable services\n- Troubleshoot and solve production issues\n- Mentor new team members to ease onboarding",
       "endDate": "",
       "currentJob": false,
@@ -171,13 +170,11 @@
       "location": "SOUTH BRIDGE ROAD, SINGAPORE",
       "company": "Stvble™",
       "startDate": "September 2022",
-      "sortOrderId": 0,
-      "resumeId": 229225,
+      "position": 0,
       "createdAt": "2024-04-11T17:33:15.820Z",
       "updatedAt": "2024-04-11T17:33:15.820Z"
     },
     {
-      "id": 319417,
       "description": "",
       "endDate": "Aug, 2022",
       "currentJob": false,
@@ -185,13 +182,11 @@
       "location": "SINGAPORE",
       "company": "IN REMIT (MYCASH MONEY PTE. LTD)",
       "startDate": "May, 2021",
-      "sortOrderId": 1,
-      "resumeId": 229225,
+      "position": 1,
       "createdAt": "2024-05-09T18:16:15.267Z",
       "updatedAt": "2024-05-09T18:16:15.267Z"
     },
     {
-      "id": 319418,
       "description": "",
       "endDate": "Apr, 2021",
       "currentJob": false,
@@ -199,13 +194,11 @@
       "location": "SINGAPORE",
       "company": "MYCASH ONLINE SDN. BHD",
       "startDate": "Nov, 2019",
-      "sortOrderId": 2,
-      "resumeId": 229225,
+      "position": 2,
       "createdAt": "2024-05-09T18:17:58.440Z",
       "updatedAt": "2024-05-09T18:17:58.440Z"
     },
     {
-      "id": 319419,
       "description": "",
       "endDate": "Oct, 2019",
       "currentJob": false,
@@ -213,13 +206,11 @@
       "location": "SINGAPORE",
       "company": "VIVACOM Solutions",
       "startDate": "Oct, 2016",
-      "sortOrderId": 3,
-      "resumeId": 229225,
+      "position": 3,
       "createdAt": "2024-05-09T18:19:37.262Z",
       "updatedAt": "2024-05-09T18:19:37.262Z"
     },
     {
-      "id": 319420,
       "description": "",
       "endDate": "Sep, 2016",
       "currentJob": false,
@@ -227,13 +218,11 @@
       "location": "Dhaka, Bangladesh",
       "company": "INNOTECH",
       "startDate": "Apr, 2014",
-      "sortOrderId": 4,
-      "resumeId": 229225,
+      "position": 4,
       "createdAt": "2024-05-09T18:22:28.360Z",
       "updatedAt": "2024-05-09T18:22:28.360Z"
     },
     {
-      "id": 319421,
       "description": "",
       "endDate": "Feb, 2014",
       "currentJob": false,
@@ -241,13 +230,11 @@
       "location": "Dhaka, Bangladesh",
       "company": "SCSL",
       "startDate": "Nov, 2012",
-      "sortOrderId": 5,
-      "resumeId": 229225,
+      "position": 5,
       "createdAt": "2024-05-09T18:23:30.218Z",
       "updatedAt": "2024-05-09T18:23:30.218Z"
     },
     {
-      "id": 319422,
       "description": "",
       "endDate": "Oct, 2012",
       "currentJob": false,
@@ -255,13 +242,11 @@
       "location": "Dhaka, Bangladesh",
       "company": "Datapeople Limited",
       "startDate": "Mar, 2011",
-      "sortOrderId": 6,
-      "resumeId": 229225,
+      "position": 6,
       "createdAt": "2024-05-09T18:24:40.214Z",
       "updatedAt": "2024-05-09T18:24:40.214Z"
     },
     {
-      "id": 319423,
       "description": "",
       "endDate": "Feb, 2011",
       "currentJob": false,
@@ -269,13 +254,11 @@
       "location": "Dhaka, Bangladesh",
       "company": "The Daily Prothom Alo",
       "startDate": "Mar, 2009",
-      "sortOrderId": 7,
-      "resumeId": 229225,
+      "position": 7,
       "createdAt": "2024-05-09T18:25:30.245Z",
       "updatedAt": "2024-05-09T18:25:30.245Z"
     },
     {
-      "id": 319424,
       "description": "",
       "endDate": "Feb, 2009",
       "currentJob": false,
@@ -283,282 +266,342 @@
       "location": "Dhaka, Bangladesh",
       "company": "AI Microsystems",
       "startDate": "Jul, 2007",
-      "sortOrderId": 8,
-      "resumeId": 229225,
+      "position": 8,
       "createdAt": "2024-05-09T18:26:23.518Z",
       "updatedAt": "2024-05-09T18:26:23.518Z"
     }
   ],
   "projects": [
     {
-      "id": 425421,
       "name": "STVBLE INVOICE",
       "description": "SaaS Base User Module, Invoice Module, Customer Module, Supplier Module, Chat Module (thread based), Payment Module (Multi-currency), Order Module (Multi-currency)",
       "keywords": [
         "PHP · Laravel · jQuery · Bootstrap (Framework) · CSS3 · MySQL · JQuery · Laravel · Docker"
       ],
       "url": "http://invoice.stvble.com",
-      "sortOrderId": 0,
-      "resumeId": 229225,
+      "position": 0,
       "createdAt": "2024-05-09T18:02:57.079Z",
       "updatedAt": "2024-05-09T18:02:57.079Z"
     },
     {
-      "id": 425423,
       "name": " STVBLE Internal Dashboard (Backend)",
       "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cronjobs Integration, MySQL Stored Procedures",
       "keywords": [
         "Laravel · REST APIs · API documentation generation · Stored Procedures · MySQL Event · CornJob"
       ],
       "url": "http://internal.stvble.com",
-      "sortOrderId": 1,
-      "resumeId": 229225,
+      "position": 1,
       "createdAt": "2024-05-09T18:05:36.502Z",
       "updatedAt": "2024-05-09T18:05:36.502Z"
     },
     {
-      "id": 415132,
       "name": "INREMIT",
       "description": "Payment, Point Transfer, Remittance, Mobile Recharge, Mobile Data Plan, E-Wallet, Credit Card Point Transfer",
       "keywords": [
         "Apache, PHP, Laravel, CURL, Rest API, Laravel-Excel, XML, DOM Document, DataTable"
       ],
       "url": "https://inremit.co/",
-      "sortOrderId": 2,
-      "resumeId": 229225,
+      "position": 2,
       "createdAt": "2024-04-11T17:56:24.707Z",
       "updatedAt": "2024-04-11T17:56:24.707Z"
     },
     {
-      "id": 415133,
       "name": "MyCash Money",
       "description": "Payment, Point Transfer, Remittance, Mobile Recharge, Mobile Data Plan, E-Wallet, Early Wage Access, B2B Transaction, Credit Card Point Transfer, User KYC, Consolidated Sanction, Manual Refund, Google map API, IP address region black/white list and several reports",
       "keywords": [
         "Apache, PHP, Laravel, CURL, MySQL, JWT, Rest API, Laravel-Excel, XML, DOM Document, Push Notification, RBAC, DataTable"
       ],
       "url": "https://bdmycash.com",
-      "sortOrderId": 3,
-      "resumeId": 229225,
+      "position": 3,
       "createdAt": "2024-04-11T18:04:53.200Z",
       "updatedAt": "2024-04-11T18:04:53.200Z"
     },
     {
-      "id": 415135,
       "name": "GARGAAR Freighters Ltd  - Fleet Management Solution",
       "description": "- Vehicle Module: The system consists of vehicle financing, vehicle maintenance, vehicle telematics (tracking and diagnostics), driver, speed, fuel, health, and safety management.\n- HRM Module: User Management, Employee Lifecycle, Rewards & Recognition, Grievances Handling, Manpower Planning, Payroll, Attendance, Shift, General Setup\n- ORDER Module, Routes Module, Report Module",
       "keywords": [
         "Apache, PHP, Laravel, CURL, MySQL, JWT, Rest API, Laravel-Excel, Push Notification, RBAC, JQuery"
       ],
       "url": "https://erp.gfltd.net/login",
-      "sortOrderId": 4,
-      "resumeId": 229225,
+      "position": 4,
       "createdAt": "2024-04-11T18:12:16.989Z",
       "updatedAt": "2024-04-11T18:12:16.989Z"
     },
     {
-      "id": 425399,
       "name": "Takaful (Insurance of Africa) - IBLT Live Stock",
       "description": "Cover, Report, Window, Underwriter, Coordinator, Lead Agent, Sub Agent, Trigger/Payment, Payout, Campaign, Setting, County, Partner, Partners Account.",
       "keywords": [
         "Apache, PHP, Codeigniter, MySQL, PHP-Excel, PHP-PDF, JQuery"
       ],
       "url": "https://github.com/mah-shamim/takaful-live-stock.git",
-      "sortOrderId": 5,
-      "resumeId": 229225,
+      "position": 5,
       "createdAt": "2024-05-09T17:04:04.053Z",
       "updatedAt": "2024-05-09T17:04:04.053Z"
     },
     {
-      "id": 425400,
       "name": "VIVACOM Solution - Onushilon (Online Exam System)",
       "description": "",
       "keywords": [
         "PHP, LARAVEL, MYSQL, VUE.JS"
       ],
       "url": "",
-      "sortOrderId": 6,
-      "resumeId": 229225,
+      "position": 6,
       "createdAt": "2024-05-09T17:08:36.628Z",
       "updatedAt": "2024-05-09T17:08:36.628Z"
     },
     {
-      "id": 425402,
       "name": "SBS and ITS - Support Management System",
       "description": "",
       "keywords": [
         "PHP, LARAVEL, MYSQL, VUE.JS"
       ],
       "url": "",
-      "sortOrderId": 7,
-      "resumeId": 229225,
+      "position": 7,
       "createdAt": "2024-05-09T17:09:11.241Z",
       "updatedAt": "2024-05-09T17:09:11.241Z"
     },
     {
-      "id": 425403,
       "name": "Hassan Book Depot. ERP",
       "description": "Accounting & Finance Module (Inventory, Purchase, Sales), CRM Module (Salesman Visit Tracking, Institute Management (School, College, Coaching Center, Library, Working Schedule, Daily Working Report, TA/DA, Donation, Stakeholder), HRM Module (User Management, Employee Lifecycle, Rewards & Recognition, Grievances Handling, Manpower Planning, Payroll, Attendance, Shift, General Setup).",
       "keywords": [
         "Apache, PHP, CakePHP, MySQL, PHP-Excel, PHP-PDF, JQuery"
       ],
       "url": "",
-      "sortOrderId": 8,
-      "resumeId": 229225,
+      "position": 8,
       "createdAt": "2024-05-09T17:09:24.956Z",
       "updatedAt": "2024-05-09T17:09:24.956Z"
     },
     {
-      "id": 425404,
       "name": "G. P. Dhar & Sons - Jewellers",
       "description": "Order/Delivery, Stock, Report, Purchase, TR Product, User Manage, Expenses, Customer Manage, Mortgaged, Bank Register",
       "keywords": [
         "Apache, PHP, CakePHP, MySQL, PHP-Excel, PHP-PDF, JQuery"
       ],
       "url": "",
-      "sortOrderId": 9,
-      "resumeId": 229225,
+      "position": 9,
       "createdAt": "2024-05-09T17:09:54.579Z",
       "updatedAt": "2024-05-09T17:09:54.579Z"
     },
     {
-      "id": 425405,
       "name": "Arirang Aviation Ltd (sister concern of Youngone group)",
       "description": "Accounting & Finance, Admin (Procurement, Stationeries & Office Supply, Transportation, Cafeteria, Office Management, Event Management, Consultation & Messages) Module, HR, Payroll, Flight Operations Module with Log chart, Aircrafts Maintenance Module, Flying Academy (Register Office, Library, Academy), Control Panel Module.",
       "keywords": [
         "Apache, PHP, ORACAL,JavaScript."
       ],
       "url": "",
-      "sortOrderId": 10,
-      "resumeId": 229225,
+      "position": 10,
       "createdAt": "2024-05-09T17:10:43.575Z",
       "updatedAt": "2024-05-09T17:10:43.575Z"
     },
     {
-      "id": 425406,
       "name": "Library Management System of BARD",
       "description": "Add, Edit, and Delete Member, classify library item according to their category, subject and class,  Borrow library item, return library item, Search, add edit and delete books, produce report for library item, sort library item, email to new member when an account is created or library item is issued and due to return, complete usage of keyboard, member and library item report generation, member login system, library item search for user without login, member and library item status, published library events, and many more...",
       "keywords": [
         "Apache, PHP, MySQL, JQuery"
       ],
       "url": "",
-      "sortOrderId": 11,
-      "resumeId": 229225,
+      "position": 11,
       "createdAt": "2024-05-09T17:11:22.416Z",
       "updatedAt": "2024-05-09T17:11:22.416Z"
     }
   ],
   "skills": [
     {
-      "id": 916691,
       "skillType": "programming",
+      "skillLabel": "Cloud <span>Services</span>",
       "skillValues": [
-        "PHP",
-        "Bash",
-        "HTML",
-        "CSS",
-        "YML",
-        "JavaScript"
-      ],
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T17:14:47.969Z",
-      "updatedAt": "2024-04-11T17:14:47.969Z"
+        {
+          "valueLabel": "Amazon Web Services (AWS)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Google Cloud Platform (GCP)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Microsoft Azure",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Digital Oceans",
+          "valuePercentage": "88%"
+        }
+      ]
     },
     {
-      "id": 916692,
-      "skillType": "frameworks",
+      "skillType": "programming",
+      "skillLabel": "Cloud <span>Services</span>",
       "skillValues": [
-        "Laravel",
-        "CodeIgniter",
-        "CakePHP",
-        "Vue.js",
-        "Bootstrap",
-        "jQuery",
-        "Fusebox",
-        "ZEND"
-      ],
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T17:14:47.969Z",
-      "updatedAt": "2024-04-11T17:14:47.969Z"
+        {
+          "valueLabel": "Amazon Web Services (AWS)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Google Cloud Platform (GCP)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Microsoft Azure",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Digital Oceans",
+          "valuePercentage": "88%"
+        }
+      ]
     },
     {
-      "id": 916693,
-      "skillType": "database",
+      "skillType": "programming",
+      "skillLabel": "Cloud <span>Services</span>",
       "skillValues": [
-        "MySql",
-        "Oracle",
-        "Sql-Lite"
-      ],
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T17:14:47.969Z",
-      "updatedAt": "2024-04-11T17:14:47.969Z"
+        {
+          "valueLabel": "Amazon Web Services (AWS)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Google Cloud Platform (GCP)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Microsoft Azure",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Digital Oceans",
+          "valuePercentage": "88%"
+        }
+      ]
     },
     {
-      "id": 916694,
-      "skillType": "tools",
+      "skillType": "programming",
+      "skillLabel": "Cloud <span>Services</span>",
       "skillValues": [
-        "Apache",
-        "Nginx",
-        "Git",
-        "Docker",
-        "AWS",
-        "DigitalOcean",
-        "Jenkins",
-        "GitHub Workflow"
-      ],
-      "resumeId": 229225,
-      "createdAt": "2024-04-11T17:14:47.969Z",
-      "updatedAt": "2024-04-11T17:14:47.969Z"
+        {
+          "valueLabel": "Amazon Web Services (AWS)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Google Cloud Platform (GCP)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Microsoft Azure",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Digital Oceans",
+          "valuePercentage": "88%"
+        }
+      ]
+    },
+    {
+      "skillType": "programming",
+      "skillLabel": "Cloud <span>Services</span>",
+      "skillValues": [
+        {
+          "valueLabel": "Amazon Web Services (AWS)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Google Cloud Platform (GCP)",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Microsoft Azure",
+          "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Digital Oceans",
+          "valuePercentage": "88%"
+        }
+      ]
     }
   ],
   "links": [
     {
-      "id": 315866,
-      "network": "Portfolio",
+      "network": "Github",
       "username": "",
       "url": "https://mah-shamim.github.io/#home",
-      "resumeId": 229225,
+      "icon": "fa fa-github",
       "createdAt": "2024-04-11T17:17:44.963Z",
       "updatedAt": "2024-04-11T17:17:44.963Z"
     },
     {
-      "id": 315868,
       "network": "LeetCode",
       "username": "",
       "url": "https://leetcode.com/mah-shamim/",
-      "resumeId": 229225,
+      "icon": "fa fa-github",
       "createdAt": "2024-04-11T17:18:24.848Z",
       "updatedAt": "2024-04-11T17:18:24.848Z"
     },
     {
-      "id": 315865,
       "network": "HackerRank",
       "username": "",
       "url": "https://www.hackerrank.com/profile/mah_shamim",
-      "resumeId": 229225,
+      "icon": "fa fa-github",
       "createdAt": "2024-04-11T17:17:18.376Z",
       "updatedAt": "2024-04-11T17:17:18.376Z"
     },
     {
-      "id": 315864,
       "network": "Linkedin",
       "username": "",
       "url": "https://www.linkedin.com/in/arifulhaque/",
-      "resumeId": 229225,
+      "icon": "fa fa-linkedin",
       "createdAt": "2024-04-11T17:16:27.568Z",
       "updatedAt": "2024-04-11T17:16:27.568Z"
     },
     {
-      "id": 315863,
-      "network": "GitHub",
+      "network": "GitLab",
       "username": "",
-      "url": "https://github.com/mah-shamim",
-      "resumeId": 229225,
+      "url": "https://gitlab.com/mah-shamim",
+      "icon": "fa fa-gitlab",
       "createdAt": "2024-04-11T17:15:52.076Z",
       "updatedAt": "2024-04-11T17:15:52.076Z"
     }
   ],
+  "services": [
+    {
+      "imageUrl" : "./images/service/web_design_icon.png",
+      "title" : "Web Design",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+    },
+    {
+      "imageUrl" : "./images/service/photography_icon.png",
+      "title" : "Photography",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+    },
+    {
+      "imageUrl" : "./images/service/creativity_icon.png",
+      "title" : "Management",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+    },
+    {
+      "imageUrl" : "./images/service/advetising_icon.png",
+      "title" : "Advertising",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+    }
+  ],
+  "reviews": [
+    {
+      "client": "Maria Richardson",
+      "designation": "Lindsley's Lumber",
+      "imageUrl": "./images/testimonials/testimonial_photo_1.jpg",
+      "content": "\"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros.\nSed sed ipsum sed massa.\""
+    },
+    {
+      "client": "John Doe",
+      "designation": "Apple Inc.",
+      "imageUrl": "./images/testimonials/testimonial_photo_2.jpg",
+      "content": "\"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros.\nSed sed ipsum sed massa.\""
+    },
+    {
+      "client": "George McQueen",
+      "designation": "Harmony House",
+      "imageUrl": "./images/testimonials/testimonial_photo_3.jpg",
+      "content": "\"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros.\nSed sed ipsum sed massa.\""
+    }
+  ],
   "user": {
-    "id": 282783,
     "uid": "12608430",
     "name": "MD ARIFUL HAQUE",
     "role": "",
@@ -574,7 +617,5 @@
     "email": "mah.shamim@gmail.com",
     "secondary_emails": [],
     "banners": {}
-  },
-  "userId": 282783,
-  "review": null
+  }
 }

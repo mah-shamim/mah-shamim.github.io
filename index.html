@@ -20,13 +20,14 @@
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <script defer src="//cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./js/main.js"></script>
     <style>
         [x-cloak] {
             display: none !important;
         }
     </style>
 </head>
-<body class="material-template" x-data>
+<body class="material-template" x-data="data()">
 <div class="preloader">
     <div class="preloader-animation">
         <div class="preloader-spinner">
@@ -38,7 +39,7 @@
         <div class="header-content">
             <div class="site-title-block mobile-hidden">
                 <div class="site-title"
-                     x-html="$store.user.userFirstName + ' <span>' + $store.user.userLastName + '</span>'">
+                     x-html="user.userFirstName + ' <span>' + user.userLastName + '</span>'">
                 </div>
             </div>
             <div class="site-nav">
@@ -69,7 +70,7 @@
     </header>
     <div class="mobile-header mobile-visible">
         <div class="mobile-logo-container">
-            <div class="mobile-site-title" x-text="$store.user.userFirstName + ' ' + $store.user.userLastName"></div>
+            <div class="mobile-site-title" x-text="user.userFullName"></div>
         </div>
         <a class="menu-toggle mobile-visible">
             <i class="fa fa-bars"></i>
@@ -89,18 +90,17 @@
                                 </div>
                                 <div class="col-sm-8 col-md-8 col-lg-8">
                                     <div class="title-block">
-                                        <h1 x-text="$store.user.userFirstName + ' ' + $store.user.userLastName"></h1>
-                                        <div class="owl-carousel text-rotation">
-                                            <template x-for="position in $store.user.userHeading" x-cloak>
+                                        <h1 x-text="user.userFullName"></h1>
+                                        <div class="text-rotation" x-cloak id="userHeading">
+                                            <template x-for="heading in user.userHeading">
                                                 <div class="item">
-                                                    <div class="sp-subtitle" x-text="position"></div>
+                                                    <div class="sp-subtitle" x-text="heading"></div>
                                                 </div>
                                             </template>
                                         </div>
                                     </div>
-
                                     <div class="social-links">
-                                        <template x-for="link in $store.user.links">
+                                        <template x-for="link in user.links">
                                             <a :href="link.url" target="_blank" :title="link.network"><i
                                                     :class="link.icon"></i></a>
                                         </template>
@@ -115,10 +115,10 @@
                                         <div class="block-title">
                                             <h3>About <span>Me</span></h3>
                                         </div>
-                                        <p x-html="$store.user.userIntroduction"></p>
+                                        <p x-html="user.userIntroduction"></p>
                                     </div>
                                     <div class="download-resume">
-                                        <a :href="$store.user.templateUrl"
+                                        <a :href="user.templateUrl"
                                            target=_blank"
                                            download
                                            class="btn btn-secondary">
@@ -137,31 +137,31 @@
                                         </li>
                                         <li>
                                             <span class="title">Address</span>
-                                            <span class="value" x-text="$store.user.userAddress"></span>
+                                            <span class="value" x-text="user.userAddress"></span>
                                         </li>
                                         <li>
                                             <span class="title">Email</span>
                                             <span class="value">
-                                                <a :href="'mailto:' + $store.user.userEmail">
-                                                    <span x-text="$store.user.userEmail"></span>
+                                                <a :href="'mailto:' + user.userEmail">
+                                                    <span x-text="user.userEmail"></span>
                                                 </a>
                                             </span>
                                         </li>
                                         <li>
                                             <span class="title">Phone</span>
                                             <span class="value">
-                                                <a :href="'telto:' + $store.user.userPhoneNumber">
-                                                    <span x-text="$store.user.userPhoneNumber"></span>
+                                                <a :href="'telto:' + user.userPhoneNumber">
+                                                    <span x-text="user.userPhoneNumber"></span>
                                                 </a>
                                             </span>
                                         </li>
                                         <li><span class="title">Freelance</span>
-                                            <template x-if="$store.user.userFreelanceAvailable">
+                                            <template x-if="user.userFreelanceAvailable">
                                                 <span class="value available">
                                                     Available
                                                 </span>
                                             </template>
-                                            <template x-if="!$store.user.userFreelanceAvailable">
+                                            <template x-if="!user.userFreelanceAvailable">
                                                 <span class="value">
                                                     Not Available
                                                 </span>
@@ -169,7 +169,7 @@
                                         </li>
                                         <li><span class="title">Key Skills</span>
                                             <span class="value">
-                                                <template x-for="tag in $store.user.userTags">
+                                                <template x-for="tag in user.userTags">
                                                     <span class="badge badge-primary" x-text="tag"
                                                           style="margin-right: 0.25rem"></span>
                                                 </template>
@@ -194,13 +194,14 @@
                                             <h3>Experience</h3>
                                         </div>
                                         <div class="timeline">
-                                            <template x-for="job in $store.user.work">
+                                            <template x-for="job in user.work">
                                                 <div class="timeline-item">
                                                     <h4 class="item-title" x-text="job.role"></h4>
                                                     <span class="item-period"
                                                           x-text="job.startDate + ' - ' + job.endDate"></span>
                                                     <span class="item-small" x-text="job.company"></span>
-                                                    <p class="item-description" x-html="job.description"></p>
+                                                    <p class="item-description"
+                                                       x-html="job.description.toString().replace(/(?:\r\n|\r|\n)/g, '<br>')"></p>
                                                 </div>
                                             </template>
                                         </div>
@@ -212,7 +213,7 @@
                                             <h3>Education</h3>
                                         </div>
                                         <div class="timeline">
-                                            <template x-for="study in $store.user.education">
+                                            <template x-for="study in user.education">
                                                 <div class="timeline-item">
                                                     <h4 class="item-title"
                                                         x-text="study.degree + ' of ' + study.studyType"></h4>
@@ -236,187 +237,28 @@
                         </div>
                         <div class="page-content">
                             <div class="row">
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>Cloud <span>Services</span></h3>
-                                        </div>
+                                <template x-for="skill in user.skills">
+                                    <div class="col-sm-6 col-md-6 col-lg-4">
+                                        <div class="block">
+                                            <div class="block-title">
+                                                <h3 x-html="skill.skillLabel"></h3>
+                                            </div>
 
-                                        <div class="skills-info">
-                                            <h4>Amazon Web Services (AWS)</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-1"></div>
-                                            </div>
-                                            <h4>Google Cloud Platform (GCP)</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-2"></div>
-                                            </div>
-                                            <h4>Microsoft Azure</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill"></div>
-                                            </div>
-                                            <h4>Digital Oceans</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-5"></div>
+                                            <div class="skills-info">
+                                                <template x-for="value in skill.skillValues">
+                                                    <div>
+                                                        <h4 x-html="value.valueLabel"></h4>
+                                                        <div class="skill-container">
+                                                            <div class="skill-percentage"
+                                                                 x-bind:style="{width: value.valuePercentage}"></div>
+                                                        </div>
+                                                    </div>
+                                                </template>
                                             </div>
                                         </div>
-
                                     </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>Containerization <span>Tools</span></h3>
-                                        </div>
-
-                                        <div class="skills-info">
-                                            <h4>Docker</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-4"></div>
-                                            </div>
-                                            <h4>Droplet</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-5"></div>
-                                            </div>
-                                            <h4>AWS ECS</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-6"></div>
-                                            </div>
-                                            <h4>Azure Container Service</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-6"></div>
-                                            </div>
-                                            <h4>Google Container Engine (GKE)</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-6"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>Automation <span>Tools</span></h3>
-                                        </div>
-
-                                        <div class="skills-info">
-                                            <h4>PHPUnit</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-1"></div>
-                                            </div>
-
-                                            <h4>PhpMetrics</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-4"></div>
-                                            </div>
-
-                                            <h4>Postman</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill"></div>
-                                            </div>
-
-                                            <h4>Katalon Studio</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-6"></div>
-                                            </div>
-                                            <h4>Apache JMeter</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-6"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>CI/CD <span>Tools</span></h3>
-                                        </div>
-
-                                        <div class="skills-info">
-                                            <h4>Jenkins</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-6"></div>
-                                            </div>
-                                            <h4>TeamCity</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-6"></div>
-                                            </div>
-                                            <h4>Git</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill"></div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>Coding <span>Skills</span></h3>
-                                        </div>
-
-                                        <div class="skills-info">
-                                            <h4>PHP</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill"></div>
-                                            </div>
-
-                                            <h4>NODE.JS</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-10"></div>
-                                            </div>
-
-                                            <h4>HTML5</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-4"></div>
-                                            </div>
-
-                                            <h4>CSS3/LESS/SASS</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-5"></div>
-                                            </div>
-
-                                            <h4>jQuery</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-6"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-6 col-lg-4">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>Server <span>Administration</span></h3>
-                                        </div>
-
-                                        <div class="skills-info">
-                                            <h4>Shell Scripting</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-4"></div>
-                                            </div>
-                                            <h4>Nginx</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-7"></div>
-                                            </div>
-                                            <h4>Linux Configuration</h4>
-                                            <div class="skill-container">
-                                                <div class="skill-percentage skill-8"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
+                                </template>
                             </div>
-
                         </div>
                     </div>
                 </section>
@@ -427,137 +269,28 @@
                         </div>
                         <div class="page-content">
                             <div class="row">
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>Microsoft Server Administration</h3>
-                                        </div>
-
-                                        <div class="timeline">
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">Enterprise Administrator on Windows Server®
-                                                    2008</h4>
-                                                <span class="item-period">Jul 2012</span>
-                                                <span class="item-small">Microsoft</span>
-                                                <p class="item-description">Credential ID D960-1603</p>
+                                <template x-for="(certifications, issuer) in user.certifications">
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="block">
+                                            <div class="block-title">
+                                                <h3 x-text="issuer"></h3>
                                             </div>
 
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">Windows Server® 2008 Network Infrastructure,
-                                                    Configuration</h4>
-                                                <span class="item-period">May 2012</span>
-                                                <span class="item-small">Microsoft</span>
-                                                <p class="item-description">Credential ID D947-5307</p>
-                                            </div>
-
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">Windows Server® 2008 Network Infrastructure</h4>
-                                                <span class="item-period">April 2012</span>
-                                                <span class="item-small">Microsoft</span>
-                                                <p class="item-description">Credential ID D954-7849</p>
-                                            </div>
-
-
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">Windows Server® 2008 Active Directory,
-                                                    Configuration</h4>
-                                                <span class="item-period">Jan 2012</span>
-                                                <span class="item-small">Microsoft</span>
-                                                <p class="item-description">Credential ID D928-0228</p>
-                                            </div>
-
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">Windows® 7, Configuration</h4>
-                                                <span class="item-period">Dec 2011</span>
-                                                <span class="item-small">Microsoft</span>
-                                                <p class="item-description">Credential ID D768-8284</p>
+                                            <div class="timeline">
+                                                <template x-for="certificate in certifications">
+                                                    <div class="timeline-item">
+                                                        <h4 class="item-title" x-text="certificate.title"></h4>
+                                                        <span class="item-period"
+                                                              x-text="new Date(certificate.issuedDate).toLocaleDateString()"></span>
+                                                        <span class="item-small" x-text="issuer"></span>
+                                                        <p class="item-description mt-3"
+                                                           x-text="certificate.description"></p>
+                                                    </div>
+                                                </template>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>HackerRank</h3>
-                                        </div>
-
-                                        <div class="timeline">
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">JavaScript (Intermediate) Certificate</h4>
-                                                <span class="item-period">Apr 2022</span>
-                                                <span class="item-small">HackerRank.Inc</span>
-                                                <p class="item-description">
-                                                    Credential ID c1a244a031e6
-                                                </p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">RestAPI (Intermediate) Certificate</h4>
-                                                <span class="item-period">Apr 2022</span>
-                                                <span class="item-small">HackerRank.Inc</span>
-                                                <p class="item-description">
-                                                    Credential ID c1a244a031e6
-                                                </p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">SQL (Advanced) Certificate</h4>
-                                                <span class="item-period">Apr 2022</span>
-                                                <span class="item-small">HackerRank.Inc</span>
-                                                <p class="item-description">
-                                                    Credential ID c1a244a031e6
-                                                </p>
-                                            </div>
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">SQL (Intermediate) Certificate</h4>
-                                                <span class="item-period">Apr 2022</span>
-                                                <span class="item-small">HackerRank.Inc</span>
-                                                <p class="item-description">
-                                                    Credential ID c1a244a031e6
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--<div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="block">
-                                        <div class="block-title">
-                                            <h3>Education</h3>
-                                        </div>
-
-                                        <div class="timeline">
-                                            &lt;!&ndash; Education 1 &ndash;&gt;
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">Specialization Course</h4>
-                                                <span class="item-period">2010</span>
-                                                <span class="item-small">Apple Inc.</span>
-                                                <p class="item-description">Mauris magna sapien, pharetra consectetur
-                                                    fringilla vitae, interdum sed tortor.</p>
-                                            </div>
-                                            &lt;!&ndash; / Education 1 &ndash;&gt;
-
-                                            &lt;!&ndash; Education 2 &ndash;&gt;
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">Specialization Course</h4>
-                                                <span class="item-period">2010</span>
-                                                <span class="item-small">Apple Inc.</span>
-                                                <p class="item-description">Mauris magna sapien, pharetra consectetur
-                                                    fringilla vitae, interdum sed tortor.</p>
-                                            </div>
-                                            &lt;!&ndash; / Education 2 &ndash;&gt;
-
-                                            &lt;!&ndash; Education 3 &ndash;&gt;
-                                            <div class="timeline-item">
-                                                <h4 class="item-title">Specialization Course</h4>
-                                                <span class="item-period">2010</span>
-                                                <span class="item-small">Apple Inc.</span>
-                                                <p class="item-description">Mauris magna sapien, pharetra consectetur
-                                                    fringilla vitae, interdum sed tortor.</p>
-                                            </div>
-                                            &lt;!&ndash; / Education 3 &ndash;&gt;
-                                        </div>
-                                    </div>
-                                </div>-->
+                                </template>
                             </div>
                         </div>
                     </div>
@@ -575,62 +308,21 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="service-block">
-                                        <div class="service-info">
-                                            <!--<i class="service-icon fa fa-shopping-cart"></i>-->
-                                            <div class="service-image">
-                                                <img src="images/service/web_design_icon.png" alt="Responsive Design"
-                                                     class="mCS_img_loaded">
+                                <template x-for="service in user.services">
+                                    <div class="col-sm-6 col-md-3">
+                                        <div class="service-block">
+                                            <div class="service-info">
+                                                <div class="service-image">
+                                                    <img :src="service.imageUrl"
+                                                         :alt="service.title"
+                                                         class="mCS_img_loaded">
+                                                </div>
+                                                <h4 x-text="service.title"></h4>
+                                                <p x-html="service.description"></p>
                                             </div>
-                                            <h4>Web Design</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor.</p>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="service-block">
-                                        <div class="service-info">
-                                            <div class="service-image">
-                                                <img src="images/service/photography_icon.png" alt="Photography"
-                                                     class="mCS_img_loaded">
-                                            </div>
-                                            <h4>Photography</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="service-block">
-                                        <div class="service-info">
-                                            <div class="service-image">
-                                                <img src="images/service/creativity_icon.png" alt="Creativity"
-                                                     class="mCS_img_loaded">
-                                            </div>
-                                            <h4>Management</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="service-block">
-                                        <div class="service-info">
-                                            <div class="service-image">
-                                                <img src="images/service/advetising_icon.png" alt="Advetising"
-                                                     class="mCS_img_loaded">
-                                            </div>
-                                            <h4>Advertising</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                </template>
                             </div>
 
                             <div class="row">
@@ -689,62 +381,25 @@
                                     <div class="block-title">
                                         <h3>Testimonials</h3>
                                     </div>
-
-
                                     <div class="testimonials owl-carousel block">
-                                        <div class="testimonial-item">
-                                            <div class="testimonial-credits">
-                                                <div class="testimonial-picture">
-                                                    <img src="images/testimonials/testimonial_photo_1.jpg" alt="">
+                                        <template x-for="review in user.reviews">
+                                            <div class="testimonial-item">
+                                                <div class="testimonial-credits">
+                                                    <div class="testimonial-picture">
+                                                        <img :src="review.imageUrl" :alt="review.client">
+                                                    </div>
+                                                    <div class="testimonial-author-info">
+                                                        <p class="testimonial-author" x-text="review.client"></p>
+                                                        <p class="testimonial-firm" x-text="review.designation"></p>
+                                                    </div>
                                                 </div>
-                                                <div class="testimonial-author-info">
-                                                    <p class="testimonial-author">Maria Richardson</p>
-                                                    <p class="testimonial-firm">Lindsley's Lumber</p>
-                                                </div>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <div class="testimonial-text">
-                                                    <p>"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros.
-                                                        Sed sed ipsum sed massa."</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="testimonial-item">
-                                            <div class="testimonial-credits">
-                                                <div class="testimonial-picture">
-                                                    <img src="images/testimonials/testimonial_photo_2.jpg" alt="">
-                                                </div>
-                                                <div class="testimonial-author-info">
-                                                    <p class="testimonial-author">John Doe</p>
-                                                    <p class="testimonial-firm">Apple Inc.</p>
+                                                <div class="testimonial-content">
+                                                    <div class="testimonial-text">
+                                                        <p x-html="review.content"></p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="testimonial-content">
-                                                <div class="testimonial-text">
-                                                    <p>"Vivamus porta dapibus tristique. Suspendisse et arcu eget nisi
-                                                        convallis eleifend nec ac lorem.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="testimonial-item">
-                                            <div class="testimonial-credits">
-                                                <div class="testimonial-picture">
-                                                    <img src="images/testimonials/testimonial_photo_3.jpg" alt="">
-                                                </div>
-                                                <div class="testimonial-author-info">
-                                                    <p class="testimonial-author">George McQueen</p>
-                                                    <p class="testimonial-firm">Harmony House</p>
-                                                </div>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <div class="testimonial-text">
-                                                    <p>"Aliquam congue auctor lectus sed fermentum. Nulla ultricies
-                                                        tellus quis sapien lacinia egestas."</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </template>
                                     </div>
                                 </div>
                             </div>
@@ -757,9 +412,7 @@
                             <h2>Projects</h2>
                         </div>
                         <div class="page-content">
-
                             <div class="portfolio-content">
-
                                 <ul id="portfolio_filters" class="portfolio-filters">
                                     <li class="active">
                                         <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
@@ -775,7 +428,6 @@
                                     </li>
                                     -->
                                 </ul>
-
                                 <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
 
                                     <figure class="item" data-groups='["all", "media"]'>
@@ -788,7 +440,7 @@
                                             </div>
                                         </a>
                                     </figure>
-
+'
                                     <figure class="item" data-groups='["all", "video"]'>
                                         <a href="https://player.vimeo.com/video/97102654?autoplay=1"
                                            title="Praesent Dolor Ex" class="lightbox mfp-iframe">
@@ -917,7 +569,6 @@
                                         </a>
                                     </figure>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -1027,8 +678,7 @@
 </div>
 <footer>
     <div class="copyrights"
-         x-data="{footer: '© ' + (new Date()).getFullYear() + ' All rights reserved.'}"
-         x-text="footer"></div>
+         x-text="'© ' + (new Date()).getFullYear() + ' All rights reserved.'"></div>
 </footer>
 <a id="lm_demo_panel_switcher" class="lm-demo-panel-switcher right"><i class="fa fa-gear"></i></a>
 <div id="lm_demo_panel" class="lm-demo-panel right panel-color-red">
@@ -1086,607 +736,32 @@
 <!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>-->
 <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
 <!--<script type="text/javascript" src="js/jquery.googlemap.js"></script>-->
-<script type="text/javascript" src="js/main.js"></script>
 <script src="preview/lmpixels-demo-panel.js"></script>
 <!--<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"-->
 <!--        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="-->
 <!--        data-cf-beacon='{"rayId":"6ff840e74f63ab56","version":"2021.12.0","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","si":100}'-->
 <!--        crossorigin="anonymous"></script>-->
 <script>
-    document.addEventListener('alpine:init', async () => {
-        // await fetch("./user-data.json")
-        //     .then((response) => Alpine.store('user', response.json()));
-        Alpine.store('user', {
-            "userFirstName": "MD ARIFUL",
-            "userLastName": "HAQUE",
-            "userHeading": ["Lead Developer", "Technical Lead", "Senior Software Engineer", "Web App Developer"],
-            "userTags": ["Laravel", "Digital Ocean", "Docker", "Oracle", "VueJS"],
-            "userFreelanceAvailable": true,
-            "userEmail": "mah.shamim@gmail.com",
-            "userAddress": "36/2, Nawab Yousuf Road, Naya Bazar, Dhaka",
-            "userPhoneNumber": "+8801614747054",
-            "userIntroduction": "Hello! I’m Ariful Haque.<br>To work in a highly innovative and challenging atmosphere where there is an opportunity of self-assessment and self-improvement in both individual and group based work. That will ultimately lead to the further development of the higher educational sector of the world.",
-            "id": 229225,
-            "resumeId": 229225,
-            "uuid": "947d69eb-28e1-497a-83e6-c3349d2bd60b",
-            "templateId": 4,
-            "cvName": "MD's Resume",
-            "inReview": false,
-            "isShared": false,
-            "updatedAfterReview": false,
-            "createdAt": "2024-04-11T17:14:47.969Z",
-            "updatedAt": "2024-05-09T18:09:14.744Z",
-            "templateUrl": "https://hackerresume-prod.s3.us-east-1.amazonaws.com/thumbnails/12608430/947d69eb-28e1-497a-83e6-c3349d2bd60b.png",
-            "awards": [],
-            "certifications": [
-                {
-                    "id": 260225,
-                    "description": "Problem Solving (Intermediate) Certificate",
-                    "issuedBy": "HackerRank",
-                    "url": "https://www.hackerrank.com/certificates/2f919611e166",
-                    "sortOrderId": 0,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:44:58.979Z",
-                    "updatedAt": "2024-04-11T18:44:58.979Z"
-                },
-                {
-                    "id": 260227,
-                    "description": "SQL (Intermediate) Certificate",
-                    "issuedBy": "HackerRank",
-                    "url": "https://www.hackerrank.com/certificates/e708974ac65d",
-                    "sortOrderId": 1,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:46:26.998Z",
-                    "updatedAt": "2024-04-11T18:46:26.998Z"
-                },
-                {
-                    "id": 260228,
-                    "description": "SQL (Advanced) Certificate",
-                    "issuedBy": "HackerRank",
-                    "url": "https://www.hackerrank.com/certificates/c1a244a031e6",
-                    "sortOrderId": 2,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:46:49.813Z",
-                    "updatedAt": "2024-04-11T18:46:49.813Z"
-                },
-                {
-                    "id": 260229,
-                    "description": "Rest API (Intermediate) Certificate",
-                    "issuedBy": "HackerRank",
-                    "url": "https://www.hackerrank.com/certificates/6ac97e432c5e",
-                    "sortOrderId": 3,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:46:53.006Z",
-                    "updatedAt": "2024-04-11T18:46:53.006Z"
-                },
-                {
-                    "id": 260230,
-                    "description": "JavaScript (Intermediate) Certificate",
-                    "issuedBy": "HackerRank",
-                    "url": "https://www.hackerrank.com/resume/api/generate/resume",
-                    "sortOrderId": 4,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:47:00.652Z",
-                    "updatedAt": "2024-04-11T18:47:00.652Z"
-                },
-                {
-                    "id": 260232,
-                    "description": "CI/CD For Beginners",
-                    "issuedBy": "Simplilearn",
-                    "url": "https://simpli-web.app.link/e/I74CsGLqIIb",
-                    "sortOrderId": 5,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:50:40.731Z",
-                    "updatedAt": "2024-04-11T18:50:40.731Z"
-                },
-                {
-                    "id": 260234,
-                    "description": "SQL Injection For Beginners",
-                    "issuedBy": "simplilearn",
-                    "url": "https://simpli-web.app.link/e/5Ct79L1qIIb",
-                    "sortOrderId": 6,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:52:04.765Z",
-                    "updatedAt": "2024-04-11T18:52:04.765Z"
-                },
-                {
-                    "id": 260240,
-                    "description": "AWS Certified Solutions Architect-Associate (SAA)",
-                    "issuedBy": "Linux Pathshala Limited",
-                    "url": "https://drive.google.com/file/d/1UDyhccwWS_K46zmxJYq0D8OLY2fAq5XK/view?usp=sharing",
-                    "sortOrderId": 7,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:59:11.662Z",
-                    "updatedAt": "2024-04-11T18:59:11.662Z"
-                },
-                {
-                    "id": 260237,
-                    "description": "Certified DevOps Engineer",
-                    "issuedBy": "Page Cloud Academy",
-                    "url": "https://drive.google.com/file/d/1BnYows-D5hSU2NNs03pohaJZYC2tnkxU/view?usp=sharing",
-                    "sortOrderId": 8,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:54:19.603Z",
-                    "updatedAt": "2024-04-11T18:54:19.603Z"
-                },
-                {
-                    "id": 260238,
-                    "description": "Post Graduate Program in DevOps",
-                    "issuedBy": "Edureka",
-                    "url": "",
-                    "sortOrderId": 9,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:57:34.152Z",
-                    "updatedAt": "2024-04-11T18:57:34.152Z"
-                },
-                {
-                    "id": 260239,
-                    "description": "AWS Masters Certification Program",
-                    "issuedBy": "Edureka",
-                    "url": "",
-                    "sortOrderId": 10,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:57:59.320Z",
-                    "updatedAt": "2024-04-11T18:57:59.320Z"
-                }
-            ],
-            "education": [
-                {
-                    "id": 502149,
-                    "degree": "Masters",
-                    "description": "some text",
-                    "startDate": "June 2010",
-                    "completionDate": "December 2012",
-                    "institution": "Ahsanullah University of Science and Technology (AUST)",
-                    "location": "DHAKA, BANGLADESH",
-                    "score": "3.18",
-                    "scoreType": "CGPA",
-                    "studyType": "Business Administration in MIS",
-                    "sortOrderId": 0,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T17:20:37.093Z",
-                    "updatedAt": "2024-04-11T17:20:37.093Z"
-                },
-                {
-                    "id": 502152,
-                    "degree": "Bachelors",
-                    "description": "some text",
-                    "startDate": "April 2003",
-                    "completionDate": "May 2007",
-                    "institution": "University Of Development Alternative (UODA)",
-                    "location": "Dhaka, Bangladesh",
-                    "score": "3.14",
-                    "scoreType": "GPA",
-                    "studyType": "Computer Science & Engineering",
-                    "sortOrderId": 1,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T17:28:05.045Z",
-                    "updatedAt": "2024-04-11T17:28:05.045Z"
-                }
-            ],
-            "work": [
-                {
-                    "id": 311673,
-                    "description": "- Conducting day-to-day project coordination, planning, and implementation across multiple teams\n- Create functional and technical application documents\n- Design, coding, code review, unit test, integration test, deployment(Digital Ocean, AWS), CI/CD, and release process management\n- Performance analysis and improvement in large scale and high traffic application\n- Software architecting, design REST API\n- Inter team communication and decision making with other tech teams, product teams\n- Design highly available and scalable services\n- Troubleshoot and solve production issues\n- Mentor new team members to ease onboarding",
-                    "endDate": "",
-                    "currentJob": false,
-                    "role": "Lead Developer",
-                    "location": "SOUTH BRIDGE ROAD, SINGAPORE",
-                    "company": "Stvble™",
-                    "startDate": "September 2022",
-                    "sortOrderId": 0,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T17:33:15.820Z",
-                    "updatedAt": "2024-04-11T17:33:15.820Z"
-                },
-                {
-                    "id": 319417,
-                    "description": "",
-                    "endDate": "Aug, 2022",
-                    "currentJob": false,
-                    "role": "Technical Lead",
-                    "location": "SINGAPORE",
-                    "company": "IN REMIT (MYCASH MONEY PTE. LTD)",
-                    "startDate": "May, 2021",
-                    "sortOrderId": 1,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:16:15.267Z",
-                    "updatedAt": "2024-05-09T18:16:15.267Z"
-                },
-                {
-                    "id": 319418,
-                    "description": "",
-                    "endDate": "Apr, 2021",
-                    "currentJob": false,
-                    "role": "Lead Developer",
-                    "location": "SINGAPORE",
-                    "company": "MYCASH ONLINE SDN. BHD",
-                    "startDate": "Nov, 2019",
-                    "sortOrderId": 2,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:17:58.440Z",
-                    "updatedAt": "2024-05-09T18:17:58.440Z"
-                },
-                {
-                    "id": 319419,
-                    "description": "",
-                    "endDate": "Oct, 2019",
-                    "currentJob": false,
-                    "role": "Lead Software Engineer",
-                    "location": "SINGAPORE",
-                    "company": "VIVACOM Solutions",
-                    "startDate": "Oct, 2016",
-                    "sortOrderId": 3,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:19:37.262Z",
-                    "updatedAt": "2024-05-09T18:19:37.262Z"
-                },
-                {
-                    "id": 319420,
-                    "description": "",
-                    "endDate": "Sep, 2016",
-                    "currentJob": false,
-                    "role": "Sr. Software Engineer",
-                    "location": "Dhaka, Bangladesh",
-                    "company": "INNOTECH",
-                    "startDate": "Apr, 2014",
-                    "sortOrderId": 4,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:22:28.360Z",
-                    "updatedAt": "2024-05-09T18:22:28.360Z"
-                },
-                {
-                    "id": 319421,
-                    "description": "",
-                    "endDate": "Feb, 2014",
-                    "currentJob": false,
-                    "role": "Sr. Software Engineer",
-                    "location": "Dhaka, Bangladesh",
-                    "company": "SCSL",
-                    "startDate": "Nov, 2012",
-                    "sortOrderId": 5,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:23:30.218Z",
-                    "updatedAt": "2024-05-09T18:23:30.218Z"
-                },
-                {
-                    "id": 319422,
-                    "description": "",
-                    "endDate": "Oct, 2012",
-                    "currentJob": false,
-                    "role": "Sr. Software Engineer",
-                    "location": "Dhaka, Bangladesh",
-                    "company": "Datapeople Limited",
-                    "startDate": "Mar, 2011",
-                    "sortOrderId": 6,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:24:40.214Z",
-                    "updatedAt": "2024-05-09T18:24:40.214Z"
-                },
-                {
-                    "id": 319423,
-                    "description": "",
-                    "endDate": "Feb, 2011",
-                    "currentJob": false,
-                    "role": "Software Engineer",
-                    "location": "Dhaka, Bangladesh",
-                    "company": "The Daily Prothom Alo",
-                    "startDate": "Mar, 2009",
-                    "sortOrderId": 7,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:25:30.245Z",
-                    "updatedAt": "2024-05-09T18:25:30.245Z"
-                },
-                {
-                    "id": 319424,
-                    "description": "",
-                    "endDate": "Feb, 2009",
-                    "currentJob": false,
-                    "role": "Software Engineer",
-                    "location": "Dhaka, Bangladesh",
-                    "company": "AI Microsystems",
-                    "startDate": "Jul, 2007",
-                    "sortOrderId": 8,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:26:23.518Z",
-                    "updatedAt": "2024-05-09T18:26:23.518Z"
-                }
-            ],
-            "projects": [
-                {
-                    "id": 425421,
-                    "name": "STVBLE INVOICE",
-                    "description": "SaaS Base User Module, Invoice Module, Customer Module, Supplier Module, Chat Module (thread based), Payment Module (Multi-currency), Order Module (Multi-currency)",
-                    "keywords": [
-                        "PHP · Laravel · jQuery · Bootstrap (Framework) · CSS3 · MySQL · JQuery · Laravel · Docker"
-                    ],
-                    "url": "http://invoice.stvble.com",
-                    "sortOrderId": 0,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:02:57.079Z",
-                    "updatedAt": "2024-05-09T18:02:57.079Z"
-                },
-                {
-                    "id": 425423,
-                    "name": " STVBLE Internal Dashboard (Backend)",
-                    "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cronjobs Integration, MySQL Stored Procedures",
-                    "keywords": [
-                        "Laravel · REST APIs · API documentation generation · Stored Procedures · MySQL Event · CornJob"
-                    ],
-                    "url": "http://internal.stvble.com",
-                    "sortOrderId": 1,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T18:05:36.502Z",
-                    "updatedAt": "2024-05-09T18:05:36.502Z"
-                },
-                {
-                    "id": 415132,
-                    "name": "INREMIT",
-                    "description": "Payment, Point Transfer, Remittance, Mobile Recharge, Mobile Data Plan, E-Wallet, Credit Card Point Transfer",
-                    "keywords": [
-                        "Apache, PHP, Laravel, CURL, Rest API, Laravel-Excel, XML, DOM Document, DataTable"
-                    ],
-                    "url": "https://inremit.co/",
-                    "sortOrderId": 2,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T17:56:24.707Z",
-                    "updatedAt": "2024-04-11T17:56:24.707Z"
-                },
-                {
-                    "id": 415133,
-                    "name": "MyCash Money",
-                    "description": "Payment, Point Transfer, Remittance, Mobile Recharge, Mobile Data Plan, E-Wallet, Early Wage Access, B2B Transaction, Credit Card Point Transfer, User KYC, Consolidated Sanction, Manual Refund, Google map API, IP address region black/white list and several reports",
-                    "keywords": [
-                        "Apache, PHP, Laravel, CURL, MySQL, JWT, Rest API, Laravel-Excel, XML, DOM Document, Push Notification, RBAC, DataTable"
-                    ],
-                    "url": "https://bdmycash.com",
-                    "sortOrderId": 3,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:04:53.200Z",
-                    "updatedAt": "2024-04-11T18:04:53.200Z"
-                },
-                {
-                    "id": 415135,
-                    "name": "GARGAAR Freighters Ltd  - Fleet Management Solution",
-                    "description": "- Vehicle Module: The system consists of vehicle financing, vehicle maintenance, vehicle telematics (tracking and diagnostics), driver, speed, fuel, health, and safety management.\n- HRM Module: User Management, Employee Lifecycle, Rewards & Recognition, Grievances Handling, Manpower Planning, Payroll, Attendance, Shift, General Setup\n- ORDER Module, Routes Module, Report Module",
-                    "keywords": [
-                        "Apache, PHP, Laravel, CURL, MySQL, JWT, Rest API, Laravel-Excel, Push Notification, RBAC, JQuery"
-                    ],
-                    "url": "https://erp.gfltd.net/login",
-                    "sortOrderId": 4,
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T18:12:16.989Z",
-                    "updatedAt": "2024-04-11T18:12:16.989Z"
-                },
-                {
-                    "id": 425399,
-                    "name": "Takaful (Insurance of Africa) - IBLT Live Stock",
-                    "description": "Cover, Report, Window, Underwriter, Coordinator, Lead Agent, Sub Agent, Trigger/Payment, Payout, Campaign, Setting, County, Partner, Partners Account.",
-                    "keywords": [
-                        "Apache, PHP, Codeigniter, MySQL, PHP-Excel, PHP-PDF, JQuery"
-                    ],
-                    "url": "https://github.com/mah-shamim/takaful-live-stock.git",
-                    "sortOrderId": 5,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T17:04:04.053Z",
-                    "updatedAt": "2024-05-09T17:04:04.053Z"
-                },
-                {
-                    "id": 425400,
-                    "name": "VIVACOM Solution - Onushilon (Online Exam System)",
-                    "description": "",
-                    "keywords": [
-                        "PHP, LARAVEL, MYSQL, VUE.JS"
-                    ],
-                    "url": "",
-                    "sortOrderId": 6,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T17:08:36.628Z",
-                    "updatedAt": "2024-05-09T17:08:36.628Z"
-                },
-                {
-                    "id": 425402,
-                    "name": "SBS and ITS - Support Management System",
-                    "description": "",
-                    "keywords": [
-                        "PHP, LARAVEL, MYSQL, VUE.JS"
-                    ],
-                    "url": "",
-                    "sortOrderId": 7,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T17:09:11.241Z",
-                    "updatedAt": "2024-05-09T17:09:11.241Z"
-                },
-                {
-                    "id": 425403,
-                    "name": "Hassan Book Depot. ERP",
-                    "description": "Accounting & Finance Module (Inventory, Purchase, Sales), CRM Module (Salesman Visit Tracking, Institute Management (School, College, Coaching Center, Library, Working Schedule, Daily Working Report, TA/DA, Donation, Stakeholder), HRM Module (User Management, Employee Lifecycle, Rewards & Recognition, Grievances Handling, Manpower Planning, Payroll, Attendance, Shift, General Setup).",
-                    "keywords": [
-                        "Apache, PHP, CakePHP, MySQL, PHP-Excel, PHP-PDF, JQuery"
-                    ],
-                    "url": "",
-                    "sortOrderId": 8,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T17:09:24.956Z",
-                    "updatedAt": "2024-05-09T17:09:24.956Z"
-                },
-                {
-                    "id": 425404,
-                    "name": "G. P. Dhar & Sons - Jewellers",
-                    "description": "Order/Delivery, Stock, Report, Purchase, TR Product, User Manage, Expenses, Customer Manage, Mortgaged, Bank Register",
-                    "keywords": [
-                        "Apache, PHP, CakePHP, MySQL, PHP-Excel, PHP-PDF, JQuery"
-                    ],
-                    "url": "",
-                    "sortOrderId": 9,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T17:09:54.579Z",
-                    "updatedAt": "2024-05-09T17:09:54.579Z"
-                },
-                {
-                    "id": 425405,
-                    "name": "Arirang Aviation Ltd (sister concern of Youngone group)",
-                    "description": "Accounting & Finance, Admin (Procurement, Stationeries & Office Supply, Transportation, Cafeteria, Office Management, Event Management, Consultation & Messages) Module, HR, Payroll, Flight Operations Module with Log chart, Aircrafts Maintenance Module, Flying Academy (Register Office, Library, Academy), Control Panel Module.",
-                    "keywords": [
-                        "Apache, PHP, ORACAL,JavaScript."
-                    ],
-                    "url": "",
-                    "sortOrderId": 10,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T17:10:43.575Z",
-                    "updatedAt": "2024-05-09T17:10:43.575Z"
-                },
-                {
-                    "id": 425406,
-                    "name": "Library Management System of BARD",
-                    "description": "Add, Edit, and Delete Member, classify library item according to their category, subject and class,  Borrow library item, return library item, Search, add edit and delete books, produce report for library item, sort library item, email to new member when an account is created or library item is issued and due to return, complete usage of keyboard, member and library item report generation, member login system, library item search for user without login, member and library item status, published library events, and many more...",
-                    "keywords": [
-                        "Apache, PHP, MySQL, JQuery"
-                    ],
-                    "url": "",
-                    "sortOrderId": 11,
-                    "resumeId": 229225,
-                    "createdAt": "2024-05-09T17:11:22.416Z",
-                    "updatedAt": "2024-05-09T17:11:22.416Z"
-                }
-            ],
-            "skills": [
-                {
-                    "id": 916691,
-                    "skillType": "programming",
-                    "skillValues": [
-                        "PHP",
-                        "Bash",
-                        "HTML",
-                        "CSS",
-                        "YML",
-                        "JavaScript"
-                    ],
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T17:14:47.969Z",
-                    "updatedAt": "2024-04-11T17:14:47.969Z"
-                },
-                {
-                    "id": 916692,
-                    "skillType": "frameworks",
-                    "skillValues": [
-                        "Laravel",
-                        "CodeIgniter",
-                        "CakePHP",
-                        "Vue.js",
-                        "Bootstrap",
-                        "jQuery",
-                        "Fusebox",
-                        "ZEND"
-                    ],
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T17:14:47.969Z",
-                    "updatedAt": "2024-04-11T17:14:47.969Z"
-                },
-                {
-                    "id": 916693,
-                    "skillType": "database",
-                    "skillValues": [
-                        "MySql",
-                        "Oracle",
-                        "Sql-Lite"
-                    ],
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T17:14:47.969Z",
-                    "updatedAt": "2024-04-11T17:14:47.969Z"
-                },
-                {
-                    "id": 916694,
-                    "skillType": "tools",
-                    "skillValues": [
-                        "Apache",
-                        "Nginx",
-                        "Git",
-                        "Docker",
-                        "AWS",
-                        "DigitalOcean",
-                        "Jenkins",
-                        "GitHub Workflow"
-                    ],
-                    "resumeId": 229225,
-                    "createdAt": "2024-04-11T17:14:47.969Z",
-                    "updatedAt": "2024-04-11T17:14:47.969Z"
-                }
-            ],
-            "links": [
-                {
-                    "id": 315866,
-                    "network": "Github",
-                    "username": "",
-                    "url": "https://mah-shamim.github.io/#home",
-                    "resumeId": 229225,
-                    "icon": 'fa fa-github',
-                    "createdAt": "2024-04-11T17:17:44.963Z",
-                    "updatedAt": "2024-04-11T17:17:44.963Z"
-                },
-                {
-                    "id": 315868,
-                    "network": "LeetCode",
-                    "username": "",
-                    "url": "https://leetcode.com/mah-shamim/",
-                    "resumeId": 229225,
-                    "icon": 'fa fa-github',
-                    "createdAt": "2024-04-11T17:18:24.848Z",
-                    "updatedAt": "2024-04-11T17:18:24.848Z"
-                },
-                {
-                    "id": 315865,
-                    "network": "HackerRank",
-                    "username": "",
-                    "url": "https://www.hackerrank.com/profile/mah_shamim",
-                    "resumeId": 229225,
-                    "icon": 'fa fa-github',
-                    "createdAt": "2024-04-11T17:17:18.376Z",
-                    "updatedAt": "2024-04-11T17:17:18.376Z"
-                },
-                {
-                    "id": 315864,
-                    "network": "Linkedin",
-                    "username": "",
-                    "url": "https://www.linkedin.com/in/arifulhaque/",
-                    "resumeId": 229225,
-                    "icon": 'fa fa-linkedin',
-                    "createdAt": "2024-04-11T17:16:27.568Z",
-                    "updatedAt": "2024-04-11T17:16:27.568Z"
-                },
-                {
-                    "id": 315863,
-                    "network": "GitLab",
-                    "username": "",
-                    "url": "https://gitlab.com/mah-shamim",
-                    "resumeId": 229225,
-                    "icon": 'fa fa-gitlab',
-                    "createdAt": "2024-04-11T17:15:52.076Z",
-                    "updatedAt": "2024-04-11T17:15:52.076Z"
-                }
-            ],
-            "user": {
-                "id": 282783,
-                "uid": "12608430",
-                "name": "MD ARIFUL HAQUE",
-                "role": "",
-                "companyName": "",
-                "lastActiveToken": "",
-                "createdAt": "2024-04-11T17:14:20.626Z",
-                "updatedAt": "2024-04-11T17:14:20.626Z",
-                "lastNotificationCheck": "2024-04-11T17:14:20.626Z",
-                "incompleteResumeEmailCount": 0,
-                "reviewer": false,
-                "hacker_id": "12608430",
-                "username": "mah_shamim",
-                "email": "mah.shamim@gmail.com",
-                "secondary_emails": [],
-                "banners": {}
-            },
-            "userId": 282783,
-            "review": null
-        });
-    });
+    // document.addEventListener('alpine:init', () => {
+    // });
+
+    // document.addEventListener('alpine:initialized', () => {
+    //
+    //     $('#userHeading')
+    //         .addClass('owl-carousel')
+    //         .owlCarousel({
+    //             loop: true,
+    //             dots: false,
+    //             nav: false,
+    //             margin: 0,
+    //             items: 1,
+    //             autoplay: true,
+    //             autoplayHoverPause: false,
+    //             autoplayTimeout: 3800,
+    //             animateOut: 'zoomOut',
+    //             animateIn: 'zoomIn'
+    //         });
+    // });
 </script>
 </body>
 </html>
