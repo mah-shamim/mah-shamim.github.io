@@ -20,12 +20,6 @@
   "userAddress": "36/2, Nawab Yousuf Road, Naya Bazar, Dhaka",
   "userPhoneNumber": "+8801614747054",
   "userIntroduction": "Hello! I’m Ariful Haque.<br>To work in a highly innovative and challenging atmosphere where there is an opportunity of self-assessment and self-improvement in both individual and group based work. That will ultimately lead to the further development of the higher educational sector of the world.",
-  "uuid": "947d69eb-28e1-497a-83e6-c3349d2bd60b",
-  "templateId": 4,
-  "cvName": "MD's Resume",
-  "inReview": false,
-  "isShared": false,
-  "updatedAfterReview": false,
   "createdAt": "2024-04-11T17:14:47.969Z",
   "updatedAt": "2024-05-09T18:09:14.744Z",
   "templateUrl": "./docs/arif-haque-resume.pdf",
@@ -276,10 +270,23 @@
       "name": "STVBLE INVOICE",
       "description": "SaaS Base User Module, Invoice Module, Customer Module, Supplier Module, Chat Module (thread based), Payment Module (Multi-currency), Order Module (Multi-currency)",
       "keywords": [
-        "PHP · Laravel · jQuery · Bootstrap (Framework) · CSS3 · MySQL · JQuery · Laravel · Docker"
+        "PHP",
+        "Laravel",
+        "jQuery",
+        "Bootstrap (Framework)",
+        "CSS3",
+        "MySQL",
+        "JQuery",
+        "Laravel",
+        "Docker"
       ],
       "url": "http://invoice.stvble.com",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 0,
+      "documentType": "video",
+      "groups": [
+        "Fintech"
+      ],
       "createdAt": "2024-05-09T18:02:57.079Z",
       "updatedAt": "2024-05-09T18:02:57.079Z"
     },
@@ -287,10 +294,20 @@
       "name": " STVBLE Internal Dashboard (Backend)",
       "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cronjobs Integration, MySQL Stored Procedures",
       "keywords": [
-        "Laravel · REST APIs · API documentation generation · Stored Procedures · MySQL Event · CornJob"
+        "Laravel",
+        "REST APIs",
+        "API documentation generation",
+        "Stored Procedures",
+        "MySQL Event",
+        "CornJob"
       ],
       "url": "http://internal.stvble.com",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 1,
+      "documentType": "video",
+      "groups": [
+        "Fintech"
+      ],
       "createdAt": "2024-05-09T18:05:36.502Z",
       "updatedAt": "2024-05-09T18:05:36.502Z"
     },
@@ -298,10 +315,23 @@
       "name": "INREMIT",
       "description": "Payment, Point Transfer, Remittance, Mobile Recharge, Mobile Data Plan, E-Wallet, Credit Card Point Transfer",
       "keywords": [
-        "Apache, PHP, Laravel, CURL, Rest API, Laravel-Excel, XML, DOM Document, DataTable"
+        "Apache",
+        "PHP",
+        "Laravel",
+        "CURL",
+        "Rest API",
+        "Laravel-Excel",
+        "XML",
+        "DOM Document",
+        "DataTable"
       ],
       "url": "https://inremit.co/",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 2,
+      "documentType": "video",
+      "groups": [
+        "Fintech"
+      ],
       "createdAt": "2024-04-11T17:56:24.707Z",
       "updatedAt": "2024-04-11T17:56:24.707Z"
     },
@@ -309,10 +339,27 @@
       "name": "MyCash Money",
       "description": "Payment, Point Transfer, Remittance, Mobile Recharge, Mobile Data Plan, E-Wallet, Early Wage Access, B2B Transaction, Credit Card Point Transfer, User KYC, Consolidated Sanction, Manual Refund, Google map API, IP address region black/white list and several reports",
       "keywords": [
-        "Apache, PHP, Laravel, CURL, MySQL, JWT, Rest API, Laravel-Excel, XML, DOM Document, Push Notification, RBAC, DataTable"
+        "Apache",
+        "PHP",
+        "Laravel",
+        "CURL",
+        "MySQL",
+        "JWT",
+        "Rest API",
+        "Laravel-Excel",
+        "XML",
+        "DOM Document",
+        "Push Notification",
+        "RBAC",
+        "DataTable"
       ],
       "url": "https://bdmycash.com",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 3,
+      "documentType": "video",
+      "groups": [
+        "Fintech"
+      ],
       "createdAt": "2024-04-11T18:04:53.200Z",
       "updatedAt": "2024-04-11T18:04:53.200Z"
     },
@@ -320,10 +367,25 @@
       "name": "GARGAAR Freighters Ltd  - Fleet Management Solution",
       "description": "- Vehicle Module: The system consists of vehicle financing, vehicle maintenance, vehicle telematics (tracking and diagnostics), driver, speed, fuel, health, and safety management.\n- HRM Module: User Management, Employee Lifecycle, Rewards & Recognition, Grievances Handling, Manpower Planning, Payroll, Attendance, Shift, General Setup\n- ORDER Module, Routes Module, Report Module",
       "keywords": [
-        "Apache, PHP, Laravel, CURL, MySQL, JWT, Rest API, Laravel-Excel, Push Notification, RBAC, JQuery"
+        "Apache",
+        "PHP",
+        "Laravel",
+        "CURL",
+        "MySQL",
+        "JWT",
+        "Rest API",
+        "Laravel-Excel",
+        "Push Notification",
+        "RBAC",
+        "JQuery"
       ],
       "url": "https://erp.gfltd.net/login",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 4,
+      "documentType": "video",
+      "groups": [
+        "Management"
+      ],
       "createdAt": "2024-04-11T18:12:16.989Z",
       "updatedAt": "2024-04-11T18:12:16.989Z"
     },
@@ -331,10 +393,21 @@
       "name": "Takaful (Insurance of Africa) - IBLT Live Stock",
       "description": "Cover, Report, Window, Underwriter, Coordinator, Lead Agent, Sub Agent, Trigger/Payment, Payout, Campaign, Setting, County, Partner, Partners Account.",
       "keywords": [
-        "Apache, PHP, Codeigniter, MySQL, PHP-Excel, PHP-PDF, JQuery"
+        "Apache",
+        "PHP",
+        "Codeigniter",
+        "MySQL",
+        "PHP-Excel",
+        "PHP-PDF",
+        "JQuery"
       ],
       "url": "https://github.com/mah-shamim/takaful-live-stock.git",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 5,
+      "documentType": "video",
+      "groups": [
+        "Management"
+      ],
       "createdAt": "2024-05-09T17:04:04.053Z",
       "updatedAt": "2024-05-09T17:04:04.053Z"
     },
@@ -342,10 +415,18 @@
       "name": "VIVACOM Solution - Onushilon (Online Exam System)",
       "description": "",
       "keywords": [
-        "PHP, LARAVEL, MYSQL, VUE.JS"
+        "PHP",
+        "LARAVEL",
+        "MYSQL",
+        "VUE.JS"
       ],
       "url": "",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 6,
+      "documentType": "video",
+      "groups": [
+        "Education"
+      ],
       "createdAt": "2024-05-09T17:08:36.628Z",
       "updatedAt": "2024-05-09T17:08:36.628Z"
     },
@@ -353,10 +434,18 @@
       "name": "SBS and ITS - Support Management System",
       "description": "",
       "keywords": [
-        "PHP, LARAVEL, MYSQL, VUE.JS"
+        "PHP",
+        "LARAVEL",
+        "MYSQL",
+        "VUE.JS"
       ],
       "url": "",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 7,
+      "documentType": "video",
+      "groups": [
+        "Support"
+      ],
       "createdAt": "2024-05-09T17:09:11.241Z",
       "updatedAt": "2024-05-09T17:09:11.241Z"
     },
@@ -364,10 +453,21 @@
       "name": "Hassan Book Depot. ERP",
       "description": "Accounting & Finance Module (Inventory, Purchase, Sales), CRM Module (Salesman Visit Tracking, Institute Management (School, College, Coaching Center, Library, Working Schedule, Daily Working Report, TA/DA, Donation, Stakeholder), HRM Module (User Management, Employee Lifecycle, Rewards & Recognition, Grievances Handling, Manpower Planning, Payroll, Attendance, Shift, General Setup).",
       "keywords": [
-        "Apache, PHP, CakePHP, MySQL, PHP-Excel, PHP-PDF, JQuery"
+        "Apache",
+        "PHP",
+        "CakePHP",
+        "MySQL",
+        "PHP-Excel",
+        "PHP-PDF",
+        "JQuery"
       ],
       "url": "",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 8,
+      "documentType": "video",
+      "groups": [
+        "Management"
+      ],
       "createdAt": "2024-05-09T17:09:24.956Z",
       "updatedAt": "2024-05-09T17:09:24.956Z"
     },
@@ -375,10 +475,21 @@
       "name": "G. P. Dhar & Sons - Jewellers",
       "description": "Order/Delivery, Stock, Report, Purchase, TR Product, User Manage, Expenses, Customer Manage, Mortgaged, Bank Register",
       "keywords": [
-        "Apache, PHP, CakePHP, MySQL, PHP-Excel, PHP-PDF, JQuery"
+        "Apache",
+        "PHP",
+        "CakePHP",
+        "MySQL",
+        "PHP-Excel",
+        "PHP-PDF",
+        "JQuery"
       ],
       "url": "",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 9,
+      "documentType": "video",
+      "groups": [
+        "Management"
+      ],
       "createdAt": "2024-05-09T17:09:54.579Z",
       "updatedAt": "2024-05-09T17:09:54.579Z"
     },
@@ -386,10 +497,18 @@
       "name": "Arirang Aviation Ltd (sister concern of Youngone group)",
       "description": "Accounting & Finance, Admin (Procurement, Stationeries & Office Supply, Transportation, Cafeteria, Office Management, Event Management, Consultation & Messages) Module, HR, Payroll, Flight Operations Module with Log chart, Aircrafts Maintenance Module, Flying Academy (Register Office, Library, Academy), Control Panel Module.",
       "keywords": [
-        "Apache, PHP, ORACAL,JavaScript."
+        "Apache",
+        "PHP",
+        "ORACAL",
+        "JavaScript."
       ],
       "url": "",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 10,
+      "documentType": "video",
+      "groups": [
+        "Management"
+      ],
       "createdAt": "2024-05-09T17:10:43.575Z",
       "updatedAt": "2024-05-09T17:10:43.575Z"
     },
@@ -397,10 +516,18 @@
       "name": "Library Management System of BARD",
       "description": "Add, Edit, and Delete Member, classify library item according to their category, subject and class,  Borrow library item, return library item, Search, add edit and delete books, produce report for library item, sort library item, email to new member when an account is created or library item is issued and due to return, complete usage of keyboard, member and library item report generation, member login system, library item search for user without login, member and library item status, published library events, and many more...",
       "keywords": [
-        "Apache, PHP, MySQL, JQuery"
+        "Apache",
+        "PHP",
+        "MySQL",
+        "JQuery"
       ],
       "url": "",
+      "thumbnail": "./images/portfolio/1.jpg",
       "position": 11,
+      "documentType": "video",
+      "groups": [
+        "Management"
+      ],
       "createdAt": "2024-05-09T17:11:22.416Z",
       "updatedAt": "2024-05-09T17:11:22.416Z"
     }
@@ -561,24 +688,24 @@
   ],
   "services": [
     {
-      "imageUrl" : "./images/service/web_design_icon.png",
-      "title" : "Web Design",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+      "imageUrl": "./images/service/web_design_icon.png",
+      "title": "Web Design",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
     },
     {
-      "imageUrl" : "./images/service/photography_icon.png",
-      "title" : "Photography",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+      "imageUrl": "./images/service/photography_icon.png",
+      "title": "Photography",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
     },
     {
-      "imageUrl" : "./images/service/creativity_icon.png",
-      "title" : "Management",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+      "imageUrl": "./images/service/creativity_icon.png",
+      "title": "Management",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
     },
     {
-      "imageUrl" : "./images/service/advetising_icon.png",
-      "title" : "Advertising",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+      "imageUrl": "./images/service/advetising_icon.png",
+      "title": "Advertising",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
     }
   ],
   "reviews": [
@@ -601,10 +728,43 @@
       "content": "\"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros.\nSed sed ipsum sed massa.\""
     }
   ],
+  "clients": [
+    {
+      "name": "Client 1",
+      "imageUrl": "./images/clients/client_1.png",
+      "url": "#"
+    },
+    {
+      "name": "Client 2",
+      "imageUrl": "./images/clients/client_2.png",
+      "url": "#"
+    },
+    {
+      "name": "Client 3",
+      "imageUrl": "./images/clients/client_3.png",
+      "url": "#"
+    },
+    {
+      "name": "Client 4",
+      "imageUrl": "./images/clients/client_4.png",
+      "url": "#"
+    },
+    {
+      "name": "Client 5",
+      "imageUrl": "./images/clients/client_5.png",
+      "url": "#"
+    },
+    {
+      "name": "Client 6",
+      "imageUrl": "./images/clients/client_6.png",
+      "url": "#"
+    }
+  ],
   "user": {
     "uid": "12608430",
     "name": "MD ARIFUL HAQUE",
     "role": "",
+    "photo":"./images/pofile.jpeg",
     "companyName": "",
     "lastActiveToken": "",
     "createdAt": "2024-04-11T17:14:20.626Z",

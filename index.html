@@ -21,6 +21,7 @@
     <script src="js/modernizr.custom.js"></script>
     <script defer src="//cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./portfolio.js"></script>
     <style>
         [x-cloak] {
             display: none !important;
@@ -85,7 +86,7 @@
                             <div class="row">
                                 <div class="col-sm-4 col-md-4 col-lg-4">
                                     <div class="photo">
-                                        <img src="images/photo.png" alt="">
+                                        <img :src="user.user.photo" :alt="user.userFullName">
                                     </div>
                                 </div>
                                 <div class="col-sm-8 col-md-8 col-lg-8">
@@ -324,58 +325,24 @@
                                     </div>
                                 </template>
                             </div>
-
                             <div class="row">
                                 <div class="col-sm-12 col-md-12">
                                     <div class="block-title">
                                         <h3>Clients</h3>
                                     </div>
 
-                                    <div class="col-sm-4 col-md-2 subpage-block">
-                                        <div class="client-block">
-                                            <a href="#" target="_blank"><img src="images/clients/client_1.png"
-                                                                             alt="image" class="mCS_img_loaded"></a>
+                                    <template x-for="client in user.clients">
+                                        <div class="col-sm-4 col-md-2 subpage-block">
+                                            <div class="client-block">
+                                                <a :href="client.url" target="_blank" :title="client.name">
+                                                    <img :src="client.imageUrl"
+                                                         :alt="client.name" class="mCS_img_loaded">
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="col-sm-4 col-md-2 subpage-block">
-                                        <div class="client-block">
-                                            <a href="#" target="_blank"><img src="images/clients/client_2.png"
-                                                                             alt="image" class="mCS_img_loaded"></a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4 col-md-2 subpage-block">
-                                        <div class="client-block">
-                                            <a href="#" target="_blank"><img src="images/clients/client_3.png"
-                                                                             alt="image" class="mCS_img_loaded"></a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4 col-md-2 subpage-block">
-                                        <div class="client-block">
-                                            <a href="#" target="_blank"><img src="images/clients/client_4.png"
-                                                                             alt="image" class="mCS_img_loaded"></a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4 col-md-2 subpage-block">
-                                        <div class="client-block">
-                                            <a href="#" target="_blank"><img src="images/clients/client_5.png"
-                                                                             alt="image" class="mCS_img_loaded"></a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4 col-md-2 subpage-block">
-                                        <div class="client-block">
-                                            <a href="#" target="_blank"><img src="images/clients/client_6.png"
-                                                                             alt="image" class="mCS_img_loaded"></a>
-                                        </div>
-                                    </div>
-
+                                    </template>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-sm-12 col-md-12">
                                     <div class="block-title">
@@ -417,157 +384,157 @@
                                     <li class="active">
                                         <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
                                     </li>
-                                    <li>
-                                        <a class="filter btn btn-sm btn-link" data-group="media">Media</a>
-                                    </li>
-                                    <li>
-                                        <a class="filter btn btn-sm btn-link" data-group="illustration">Illustration</a>
-                                    </li>
-                                    <li>
-                                        <a class="filter btn btn-sm btn-link" data-group="video">Video</a>
-                                    </li>
-                                    -->
+                                    <template x-for="(group, slug) in user.projectGroups">
+                                        <li>
+                                            <a class="filter btn btn-sm btn-link" :data-group="slug" x-text="group"></a>
+                                        </li>
+                                    </template>
                                 </ul>
                                 <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+                                    <template x-for="project in user.projects">
+                                        <figure class="item" :data-groups='JSON.stringify(project.slugs)'>
+                                            <a :class="{
+                                            'ajax-page-load':project.documentType == 'page',
+                                             'lightbox mfp-iframe': project.documentType == 'video',
+                                              'lightbox': project.documentType == 'image'}"
+                                               :href="project.url"
+                                               :title="project.name">
+                                                <img :src="project.thumbnail" :alt="project.name">
+                                                <div>
+                                                    <h5 class="name" x-html="project.name"></h5>
+                                                    <small x-text="project.groups.toString()"></small>
+                                                    <i class="fa fa-file-text-o"></i>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </template>
+<!--                                    <figure class="item" data-groups='["all", "video"]'>-->
+<!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
+<!--                                           title="Praesent Dolor Ex" class="lightbox mfp-iframe">-->
+<!--                                            <img src="images/portfolio/2.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Video</small>-->
+<!--                                                <i class="fa fa-video-camera"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all", "media"]'>
-                                        <a class="ajax-page-load" href="portfolio-1.html">
-                                            <img src="images/portfolio/1.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Media</small>
-                                                <i class="fa fa-file-text-o"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
-'
-                                    <figure class="item" data-groups='["all", "video"]'>
-                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"
-                                           title="Praesent Dolor Ex" class="lightbox mfp-iframe">
-                                            <img src="images/portfolio/2.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Video</small>
-                                                <i class="fa fa-video-camera"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
+<!--                                        <a href="images/portfolio/full/3.jpg" class="lightbox"-->
+<!--                                           title="Duis Eu Eros Viverra">-->
+<!--                                            <img src="images/portfolio/3.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Illustration</small>-->
+<!--                                                <i class="fa fa-image"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all","illustration"]'>
-                                        <a href="images/portfolio/full/3.jpg" class="lightbox"
-                                           title="Duis Eu Eros Viverra">
-                                            <img src="images/portfolio/3.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Illustration</small>
-                                                <i class="fa fa-image"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all", "media"]'>-->
+<!--                                        <a class="ajax-page-load" href="portfolio-2.html">-->
+<!--                                            <img src="images/portfolio/4.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Media</small>-->
+<!--                                                <i class="fa fa-file-text-o"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all", "media"]'>
-                                        <a class="ajax-page-load" href="portfolio-2.html">
-                                            <img src="images/portfolio/4.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Media</small>
-                                                <i class="fa fa-file-text-o"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all", "illustration"]'>-->
+<!--                                        <a href="images/portfolio/full/5.jpg" class="lightbox"-->
+<!--                                           title="Aliquam Condimentum Magna Rhoncus">-->
+<!--                                            <img src="images/portfolio/5.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Illustration</small>-->
+<!--                                                <i class="fa fa-image"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all", "illustration"]'>
-                                        <a href="images/portfolio/full/5.jpg" class="lightbox"
-                                           title="Aliquam Condimentum Magna Rhoncus">
-                                            <img src="images/portfolio/5.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Illustration</small>
-                                                <i class="fa fa-image"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all", "media"]'>-->
+<!--                                        <a class="ajax-page-load" href="portfolio-3.html">-->
+<!--                                            <img src="images/portfolio/6.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Media</small>-->
+<!--                                                <i class="fa fa-file-text-o"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all", "media"]'>
-                                        <a class="ajax-page-load" href="portfolio-3.html">
-                                            <img src="images/portfolio/6.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Media</small>
-                                                <i class="fa fa-file-text-o"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all", "video"]'>-->
+<!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
+<!--                                           title="Nulla Facilisi" class="lightbox mfp-iframe">-->
+<!--                                            <img src="images/portfolio/7.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Video</small>-->
+<!--                                                <i class="fa fa-video-camera"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all", "video"]'>
-                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"
-                                           title="Nulla Facilisi" class="lightbox mfp-iframe">
-                                            <img src="images/portfolio/7.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Video</small>
-                                                <i class="fa fa-video-camera"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all",  "media"]'>-->
+<!--                                        <a class="ajax-page-load" href="portfolio-4.html">-->
+<!--                                            <img src="images/portfolio/8.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Media</small>-->
+<!--                                                <i class="fa fa-file-text-o"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all",  "media"]'>
-                                        <a class="ajax-page-load" href="portfolio-4.html">
-                                            <img src="images/portfolio/8.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Media</small>
-                                                <i class="fa fa-file-text-o"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
+<!--                                        <a href="images/portfolio/full/9.jpg" class="lightbox"-->
+<!--                                           title="Mauris Neque Dolor">-->
+<!--                                            <img src="images/portfolio/9.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Illustration</small>-->
+<!--                                                <i class="fa fa-image"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all","illustration"]'>
-                                        <a href="images/portfolio/full/9.jpg" class="lightbox"
-                                           title="Mauris Neque Dolor">
-                                            <img src="images/portfolio/9.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Illustration</small>
-                                                <i class="fa fa-image"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all", "video"]'>-->
+<!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
+<!--                                           title="Donec Lectus Arcu" class="lightbox mfp-iframe">-->
+<!--                                            <img src="images/portfolio/10.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Video</small>-->
+<!--                                                <i class="fa fa-video-camera"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all", "video"]'>
-                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"
-                                           title="Donec Lectus Arcu" class="lightbox mfp-iframe">
-                                            <img src="images/portfolio/10.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Video</small>
-                                                <i class="fa fa-video-camera"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
+<!--                                        <a href="images/portfolio/full/11.jpg" class="lightbox"-->
+<!--                                           title="Duis Eu Eros Viverra">-->
+<!--                                            <img src="images/portfolio/11.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Illustration</small>-->
+<!--                                                <i class="fa fa-image"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
 
-                                    <figure class="item" data-groups='["all","illustration"]'>
-                                        <a href="images/portfolio/full/11.jpg" class="lightbox"
-                                           title="Duis Eu Eros Viverra">
-                                            <img src="images/portfolio/11.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Illustration</small>
-                                                <i class="fa fa-image"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
-
-                                    <figure class="item" data-groups='["all","media"]'>
-                                        <a class="ajax-page-load" href="portfolio-5.html">
-                                            <img src="images/portfolio/12.jpg" alt="">
-                                            <div>
-                                                <h5 class="name">Project Name</h5>
-                                                <small>Media</small>
-                                                <i class="fa fa-file-text-o"></i>
-                                            </div>
-                                        </a>
-                                    </figure>
+<!--                                    <figure class="item" data-groups='["all","media"]'>-->
+<!--                                        <a class="ajax-page-load" href="portfolio-5.html">-->
+<!--                                            <img src="images/portfolio/12.jpg" alt="">-->
+<!--                                            <div>-->
+<!--                                                <h5 class="name">Project Name</h5>-->
+<!--                                                <small>Media</small>-->
+<!--                                                <i class="fa fa-file-text-o"></i>-->
+<!--                                            </div>-->
+<!--                                        </a>-->
+<!--                                    </figure>-->
                                 </div>
                             </div>
                         </div>
