@@ -534,20 +534,20 @@
   ],
   "skills": [
     {
-      "skillType": "programming",
+      "skillType": "deploy",
       "skillLabel": "Cloud <span>Services</span>",
       "skillValues": [
         {
           "valueLabel": "Amazon Web Services (AWS)",
-          "valuePercentage": "88%"
+          "valuePercentage": "70%"
         },
         {
           "valueLabel": "Google Cloud Platform (GCP)",
-          "valuePercentage": "88%"
+          "valuePercentage": "55%"
         },
         {
           "valueLabel": "Microsoft Azure",
-          "valuePercentage": "88%"
+          "valuePercentage": "60%"
         },
         {
           "valueLabel": "Digital Oceans",
@@ -557,89 +557,105 @@
     },
     {
       "skillType": "programming",
-      "skillLabel": "Cloud <span>Services</span>",
+      "skillLabel": "Languages",
       "skillValues": [
         {
-          "valueLabel": "Amazon Web Services (AWS)",
+          "valueLabel": "PHP",
           "valuePercentage": "88%"
         },
         {
-          "valueLabel": "Google Cloud Platform (GCP)",
-          "valuePercentage": "88%"
+          "valueLabel": "JavaScript",
+          "valuePercentage": "80%"
         },
         {
-          "valueLabel": "Microsoft Azure",
-          "valuePercentage": "88%"
+          "valueLabel": "jQuery",
+          "valuePercentage": "80%"
         },
         {
-          "valueLabel": "Digital Oceans",
-          "valuePercentage": "88%"
+          "valueLabel": "CSS",
+          "valuePercentage": "70"
+        },
+        {
+          "valueLabel": "Bash",
+          "valuePercentage": "70%"
+        },
+        {
+          "valueLabel": "HTML",
+          "valuePercentage": "90%"
+        },
+        {
+          "valueLabel": "YML",
+          "valuePercentage": "70%"
         }
       ]
     },
     {
       "skillType": "programming",
-      "skillLabel": "Cloud <span>Services</span>",
+      "skillLabel": "Framework",
       "skillValues": [
         {
-          "valueLabel": "Amazon Web Services (AWS)",
-          "valuePercentage": "88%"
+          "valueLabel": "Laravel",
+          "valuePercentage": "80%"
         },
         {
-          "valueLabel": "Google Cloud Platform (GCP)",
-          "valuePercentage": "88%"
+          "valueLabel": "CodeIgniter",
+          "valuePercentage": "85%"
         },
         {
-          "valueLabel": "Microsoft Azure",
-          "valuePercentage": "88%"
+          "valueLabel": "CakePHP",
+          "valuePercentage": "75%"
         },
         {
-          "valueLabel": "Digital Oceans",
-          "valuePercentage": "88%"
+          "valueLabel": "ZEND",
+          "valuePercentage": "60%"
+        },
+        {
+          "valueLabel": "Bootstrap",
+          "valuePercentage": "90%"
+        },
+        {
+          "valueLabel": "Fusebox",
+          "valuePercentage": "90%"
+        },
+        {
+          "valueLabel": "Vue.js",
+          "valuePercentage": "50%"
+        },
+        {
+          "valueLabel": "Node.js",
+          "valuePercentage": "50%"
         }
       ]
     },
     {
       "skillType": "programming",
-      "skillLabel": "Cloud <span>Services</span>",
+      "skillLabel": "CI/CD",
       "skillValues": [
         {
-          "valueLabel": "Amazon Web Services (AWS)",
-          "valuePercentage": "88%"
+          "valueLabel": "Jenkins",
+          "valuePercentage": "65%"
         },
         {
-          "valueLabel": "Google Cloud Platform (GCP)",
-          "valuePercentage": "88%"
-        },
-        {
-          "valueLabel": "Microsoft Azure",
-          "valuePercentage": "88%"
-        },
-        {
-          "valueLabel": "Digital Oceans",
-          "valuePercentage": "88%"
+          "valueLabel": "GitHub CI",
+          "valuePercentage": "65%"
         }
       ]
     },
     {
       "skillType": "programming",
-      "skillLabel": "Cloud <span>Services</span>",
+      "skillLabel": "DBMS",
       "skillValues": [
         {
-          "valueLabel": "Amazon Web Services (AWS)",
+          "valueLabel": "MySql",
           "valuePercentage": "88%"
         },
         {
-          "valueLabel": "Google Cloud Platform (GCP)",
-          "valuePercentage": "88%"
+          "valueLabel": "Oracle",
+          "valuePercentage": "70%"
         },
         {
-          "valueLabel": "Microsoft Azure",
-          "valuePercentage": "88%"
-        },
-        {
-          "valueLabel": "Digital Oceans",
-          "valuePercentage": "88%"
+          "valueLabel": "SQLite",
+          "valuePercentage": "70%"
         }
       ]
     }
