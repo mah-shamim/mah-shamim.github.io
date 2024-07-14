@@ -1,4 +1,5 @@
 {
+  "template":"./css/main-amber.css",
   "userFirstName": "MD ARIFUL",
   "userLastName": "HAQUE",
   "userFullName": "MD ARIFUL HAQUE",
@@ -15,7 +16,7 @@
     "Oracle",
     "VueJS"
   ],
-  "userFreelanceAvailable": true,
+  "freelanceAvailable": true,
   "userEmail": "mah.shamim@gmail.com",
   "userAddress": "36/2, Nawab Yousuf Road, Naya Bazar, Dhaka",
   "userPhoneNumber": "+8801614747054",
@@ -665,7 +666,7 @@
       "network": "HackerRank",
       "username": "",
       "url": "https://www.hackerrank.com/profile/mah_shamim",
-      "icon": "fa fa-github",
+      "icon": "fa fa-header",
       "createdAt": "2024-04-11T17:17:18.376Z",
       "updatedAt": "2024-04-11T17:17:18.376Z"
     },
@@ -761,18 +762,11 @@
     }
   ],
   "user": {
-    "uid": "12608430",
     "name": "MD ARIFUL HAQUE",
     "role": "",
     "photo":"./images/pofile.jpeg",
-    "companyName": "",
-    "lastActiveToken": "",
     "createdAt": "2024-04-11T17:14:20.626Z",
     "updatedAt": "2024-04-11T17:14:20.626Z",
-    "lastNotificationCheck": "2024-04-11T17:14:20.626Z",
-    "incompleteResumeEmailCount": 0,
-    "reviewer": false,
-    "hacker_id": "12608430",
     "username": "mah_shamim",
     "email": "mah.shamim@gmail.com",
     "secondary_emails": [],

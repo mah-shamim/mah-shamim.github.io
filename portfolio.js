@@ -1,12 +1,13 @@
 const data = function () {
     return {
         user: {
+            "template": null,
             "userFirstName": "",
             "userLastName": "",
             "userFullName": "",
             "userHeading": [],
             "userTags": [],
-            "userFreelanceAvailable": true,
+            "freelanceAvailable": true,
             "userEmail": "",
             "userAddress": "",
             "userPhoneNumber": "",
@@ -55,6 +56,8 @@ const data = function () {
                     data.projectGroups = this.resolveProjectGroups(data.projects);
                     data.projects = this.resolveProjects(data.projects);
                     this.user = data;
+                }).then(() => {
+                    this.setTemplate();
                 });
         },
 
@@ -118,5 +121,8 @@ const data = function () {
             }
             return 0;
         },
+        setTemplate: function() {
+            document.getElementById('template-style')?.setAttribute('href', this.user.template ?? './css/main-blue.css');
+        }
     }
 };
