@@ -1,0 +1,18 @@
+name: Deploy Github Page
+on:
+  push:
+    branches:
+      - master
+      - alpinejs
+jobs:
+  build:
+  deploy:
+    permissions:
+      pages: write
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying Run
+        id: deployment
+        uses: actions/deploy-pages@v4
