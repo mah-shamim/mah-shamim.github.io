@@ -25,6 +25,34 @@
         [x-cloak] {
             display: none !important;
         }
+
+        .simple-icons--leetcode {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M13.483 0a1.37 1.37 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.3 5.3 0 0 0-1.209 2.104a5 5 0 0 0-.125.513a5.5 5.5 0 0 0 .062 2.362a6 6 0 0 0 .349 1.017a5.9 5.9 0 0 0 1.271 1.818l4.277 4.193l.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.38 1.38 0 0 0-1.951-.003l-2.396 2.392a3.02 3.02 0 0 1-4.205.038l-.02-.019l-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.7 2.7 0 0 1 .066-.523a2.55 2.55 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0m-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382a1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382a1.38 1.38 0 0 0-1.38-1.382z'/%3E%3C/svg%3E");
+            background-color: currentColor;
+            -webkit-mask-image: var(--svg);
+            mask-image: var(--svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+        }
+
+        .simple-icons--hackerrank {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M16 0c1.714 0 13 6.516 13.854 8c.859 1.484.859 14.516 0 16S17.713 32 16 32c-1.714 0-13-6.516-13.859-8c-.854-1.484-.854-14.516 0-16C3 6.516 14.287 0 16 0m3.063 9.068a.344.344 0 0 0-.349.344v5.167h-5.427v-5.37h.932a.34.34 0 0 0 .339-.344a.347.347 0 0 0-.161-.292l-2.099-2.01a.386.386 0 0 0-.302-.146a.35.35 0 0 0-.276.141L9.48 8.574a.343.343 0 0 0 .183.636h.938l.01 13.38c0 .193.146.344.339.344h1.99a.343.343 0 0 0 .344-.344v-5.339h5.432v5.536h-.932a.343.343 0 0 0-.183.636l2.104 2.016c.057.083.188.146.302.146s.208-.063.276-.146l2.24-2.016a.343.343 0 0 0 .161-.292a.347.347 0 0 0-.344-.344h-.938l-.01-13.375a.34.34 0 0 0-.339-.349h-1.99z'/%3E%3C/svg%3E");
+            background-color: currentColor;
+            -webkit-mask-image: var(--svg);
+            mask-image: var(--svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+        }
     </style>
 </head>
 <body class="material-template" x-data="data()">
@@ -91,13 +119,15 @@
                                 <div class="col-sm-8 col-md-8 col-lg-8">
                                     <div class="title-block">
                                         <h1 x-text="user.userFullName"></h1>
-                                        <div class="text-rotation" x-cloak id="userHeading">
+                                        <marquee>
+                                        <div class="text-rotation" style="display: flex; justify-content: space-between; column-gap: 2rem;" id="userHeading">
                                             <template x-for="heading in user.userHeading">
-                                                <div class="item">
+                                                <div class="item" style="display: inline-block;">
                                                     <div class="sp-subtitle" x-text="heading"></div>
                                                 </div>
                                             </template>
                                         </div>
+                                    </marquee>
                                     </div>
                                     <div class="social-links">
                                         <template x-for="link in user.links">
@@ -166,6 +196,17 @@
                                                     Not Available
                                                 </span>
                                             </template>
+                                        </li>
+                                        <li>
+                                            <span class="title">Membership</span>
+                                            <span class="value">
+                                                <template x-for="membership in user.memberships">
+                                                    <a :href="membership.link"
+                                                    target="_blank" :title="membership.title">
+                                                <span x-html="membership.label"></span>
+                                                </a>
+                                                </template>
+                                            </span>
                                         </li>
                                         <li><span class="title">Key Skills</span>
                                             <span class="value">
@@ -646,48 +687,6 @@
     <div class="copyrights"
          x-text="'© ' + (new Date()).getFullYear() + ' All rights reserved.'"></div>
 </footer>
-<!-- <a id="lm_demo_panel_switcher" class="lm-demo-panel-switcher right"><i class="fa fa-gear"></i></a>
-<div id="lm_demo_panel" class="lm-demo-panel right panel-color-red">
-    <div class="demo-panel-title">Main Color</div>
-    <div id="main_color" class="demo-panel-options">
-        <a data-id="deep-purple">
-            <div class="preview color-1">&nbsp;</div>
-        </a>
-        <a data-id="red">
-            <div class="preview color-2">&nbsp;</div>
-        </a>
-        <a data-id="blue" class="current-main-color">
-            <div class="preview color-3">&nbsp;</div>
-        </a>
-        <a data-id="deep-orange">
-            <div class="preview color-4">&nbsp;</div>
-        </a>
-        <a data-id="green">
-            <div class="preview color-5">&nbsp;</div>
-        </a>
-        <a data-id="light-blue">
-            <div class="preview color-6">&nbsp;</div>
-        </a>
-        <a data-id="pink">
-            <div class="preview color-7">&nbsp;</div>
-        </a>
-        <a data-id="purple">
-            <div class="preview color-8">&nbsp;</div>
-        </a>
-        <a data-id="orange">
-            <div class="preview color-9">&nbsp;</div>
-        </a>
-        <a data-id="amber">
-            <div class="preview color-10">&nbsp;</div>
-        </a>
-        <a data-id="lime">
-            <div class="preview color-11">&nbsp;</div>
-        </a>
-        <a data-id="teal">
-            <div class="preview color-12">&nbsp;</div>
-        </a>
-    </div>
-</div> -->
 <script data-cfasync="false" src="js/email-decode.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/pages-switcher.js"></script>

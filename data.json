@@ -1,5 +1,5 @@
 {
-  "template":"./css/main-amber.css",
+  "template":"./css/main-blue.css",
   "userFirstName": "MD ARIFUL",
   "userLastName": "HAQUE",
   "userFullName": "MD ARIFUL HAQUE",
@@ -558,7 +558,7 @@
     },
     {
       "skillType": "programming",
-      "skillLabel": "Languages",
+      "skillLabel": "Coding <span>Languages</span>",
       "skillValues": [
         {
           "valueLabel": "PHP",
@@ -629,8 +629,8 @@
       ]
     },
     {
-      "skillType": "programming",
-      "skillLabel": "CI/CD",
+      "skillType": "pipeline",
+      "skillLabel": "CI <span>CD</span>",
       "skillValues": [
         {
           "valueLabel": "Jenkins",
@@ -643,8 +643,8 @@
       ]
     },
     {
-      "skillType": "programming",
-      "skillLabel": "DBMS",
+      "skillType": "database",
+      "skillLabel": "SQL <span>Databases</span>",
       "skillValues": [
         {
           "valueLabel": "MySql",
@@ -674,7 +674,7 @@
       "network": "LeetCode",
       "username": "",
       "url": "https://leetcode.com/mah-shamim/",
-      "icon": "fa fa-github",
+      "icon": "fa simple-icons--leetcode",
       "createdAt": "2024-04-11T17:18:24.848Z",
       "updatedAt": "2024-04-11T17:18:24.848Z"
     },
@@ -682,7 +682,7 @@
       "network": "HackerRank",
       "username": "",
       "url": "https://www.hackerrank.com/profile/mah_shamim",
-      "icon": "fa fa-header",
+      "icon": "fa simple-icons--hackerrank",
       "createdAt": "2024-04-11T17:17:18.376Z",
       "updatedAt": "2024-04-11T17:17:18.376Z"
     },
@@ -787,5 +787,12 @@
     "email": "mah.shamim@gmail.com",
     "secondary_emails": [],
     "banners": {}
-  }
+  },
+  "memberships" : [
+    {
+      "link" :"https://drive.google.com/file/d/1ZkZFuU9rdGNJRI7_R18EOy7XokLHpFW9/view?usp=sharing",
+      "title" : "Bangladesh Computer Society",
+      "label" : "BCS"
+    }
+  ]
 }
