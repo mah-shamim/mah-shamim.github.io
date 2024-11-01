@@ -705,52 +705,52 @@
   ],
   "services": [
     {
-      "imageUrl": "./images/service/web_design_icon.png",
+      "imageUrl": "./images/service/web-development.png",
       "title": "Web Development",
       "description": "Creating responsive and efficient web applications using PHP, Laravel, and JavaScript frameworks. Skilled in front-end and back-end development to deliver full-stack solutions."
     },
     {
-      "imageUrl": "./images/service/web_design_icon.png",
+      "imageUrl": "./images/service/custom-software-development.png",
       "title": "Custom Software Development",
       "description": "Develop tailored software solutions to meet your unique business needs, ensuring optimal performance and user experience."
     },
     {
-      "imageUrl": "./images/service/web_design_icon.png",
+      "imageUrl": "./images/service/web-application-development.png",
       "title": "Web Application Development",
       "description": "Create robust and scalable web applications that drive engagement and enhance user satisfaction."
     },
     {
-      "imageUrl": "./images/service/photography_icon.png",
+      "imageUrl": "./images/service/technical-project-management.png",
       "title": "Technical Project Management",
       "description": "Managing projects from inception to completion, ensuring timely delivery, budget adherence, and quality assurance."
     },
     {
-      "imageUrl": "./images/service/photography_icon.png",
+      "imageUrl": "./images/service/team-collaboration.png",
       "title": "Team Collaboration",
       "description": "Foster effective collaboration among team members, promoting a culture of innovation and continuous improvement."
     },
     {
-      "imageUrl": "./images/service/creativity_icon.png",
+      "imageUrl": "./images/service/dev-ops-ci-cd.png",
       "title": "DevOps & CI/CD",
       "description": "Setting up CI/CD pipelines, deploying applications on AWS and Digital Ocean, and optimizing deployment workflows to streamline operations and enhance application stability."
     },
     {
-      "imageUrl": "./images/service/advetising_icon.png",
+      "imageUrl": "./images/service/api-development-integration.png",
       "title": "API Development & Integration",
       "description": "Designing and implementing RESTful APIs for scalable and secure integrations, supporting various applications with seamless data exchange capabilities. Creating robust APIs and integrating third-party services to enhance your application's functionality and user experience."
     },
     {
-      "imageUrl": "./images/service/advetising_icon.png",
+      "imageUrl": "./images/service/performance-optimization.png",
       "title": "Performance Optimization",
       "description": "Improving application performance through code optimization, database tuning, and efficient caching strategies to ensure high-speed and stable applications."
     },
     {
-      "imageUrl": "./images/service/advetising_icon.png",
+      "imageUrl": "./images/service/technical-consultation-support.png",
       "title": "Technical Consultation & Support",
       "description": "Providing expert technical advice and solutions to help clients navigate complex technical challenges, plan projects, and implement efficient software solutions."
     },
     {
-      "imageUrl": "./images/service/advetising_icon.png",
+      "imageUrl": "./images/service/security-audits-compliance.png",
       "title": "Security Audits & Compliance",
       "description": "Conducting thorough security assessments to ensure your applications are secure and compliant with industry standards."
     },
