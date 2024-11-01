@@ -706,23 +706,73 @@
   "services": [
     {
       "imageUrl": "./images/service/web_design_icon.png",
-      "title": "Web Design",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+      "title": "Web Development",
+      "description": "Creating responsive and efficient web applications using PHP, Laravel, and JavaScript frameworks. Skilled in front-end and back-end development to deliver full-stack solutions."
+    },
+    {
+      "imageUrl": "./images/service/web_design_icon.png",
+      "title": "Custom Software Development",
+      "description": "Develop tailored software solutions to meet your unique business needs, ensuring optimal performance and user experience."
+    },
+    {
+      "imageUrl": "./images/service/web_design_icon.png",
+      "title": "Web Application Development",
+      "description": "Create robust and scalable web applications that drive engagement and enhance user satisfaction."
     },
     {
       "imageUrl": "./images/service/photography_icon.png",
-      "title": "Photography",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+      "title": "Technical Project Management",
+      "description": "Managing projects from inception to completion, ensuring timely delivery, budget adherence, and quality assurance."
+    },
+    {
+      "imageUrl": "./images/service/photography_icon.png",
+      "title": "Team Collaboration",
+      "description": "Foster effective collaboration among team members, promoting a culture of innovation and continuous improvement."
     },
     {
       "imageUrl": "./images/service/creativity_icon.png",
-      "title": "Management",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+      "title": "DevOps & CI/CD",
+      "description": "Setting up CI/CD pipelines, deploying applications on AWS and Digital Ocean, and optimizing deployment workflows to streamline operations and enhance application stability."
     },
     {
       "imageUrl": "./images/service/advetising_icon.png",
-      "title": "Advertising",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor."
+      "title": "API Development & Integration",
+      "description": "Designing and implementing RESTful APIs for scalable and secure integrations, supporting various applications with seamless data exchange capabilities. Creating robust APIs and integrating third-party services to enhance your application's functionality and user experience."
+    },
+    {
+      "imageUrl": "./images/service/advetising_icon.png",
+      "title": "Performance Optimization",
+      "description": "Improving application performance through code optimization, database tuning, and efficient caching strategies to ensure high-speed and stable applications."
+    },
+    {
+      "imageUrl": "./images/service/advetising_icon.png",
+      "title": "Technical Consultation & Support",
+      "description": "Providing expert technical advice and solutions to help clients navigate complex technical challenges, plan projects, and implement efficient software solutions."
+    },
+    {
+      "imageUrl": "./images/service/advetising_icon.png",
+      "title": "Security Audits & Compliance",
+      "description": "Conducting thorough security assessments to ensure your applications are secure and compliant with industry standards."
+    },
+    {
+      "imageUrl": "./images/service/advetising_icon.png",
+      "title": "System Integration",
+      "description": "Integrate various systems and technologies for seamless data flow and improved operational efficiency."
+    },
+    {
+      "imageUrl": "./images/service/advetising_icon.png",
+      "title": "SEO Optimization",
+      "description": "Enhance your online presence with effective SEO strategies to drive traffic and improve search engine rankings."
+    },
+    {
+      "imageUrl": "./images/service/advetising_icon.png",
+      "title": "Cloud Integration",
+      "description": "Seamless integration of cloud services to enhance scalability and performance of your applications."
+    },
+    {
+      "imageUrl": "./images/service/advetising_icon.png",
+      "title": "Data Analytics",
+      "description": "Providing insights through data analysis to help you make informed business decisions."
     }
   ],
   "reviews": [
