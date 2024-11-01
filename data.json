@@ -769,11 +769,6 @@
       "description": "Improving application performance through code optimization, database tuning, and efficient caching strategies to ensure high-speed and stable applications."
     },
     {
-      "imageUrl": "./images/service/technical-consultation-support.png",
-      "title": "Technical Consultation & Support",
-      "description": "Providing expert technical advice and solutions to help clients navigate complex technical challenges, plan projects, and implement efficient software solutions."
-    },
-    {
       "imageUrl": "./images/service/security-audits-compliance.png",
       "title": "Security Audits & Compliance",
       "description": "Conducting thorough security assessments to ensure your applications are secure and compliant with industry standards."
@@ -787,6 +782,11 @@
       "imageUrl": "./images/service/seo-optimization.png",
       "title": "SEO Optimization",
       "description": "Enhance your online presence with effective SEO strategies to drive traffic and improve search engine rankings.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+    },
+    {
+      "imageUrl": "./images/service/technical-consultation-support.png",
+      "title": "Technical Consultation & Support",
+      "description": "Providing expert technical advice and solutions to help clients navigate complex technical challenges, plan projects, and implement efficient software solutions."
     },
     {
       "imageUrl": "./images/service/cloud-integration.png",
