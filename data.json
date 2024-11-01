@@ -663,6 +663,14 @@
   ],
   "links": [
     {
+      "network": "Portfolio",
+      "username": "",
+      "url": "https://mah-shamim.github.io/#home",
+      "icon": "fa fa-briefcase",
+      "createdAt": "2024-04-11T17:17:44.963Z",
+      "updatedAt": "2024-04-11T17:17:44.963Z"
+    },
+    {
       "network": "Github",
       "username": "",
       "url": "https://mah-shamim.github.io/#home",
@@ -699,6 +707,22 @@
       "username": "",
       "url": "https://gitlab.com/mah-shamim",
       "icon": "fa fa-gitlab",
+      "createdAt": "2024-04-11T17:15:52.076Z",
+      "updatedAt": "2024-04-11T17:15:52.076Z"
+    },
+    {
+      "network": "DockerHub",
+      "username": "",
+      "url": "https://hub.docker.com/u/mahshamim",
+      "icon": "fa fa-cloud",
+      "createdAt": "2024-04-11T17:15:52.076Z",
+      "updatedAt": "2024-04-11T17:15:52.076Z"
+    },
+    {
+      "network": "DEV.to",
+      "username": "",
+      "url": "https://dev.to/mdarifulhaque",
+      "icon": "si si-devto",
       "createdAt": "2024-04-11T17:15:52.076Z",
       "updatedAt": "2024-04-11T17:15:52.076Z"
     }
