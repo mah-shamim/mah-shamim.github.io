@@ -32,8 +32,8 @@
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/2f919611e166",
       "position": 0,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:44:58.979Z"
+      "issuedDate": "2024-04-10",
+      "updatedAt": "2024-04-10T18:44:58.979Z"
     },
     {
       "title": "SQL (Intermediate) Certificate",
@@ -41,8 +41,8 @@
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/e708974ac65d",
       "position": 1,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:46:26.998Z"
+      "issuedDate": "2022-04-12",
+      "updatedAt": "2022-04-12T18:46:26.998Z"
     },
     {
       "title": "SQL (Advanced) Certificate",
@@ -50,8 +50,8 @@
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/c1a244a031e6",
       "position": 2,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:46:49.813Z"
+      "issuedDate": "2022-04-13",
+      "updatedAt": "2022-04-13T18:46:49.813Z"
     },
     {
       "title": "Rest API (Intermediate) Certificate",
@@ -59,17 +59,17 @@
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/6ac97e432c5e",
       "position": 3,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:46:53.006Z"
+      "issuedDate": "2022-04-13",
+      "updatedAt": "2022-04-13T18:46:53.006Z"
     },
     {
       "title": "JavaScript (Intermediate) Certificate",
       "description": "JavaScript (Intermediate) Certificate",
       "issuedBy": "HackerRank",
-      "url": "https://www.hackerrank.com/resume/api/generate/resume",
+      "url": "https://www.hackerrank.com/certificates/bf65d1634835",
       "position": 4,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:47:00.652Z"
+      "issuedDate": "2024-04-08",
+      "updatedAt": "2024-04-08T18:47:00.652Z"
     },
     {
       "title": "CI/CD For Beginners",
@@ -77,8 +77,8 @@
       "issuedBy": "Simplilearn",
       "url": "https://simpli-web.app.link/e/I74CsGLqIIb",
       "position": 5,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:50:40.731Z"
+      "issuedDate": "2022-09-03",
+      "updatedAt": "2022-09-03T18:50:40.731Z"
     },
     {
       "title": "SQL Injection For Beginners",
@@ -86,8 +86,8 @@
       "issuedBy": "Simplilearn",
       "url": "https://simpli-web.app.link/e/5Ct79L1qIIb",
       "position": 6,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:52:04.765Z"
+      "issuedDate": "2022-09-09",
+      "updatedAt": "2022-09-09T18:52:04.765Z"
     },
     {
       "title": "AWS Certified Solutions Architect-Associate (SAA)",
@@ -95,8 +95,8 @@
       "issuedBy": "Linux Pathshala Limited",
       "url": "https://drive.google.com/file/d/1UDyhccwWS_K46zmxJYq0D8OLY2fAq5XK/view?usp=sharing",
       "position": 7,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:59:11.662Z"
+      "issuedDate": "2022-12-07",
+      "updatedAt": "2022-12-07T18:59:11.662Z"
     },
     {
       "title": "Certified DevOps Engineer",
@@ -104,8 +104,8 @@
       "issuedBy": "Page Cloud Academy",
       "url": "https://drive.google.com/file/d/1BnYows-D5hSU2NNs03pohaJZYC2tnkxU/view?usp=sharing",
       "position": 8,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:54:19.603Z"
+      "issuedDate": "2023-04-10",
+      "updatedAt": "2023-04-10T18:54:19.603Z"
     },
     {
       "title": "Post Graduate Program in DevOps",
@@ -797,6 +797,16 @@
       "imageUrl": "./images/service/data-analytics.png",
       "title": "Data Analytics",
       "description": "Providing insights through data analysis to help you make informed business decisions."
+    },
+    {
+      "imageUrl": "./images/service/code-review-optimization.png",
+      "title": "Code Review & Optimization",
+      "description": "I provide comprehensive code reviews and optimization services to enhance the performance and maintainability of your codebase."
+    },
+    {
+      "imageUrl": "./images/service/quality-assurance.png",
+      "title": "Quality Assurance",
+      "description": "Ensuring the highest quality through comprehensive testing and validation processes."
     }
   ],
   "reviews": [
