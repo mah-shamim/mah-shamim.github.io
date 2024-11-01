@@ -755,22 +755,22 @@
       "description": "Conducting thorough security assessments to ensure your applications are secure and compliant with industry standards."
     },
     {
-      "imageUrl": "./images/service/advetising_icon.png",
+      "imageUrl": "./images/service/system-integration.png",
       "title": "System Integration",
       "description": "Integrate various systems and technologies for seamless data flow and improved operational efficiency."
     },
     {
-      "imageUrl": "./images/service/advetising_icon.png",
+      "imageUrl": "./images/service/seo-optimization.png",
       "title": "SEO Optimization",
       "description": "Enhance your online presence with effective SEO strategies to drive traffic and improve search engine rankings."
     },
     {
-      "imageUrl": "./images/service/advetising_icon.png",
+      "imageUrl": "./images/service/cloud-integration.png",
       "title": "Cloud Integration",
       "description": "Seamless integration of cloud services to enhance scalability and performance of your applications."
     },
     {
-      "imageUrl": "./images/service/advetising_icon.png",
+      "imageUrl": "./images/service/data-analytics.png",
       "title": "Data Analytics",
       "description": "Providing insights through data analysis to help you make informed business decisions."
     }
