@@ -737,7 +737,7 @@
     {
       "imageUrl": "./images/service/api-development-integration.png",
       "title": "API Development & Integration",
-      "description": "Designing and implementing RESTful APIs for scalable and secure integrations, supporting various applications with seamless data exchange capabilities. Creating robust APIs and integrating third-party services to enhance your application's functionality and user experience."
+      "description": "Designing and implementing RESTful APIs for scalable and secure integrations third-party services, supporting various applications with seamless data exchange capabilities."
     },
     {
       "imageUrl": "./images/service/performance-optimization.png",
