@@ -27,11 +27,65 @@
   "awards": [],
   "certifications": [
     {
+      "title": "Enterprise Administrator on Windows Server® 2008",
+      "description": "Microsoft® Certified IT Professional\nCertification Number : D960-1603",
+      "issuedBy": "Microsoft",
+      "url": "https://drive.google.com/file/d/16f5th1kCPWOyYMiX4uAo70VTmnn_0iqk/view?usp=sharing",
+      "position": 5,
+      "issuedDate": "2012-07-22",
+      "updatedAt": "2024-04-11T18:57:59.320Z"
+    },
+    {
+      "title": "Windows Server® 2008",
+      "description": "Microsoft® Certified Solutions Associate\nCertification Number : D960-7416",
+      "issuedBy": "Microsoft",
+      "url": "https://drive.google.com/file/d/1L7KxBDHKDUaNRqiKfkbFpgYihXwtuY_p/view?usp=sharing",
+      "position": 4,
+      "issuedDate": "2012-07-22",
+      "updatedAt": "2024-04-11T18:57:59.320Z"
+    },
+    {
+      "title": "Windows Server® 2008 Applications Infrastructure, Configuration",
+      "description": "Microsoft® Certified Technology Specialist\nCertification Number : D954-7849",
+      "issuedBy": "Microsoft",
+      "url": "https://drive.google.com/file/d/19L2EMdvb53dM4G8A45GbjCsdnOu_xNuf/view?usp=sharing",
+      "position": 3,
+      "issuedDate": "2012-07-14",
+      "updatedAt": "2024-04-11T18:57:59.320Z"
+    },
+    {
+      "title": "Windows Server® 2008 Network Infrastructure, Configuration",
+      "description": "Microsoft® Certified Technology Specialist\nCertification Number : D947-5307",
+      "issuedBy": "Microsoft",
+      "url": "https://drive.google.com/file/d/1JN39_61rHB5JQxgMpPNJcMTs0emqG8TW/view?usp=sharing",
+      "position": 2,
+      "issuedDate": "2012-07-07",
+      "updatedAt": "2024-04-11T18:57:59.320Z"
+    },
+    {
+      "title": "Windows Server® 2008 Active Directory, Configuration",
+      "description": "Microsoft® Certified Technology Specialist\nCertification Number : D928-0228",
+      "issuedBy": "Microsoft",
+      "url": "https://drive.google.com/file/d/1rLAHlMPM77TrALr6vgiK4qRcUwH3lJBN/view?usp=sharing",
+      "position": 1,
+      "issuedDate": "2012-06-12",
+      "updatedAt": "2024-04-11T18:57:59.320Z"
+    },
+    {
+      "title": "Windows® 7, Configuration",
+      "description": "Microsoft® Certified Technology Specialist\nCertification Number : D768-8284",
+      "issuedBy": "Microsoft",
+      "url": "https://drive.google.com/file/d/1MhdDP8Z8HOq6MWhcrDNdKQHB3BeK6vpH/view?usp=sharing",
+      "position": 0,
+      "issuedDate": "2012-05-03",
+      "updatedAt": "2024-04-11T18:57:59.320Z"
+    },
+    {
       "title": "Problem Solving (Intermediate) Certificate",
       "description": "Problem Solving (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/2f919611e166",
-      "position": 0,
+      "position": 6,
       "issuedDate": "2024-04-10",
       "updatedAt": "2024-04-10T18:44:58.979Z"
     },
@@ -40,7 +94,7 @@
       "description": "SQL (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/e708974ac65d",
-      "position": 1,
+      "position": 7,
       "issuedDate": "2022-04-12",
       "updatedAt": "2022-04-12T18:46:26.998Z"
     },
@@ -49,7 +103,7 @@
       "description": "SQL (Advanced) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/c1a244a031e6",
-      "position": 2,
+      "position": 8,
       "issuedDate": "2022-04-13",
       "updatedAt": "2022-04-13T18:46:49.813Z"
     },
@@ -58,7 +112,7 @@
       "description": "Rest API (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/6ac97e432c5e",
-      "position": 3,
+      "position": 9,
       "issuedDate": "2022-04-13",
       "updatedAt": "2022-04-13T18:46:53.006Z"
     },
@@ -67,7 +121,7 @@
       "description": "JavaScript (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/bf65d1634835",
-      "position": 4,
+      "position": 10,
       "issuedDate": "2024-04-08",
       "updatedAt": "2024-04-08T18:47:00.652Z"
     },
@@ -76,7 +130,7 @@
       "description": "CI/CD For Beginners",
       "issuedBy": "Simplilearn",
       "url": "https://simpli-web.app.link/e/I74CsGLqIIb",
-      "position": 5,
+      "position": 11,
       "issuedDate": "2022-09-03",
       "updatedAt": "2022-09-03T18:50:40.731Z"
     },
@@ -85,34 +139,34 @@
       "description": "SQL Injection For Beginners",
       "issuedBy": "Simplilearn",
       "url": "https://simpli-web.app.link/e/5Ct79L1qIIb",
-      "position": 6,
+      "position": 12,
       "issuedDate": "2022-09-09",
       "updatedAt": "2022-09-09T18:52:04.765Z"
-    },
-    {
-      "title": "AWS Certified Solutions Architect-Associate (SAA)",
-      "description": "AWS Certified Solutions Architect-Associate (SAA)",
-      "issuedBy": "Linux Pathshala Limited",
-      "url": "https://drive.google.com/file/d/1UDyhccwWS_K46zmxJYq0D8OLY2fAq5XK/view?usp=sharing",
-      "position": 7,
-      "issuedDate": "2022-12-07",
-      "updatedAt": "2022-12-07T18:59:11.662Z"
     },
     {
       "title": "Certified DevOps Engineer",
       "description": "Certified DevOps Engineer",
       "issuedBy": "Page Cloud Academy",
       "url": "https://drive.google.com/file/d/1BnYows-D5hSU2NNs03pohaJZYC2tnkxU/view?usp=sharing",
-      "position": 8,
+      "position": 13,
       "issuedDate": "2023-04-10",
       "updatedAt": "2023-04-10T18:54:19.603Z"
+    },
+    {
+      "title": "AWS Certified Solutions Architect-Associate (SAA)",
+      "description": "AWS Certified Solutions Architect-Associate (SAA)",
+      "issuedBy": "Linux Pathshala Limited",
+      "url": "https://drive.google.com/file/d/1UDyhccwWS_K46zmxJYq0D8OLY2fAq5XK/view?usp=sharing",
+      "position": 14,
+      "issuedDate": "2022-12-07",
+      "updatedAt": "2022-12-07T18:59:11.662Z"
     },
     {
       "title": "Post Graduate Program in DevOps",
       "description": "Post Graduate Program in DevOps",
       "issuedBy": "Edureka",
       "url": "",
-      "position": 9,
+      "position": 15,
       "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:57:34.152Z"
     },
@@ -121,17 +175,8 @@
       "description": "AWS Masters Certification Program",
       "issuedBy": "Edureka",
       "url": "",
-      "position": 10,
+      "position": 16,
       "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:57:59.320Z"
-    },
-    {
-      "title": "Enterprise Administrator on Windows Server® 2008",
-      "description": "Microsoft® Certified IT Professional\nCertification Number : D960-1603",
-      "issuedBy": "Microsoft",
-      "url": "",
-      "position": 11,
-      "issuedDate": "2012-07-22",
       "updatedAt": "2024-04-11T18:57:59.320Z"
     }
   ],
