@@ -1,5 +1,6 @@
 const data = function () {
     return {
+        loaded: false,
         user: {
             "template": null,
             "userFirstName": "",
