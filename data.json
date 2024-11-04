@@ -626,23 +626,31 @@
   "skills": [
     {
       "skillType": "deploy",
-      "skillLabel": "Cloud <span>Services</span>",
+      "skillLabel": "Cloud & <span>DevOps</span>",
       "skillValues": [
         {
-          "valueLabel": "Amazon Web Services (AWS)",
+          "valueLabel": "Cloud Platforms (AWS, Azure, GCP, Digital Oceans)",
           "valuePercentage": "70%"
         },
         {
-          "valueLabel": "Google Cloud Platform (GCP)",
-          "valuePercentage": "55%"
+          "valueLabel": "Containerization (Docker, Kubernetes)",
+          "valuePercentage": "80%"
         },
         {
-          "valueLabel": "Microsoft Azure",
+          "valueLabel": "Infrastructure as Code (IaC) (Terraform, Ansible)",
           "valuePercentage": "60%"
         },
         {
-          "valueLabel": "Digital Oceans",
+          "valueLabel": "CI/CD Pipelines (Jenkins, GitHub Actions, GitLab CI)",
           "valuePercentage": "88%"
+        },
+        {
+          "valueLabel": "Monitoring & Logging (Prometheus, Grafana)",
+          "valuePercentage": "70%"
+        },
+        {
+          "valueLabel": "Networking & Security (VPC, Firewalls, VPNs, IAM)",
+          "valuePercentage": "75%"
         }
       ]
     },
@@ -719,20 +727,6 @@
       ]
     },
     {
-      "skillType": "pipeline",
-      "skillLabel": "CI <span>CD</span>",
-      "skillValues": [
-        {
-          "valueLabel": "Jenkins",
-          "valuePercentage": "65%"
-        },
-        {
-          "valueLabel": "GitHub CI",
-          "valuePercentage": "65%"
-        }
-      ]
-    },
-    {
       "skillType": "database",
       "skillLabel": "SQL <span>Databases</span>",
       "skillValues": [
@@ -747,6 +741,122 @@
         {
           "valueLabel": "SQLite",
           "valuePercentage": "70%"
+        }
+      ]
+    },
+    {
+      "skillType": "project_management",
+      "skillLabel": "Project Management <span>&</span> Leadership",
+      "skillValues": [
+        {
+          "valueLabel": "Mentorship & Team Building",
+          "valuePercentage": "80%"
+        },
+        {
+          "valueLabel": "Decision-Making & Problem-Solving",
+          "valuePercentage": "90%"
+        },
+        {
+          "valueLabel": "Budgeting & Resource Management",
+          "valuePercentage": "70%"
+        }
+      ]
+    },
+    {
+      "skillType": "communication_and_collaboration",
+      "skillLabel": "Communication <span>&</span> Collaboration",
+      "skillValues": [
+        {
+          "valueLabel": "Interpersonal Communication",
+          "valuePercentage": "85%"
+        },
+        {
+          "valueLabel": "Cross-Functional Collaboration",
+          "valuePercentage": "75%"
+        },
+        {
+          "valueLabel": "Conflict Resolution",
+          "valuePercentage": "80%"
+        }
+      ]
+    },
+    {
+      "skillType": "version_control",
+      "skillLabel": "Version <span>Control</span>",
+      "skillValues": [
+        {
+          "valueLabel": "Git Proficiency (Branching, Merging, Rebasing)",
+          "valuePercentage": "90%"
+        },
+        {
+          "valueLabel": "Branching Strategies (GitFlow, Trunk-Based Development)",
+          "valuePercentage": "85%"
+        },
+        {
+          "valueLabel": "Repository Management (GitHub, Bitbucket, GitLab) ",
+          "valuePercentage": "90%"
+        },
+        {
+          "valueLabel": "Commit Standards & Code Review",
+          "valuePercentage": "85%"
+        },
+        {
+          "valueLabel": "Continuous Integration (CI) Integration",
+          "valuePercentage": "80%"
+        }
+      ]
+    },
+    {
+      "skillType": "soft_skills",
+      "skillLabel": "Soft <span>Skills</span>",
+      "skillValues": [
+        {
+          "valueLabel": "Adaptability",
+          "valuePercentage": "90%"
+        },
+        {
+          "valueLabel": "Time Management",
+          "valuePercentage": "85%"
+        },
+        {
+          "valueLabel": "Emotional Intelligence & Empathy",
+          "valuePercentage": "80%"
+        },
+        {
+          "valueLabel": "Team Leadership",
+          "valuePercentage": "85%"
+        },
+        {
+          "valueLabel": "Problem Solving under Pressure",
+          "valuePercentage": "80%"
+        }
+      ]
+    },
+    {
+      "skillType": "security_and_best_practices",
+      "skillLabel": "Security <span>&</span> Best Practices",
+      "skillValues": [
+        {
+          "valueLabel": "Security Standards (OWASP, Data Protection)",
+          "valuePercentage": "80%"
+        },
+        {
+          "valueLabel": "Code Quality & Testing",
+          "valuePercentage": "85%"
+        }
+      ]
+    },
+    {
+      "skillType": "continuous_learning_and_improvement",
+      "skillLabel": "Continuous Learning <span>&</span> Improvement",
+      "skillValues": [
+        {
+          "valueLabel": "Technical Growth",
+          "valuePercentage": "85%"
+        },
+        {
+          "valueLabel": "Feedback Loops",
+          "valuePercentage": "75%"
         }
       ]
     }
