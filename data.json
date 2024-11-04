@@ -859,6 +859,60 @@
           "valuePercentage": "75%"
         }
       ]
+    },
+    {
+      "skillType": "manual_testing",
+      "skillLabel": "Manual <span>Testing</span>",
+      "skillValues": [
+        {
+          "valueLabel": "Test Case Design",
+          "valuePercentage": "65%"
+        },
+        {
+          "valueLabel": "Requirements Analysis",
+          "valuePercentage": "75%"
+        },
+        {
+          "valueLabel": "Defect Tracking",
+          "valuePercentage": "80%"
+        }
+      ]
+    },
+    {
+      "skillType": "automation_testing",
+      "skillLabel": "Automation <span>Testing</span>",
+      "skillValues": [
+        {
+          "valueLabel": "Test Automation Frameworks (e.g., Selenium)",
+          "valuePercentage": "65%"
+        },
+        {
+          "valueLabel": "Continuous Integration (CI)",
+          "valuePercentage": "75%"
+        },
+        {
+          "valueLabel": "API Testing (Postman)",
+          "valuePercentage": "80%"
+        }
+      ]
+    },
+    {
+      "skillType": "performance_and_load_testing",
+      "skillLabel": "Performance & <span>Load Testing</span>",
+      "skillValues": [
+        {
+          "valueLabel": "Load Testing Tools (e.g., JMeter, LoadRunner)",
+          "valuePercentage": "65%"
+        },
+        {
+          "valueLabel": "Performance Monitoring",
+          "valuePercentage": "70%"
+        },
+        {
+          "valueLabel": "Scalability Testing",
+          "valuePercentage": "50%"
+        }
+      ]
     }
   ],
   "links": [
