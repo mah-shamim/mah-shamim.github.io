@@ -35,6 +35,7 @@ const data = function () {
             "reviews": [],
             "services": [],
             "clients": [],
+            "tools": [],
             "user": {
                 "name": "",
                 "role": "",

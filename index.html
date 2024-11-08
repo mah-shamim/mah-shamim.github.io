@@ -339,7 +339,7 @@
                                     </div>
                                 </template>
                             </div>
-                            <div class="row">
+                            <!--<div class="row">
                                 <div class="col-sm-12 col-md-12">
                                     <div class="block-title">
                                         <h3>Clients</h3>
@@ -351,6 +351,24 @@
                                                 <a :href="client.url" target="_blank" :title="client.name">
                                                     <img :src="client.imageUrl"
                                                          :alt="client.name" class="mCS_img_loaded">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>-->
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="block-title">
+                                        <h3>Tools</h3>
+                                    </div>
+
+                                    <template x-for="tool in user.tools">
+                                        <div class="col-sm-4 col-md-2 subpage-block">
+                                            <div class="client-block">
+                                                <a :href="tool.url" target="_blank" :title="tool.name">
+                                                    <img :src="tool.imageUrl"
+                                                         :alt="tool.name" class="mCS_img_loaded">
                                                 </a>
                                             </div>
                                         </div>
