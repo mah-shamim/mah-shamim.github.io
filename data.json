@@ -82,7 +82,7 @@
     },
     {
       "title": "Microsoft Certified Professional Transcript",
-      "description": "Microsoft Certified Professional Transcript",
+      "description": "\n",
       "issuedBy": "Microsoft",
       "url": "https://learn.microsoft.com/en-us/users/mdarifulhaque-8351/transcript/v24nzf5959ey0yj",
       "position": 0,
@@ -100,7 +100,7 @@
     },
     {
       "title": "Problem Solving (Intermediate) Certificate",
-      "description": "",
+      "description": "\n",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/2f919611e166",
       "position": 6,
@@ -109,7 +109,7 @@
     },
     {
       "title": "SQL (Intermediate) Certificate",
-      "description": "",
+      "description": "\n",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/e708974ac65d",
       "position": 7,
@@ -127,7 +127,7 @@
     },
     {
       "title": "Rest API (Intermediate) Certificate",
-      "description": "",
+      "description": "Rest API (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/6ac97e432c5e",
       "position": 9,
@@ -136,7 +136,7 @@
     },
     {
       "title": "JavaScript (Intermediate) Certificate",
-      "description": "",
+      "description": "JavaScript (Intermediate) Certificate",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/bf65d1634835",
       "position": 10,
@@ -154,7 +154,7 @@
     },
     {
       "title": "AWS Masters Certification Program",
-      "description": "\n",
+      "description": "AWS Masters Certification Program",
       "issuedBy": "Edureka",
       "url": "",
       "position": 16,
