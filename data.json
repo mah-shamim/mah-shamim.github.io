@@ -228,7 +228,7 @@
   "education": [
     {
       "degree": "Masters",
-      "description": "some text",
+      "description": "",
       "startDate": "June 2010",
       "completionDate": "December 2012",
       "institution": "Ahsanullah University of Science and Technology (AUST)",
@@ -242,7 +242,7 @@
     },
     {
       "degree": "Bachelors",
-      "description": "some text",
+      "description": "",
       "startDate": "April 2003",
       "completionDate": "May 2007",
       "institution": "University Of Development Alternative (UODA)",
