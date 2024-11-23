@@ -91,7 +91,7 @@
     },
     {
       "title": "Software Engineer Certificate",
-      "description": "",
+      "description": "\n",
       "issuedBy": "HackerRank",
       "url": "https://www.hackerrank.com/certificates/a0a5fd0a142a",
       "position": 6,
@@ -154,21 +154,12 @@
     },
     {
       "title": "AWS Masters Certification Program",
-      "description": "",
+      "description": "\n",
       "issuedBy": "Edureka",
       "url": "",
       "position": 16,
       "issuedDate": "2024-04-11",
       "updatedAt": "2024-04-11T18:57:59.320Z"
-    },
-    {
-      "title": "AWS Certified Solutions Architect-Associate (SAA)",
-      "description": "",
-      "issuedBy": "Linux Pathshala Limited",
-      "url": "https://drive.google.com/file/d/1UDyhccwWS_K46zmxJYq0D8OLY2fAq5XK/view?usp=sharing",
-      "position": 11,
-      "issuedDate": "2022-12-07",
-      "updatedAt": "2022-12-07T18:59:11.662Z"
     },
     {
       "title": "CI/CD For Beginners",
