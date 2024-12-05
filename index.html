@@ -26,6 +26,77 @@
         [x-cloak] {
             display: none !important;
         }
+
+        .owl-carousel {
+            position: relative;
+            overflow: hidden;
+            height: 10vh; /* Adjusts dynamically based on the viewport height */
+            min-height: 50px; /* Ensures minimum height for smaller screens */
+        }
+
+        .item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            opacity: 1;
+            transform: translateY(100%);
+        }
+
+        .sp-subtitle {
+            font-size: clamp(1em, 4vw, 1.5em); /* Scales font size between 1em and 1.5em based on screen width */
+            font-weight: bold;
+            color: #333;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 0%, 0);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 0%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .owl-carousel {
+                height: 8vh; /* Reduce height on smaller screens */
+            }
+
+            .sp-subtitle {
+                font-size: 1em; /* Reduce font size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .owl-carousel {
+                height: 6vh; /* Further reduce height on very small screens */
+            }
+
+            .sp-subtitle {
+                font-size: 0.9em; /* Further reduce font size */
+            }
+
+            .item {
+
+                top: -30px;
+            }
+        }
     </style>
 </head>
 <body class="material-template" x-data="data()">
@@ -93,15 +164,32 @@
                                 <div class="col-sm-8 col-md-8 col-lg-8">
                                     <div class="title-block">
                                         <h1 x-text="user.userFullName"></h1>
-                                        <marquee style="width: 265px;">
-                                        <div class="text-rotation" style="display: flex; justify-content: space-between; column-gap: 20rem;" id="userHeading">
-                                            <template x-for="heading in user.userHeading">
-                                                <div class="item" style="display: inline-block;">
+                                        <!--<marquee style="width: 265px;">
+                                            <div class="text-rotation" style="display: flex; justify-content: space-between; column-gap: 20rem;" id="userHeading">
+                                                <template x-for="heading in user.userHeading">
+                                                    <div class="item" style="display: inline-block;">
+                                                        <div class="sp-subtitle" x-text="heading"></div>
+                                                    </div>
+                                                </template>
+                                            </div>
+                                        </marquee>-->
+                                        <div x-data="carouselText()" class="owl-carousel text-rotation">
+                                            <!-- Dynamic Items -->
+                                            <template x-for="(heading, index) in userHeading" :key="index">
+                                                <div
+                                                        class="item"
+                                                        x-show="current === index"
+                                                        x-transition:enter="transition-transform transform ease-out duration-500"
+                                                        x-transition:enter-start="translate-y-full opacity-0"
+                                                        x-transition:enter-end="translate-y-0 opacity-100"
+                                                        x-transition:leave="transition-transform transform ease-in duration-500"
+                                                        x-transition:leave-start="translate-y-0 opacity-100"
+                                                        x-transition:leave-end="translate-y-full opacity-0">
                                                     <div class="sp-subtitle" x-text="heading"></div>
                                                 </div>
                                             </template>
                                         </div>
-                                    </marquee>
+
                                     </div>
                                     <div class="social-links">
                                         <template x-for="link in user.links">
@@ -176,7 +264,7 @@
                                             <span class="value">
                                                 <template x-for="membership in user.memberships">
                                                     <a :href="membership.link"
-                                                    target="_blank" :title="membership.title">
+                                                       target="_blank" :title="membership.title">
                                                 <span x-html="membership.label"></span>
                                                 </a>
                                                 </template>
@@ -440,133 +528,133 @@
                                             </a>
                                         </figure>
                                     </template>
-<!--                                    <figure class="item" data-groups='["all", "video"]'>-->
-<!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
-<!--                                           title="Praesent Dolor Ex" class="lightbox mfp-iframe">-->
-<!--                                            <img src="images/portfolio/2.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Video</small>-->
-<!--                                                <i class="fa fa-video-camera"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all", "video"]'>-->
+                                    <!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
+                                    <!--                                           title="Praesent Dolor Ex" class="lightbox mfp-iframe">-->
+                                    <!--                                            <img src="images/portfolio/2.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Video</small>-->
+                                    <!--                                                <i class="fa fa-video-camera"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
-<!--                                        <a href="images/portfolio/full/3.jpg" class="lightbox"-->
-<!--                                           title="Duis Eu Eros Viverra">-->
-<!--                                            <img src="images/portfolio/3.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Illustration</small>-->
-<!--                                                <i class="fa fa-image"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
+                                    <!--                                        <a href="images/portfolio/full/3.jpg" class="lightbox"-->
+                                    <!--                                           title="Duis Eu Eros Viverra">-->
+                                    <!--                                            <img src="images/portfolio/3.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Illustration</small>-->
+                                    <!--                                                <i class="fa fa-image"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all", "media"]'>-->
-<!--                                        <a class="ajax-page-load" href="portfolio-2.html">-->
-<!--                                            <img src="images/portfolio/4.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Media</small>-->
-<!--                                                <i class="fa fa-file-text-o"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all", "media"]'>-->
+                                    <!--                                        <a class="ajax-page-load" href="portfolio-2.html">-->
+                                    <!--                                            <img src="images/portfolio/4.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Media</small>-->
+                                    <!--                                                <i class="fa fa-file-text-o"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all", "illustration"]'>-->
-<!--                                        <a href="images/portfolio/full/5.jpg" class="lightbox"-->
-<!--                                           title="Aliquam Condimentum Magna Rhoncus">-->
-<!--                                            <img src="images/portfolio/5.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Illustration</small>-->
-<!--                                                <i class="fa fa-image"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all", "illustration"]'>-->
+                                    <!--                                        <a href="images/portfolio/full/5.jpg" class="lightbox"-->
+                                    <!--                                           title="Aliquam Condimentum Magna Rhoncus">-->
+                                    <!--                                            <img src="images/portfolio/5.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Illustration</small>-->
+                                    <!--                                                <i class="fa fa-image"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all", "media"]'>-->
-<!--                                        <a class="ajax-page-load" href="portfolio-3.html">-->
-<!--                                            <img src="images/portfolio/6.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Media</small>-->
-<!--                                                <i class="fa fa-file-text-o"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all", "media"]'>-->
+                                    <!--                                        <a class="ajax-page-load" href="portfolio-3.html">-->
+                                    <!--                                            <img src="images/portfolio/6.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Media</small>-->
+                                    <!--                                                <i class="fa fa-file-text-o"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all", "video"]'>-->
-<!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
-<!--                                           title="Nulla Facilisi" class="lightbox mfp-iframe">-->
-<!--                                            <img src="images/portfolio/7.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Video</small>-->
-<!--                                                <i class="fa fa-video-camera"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all", "video"]'>-->
+                                    <!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
+                                    <!--                                           title="Nulla Facilisi" class="lightbox mfp-iframe">-->
+                                    <!--                                            <img src="images/portfolio/7.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Video</small>-->
+                                    <!--                                                <i class="fa fa-video-camera"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all",  "media"]'>-->
-<!--                                        <a class="ajax-page-load" href="portfolio-4.html">-->
-<!--                                            <img src="images/portfolio/8.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Media</small>-->
-<!--                                                <i class="fa fa-file-text-o"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all",  "media"]'>-->
+                                    <!--                                        <a class="ajax-page-load" href="portfolio-4.html">-->
+                                    <!--                                            <img src="images/portfolio/8.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Media</small>-->
+                                    <!--                                                <i class="fa fa-file-text-o"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
-<!--                                        <a href="images/portfolio/full/9.jpg" class="lightbox"-->
-<!--                                           title="Mauris Neque Dolor">-->
-<!--                                            <img src="images/portfolio/9.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Illustration</small>-->
-<!--                                                <i class="fa fa-image"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
+                                    <!--                                        <a href="images/portfolio/full/9.jpg" class="lightbox"-->
+                                    <!--                                           title="Mauris Neque Dolor">-->
+                                    <!--                                            <img src="images/portfolio/9.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Illustration</small>-->
+                                    <!--                                                <i class="fa fa-image"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all", "video"]'>-->
-<!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
-<!--                                           title="Donec Lectus Arcu" class="lightbox mfp-iframe">-->
-<!--                                            <img src="images/portfolio/10.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Video</small>-->
-<!--                                                <i class="fa fa-video-camera"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all", "video"]'>-->
+                                    <!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
+                                    <!--                                           title="Donec Lectus Arcu" class="lightbox mfp-iframe">-->
+                                    <!--                                            <img src="images/portfolio/10.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Video</small>-->
+                                    <!--                                                <i class="fa fa-video-camera"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
-<!--                                        <a href="images/portfolio/full/11.jpg" class="lightbox"-->
-<!--                                           title="Duis Eu Eros Viverra">-->
-<!--                                            <img src="images/portfolio/11.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Illustration</small>-->
-<!--                                                <i class="fa fa-image"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
+                                    <!--                                        <a href="images/portfolio/full/11.jpg" class="lightbox"-->
+                                    <!--                                           title="Duis Eu Eros Viverra">-->
+                                    <!--                                            <img src="images/portfolio/11.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Illustration</small>-->
+                                    <!--                                                <i class="fa fa-image"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
 
-<!--                                    <figure class="item" data-groups='["all","media"]'>-->
-<!--                                        <a class="ajax-page-load" href="portfolio-5.html">-->
-<!--                                            <img src="images/portfolio/12.jpg" alt="">-->
-<!--                                            <div>-->
-<!--                                                <h5 class="name">Project Name</h5>-->
-<!--                                                <small>Media</small>-->
-<!--                                                <i class="fa fa-file-text-o"></i>-->
-<!--                                            </div>-->
-<!--                                        </a>-->
-<!--                                    </figure>-->
+                                    <!--                                    <figure class="item" data-groups='["all","media"]'>-->
+                                    <!--                                        <a class="ajax-page-load" href="portfolio-5.html">-->
+                                    <!--                                            <img src="images/portfolio/12.jpg" alt="">-->
+                                    <!--                                            <div>-->
+                                    <!--                                                <h5 class="name">Project Name</h5>-->
+                                    <!--                                                <small>Media</small>-->
+                                    <!--                                                <i class="fa fa-file-text-o"></i>-->
+                                    <!--                                            </div>-->
+                                    <!--                                        </a>-->
+                                    <!--                                    </figure>-->
                                 </div>
                             </div>
                         </div>
@@ -690,13 +778,41 @@
 <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
 <script type="text/javascript"
-       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 <script type="text/javascript" src="js/jquery.googlemap.js"></script>
 <script src="preview/lmpixels-demo-panel.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
-       integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
-       data-cf-beacon='{"rayId":"6ff840e74f63ab56","version":"2021.12.0","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","si":100}'
-       crossorigin="anonymous"></script>
+        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+        data-cf-beacon='{"rayId":"6ff840e74f63ab56","version":"2021.12.0","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","si":100}'
+        crossorigin="anonymous"></script>
+<script>
+    function carouselText() {
+        return {
+            // Data
+            userHeading: ["Lead Developer", "Technical Lead", "Senior Software Engineer", "Web App Developer"],
+            current: 0, // Track the current slide
+            interval: null,
+            startAutoPlay() {
+                this.interval = setInterval(() => {
+                    this.next();
+                }, 3000); // Change every 3 seconds
+            },
+            stopAutoPlay() {
+                clearInterval(this.interval);
+            },
+            // Methods
+            next() {
+                this.current = (this.current + 1) % this.userHeading.length;
+            },
+            prev() {
+                this.current = (this.current - 1 + this.userHeading.length) % this.userHeading.length;
+            },
+            init() {
+                this.startAutoPlay();
+            }
+        };
+    }
+</script>
 </body>
 </html>
