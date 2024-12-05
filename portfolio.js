@@ -71,6 +71,19 @@ const data = function () {
                             animateOut: 'zoomOut',
                             animateIn: 'zoomIn'
                         });
+                        $(".testimonials.owl-carousel").owlCarousel({
+                            nav: true,
+                            items: 3,
+                            loop: false,
+                            navText: false,
+                            margin: 25,
+                            responsive: {0: {items: 1}, 480: {items: 1}, 768: {items: 2}, 1200: {items: 2}},
+                            onInitialized: function (event) {
+                                // Remove index 0 dynamically
+                                $(".testimonials.owl-carousel .owl-item").eq(0).remove();
+                                $(".testimonials.owl-carousel").trigger('refresh.owl.carousel');
+                            }
+                        });
                     });
                 }).then(() => {
                     this.setTemplate();

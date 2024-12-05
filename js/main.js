@@ -101,14 +101,6 @@
         $('.sidebar-toggle').on("click", function () {
             $('#blog-sidebar').toggleClass('open');
         });
-        $(".testimonials.owl-carousel").owlCarousel({
-            nav: true,
-            items: 3,
-            loop: false,
-            navText: false,
-            margin: 25,
-            responsive: {0: {items: 1,}, 480: {items: 1,}, 768: {items: 2,}, 1200: {items: 2,}}
-        });
         $('body').magnificPopup({
             delegate: 'a.lightbox',
             type: 'image',
