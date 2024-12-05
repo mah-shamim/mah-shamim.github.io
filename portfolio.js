@@ -58,6 +58,20 @@ const data = function () {
                     data.projectGroups = this.resolveProjectGroups(data.projects);
                     data.projects = this.resolveProjects(data.projects);
                     this.user = data;
+                    this.$nextTick(() => {
+                        $('.text-rotation').owlCarousel({
+                            loop: true,
+                            dots: false,
+                            nav: false,
+                            margin: 0,
+                            items: 1,
+                            autoplay: true,
+                            autoplayHoverPause: false,
+                            autoplayTimeout: 3800,
+                            animateOut: 'zoomOut',
+                            animateIn: 'zoomIn'
+                        });
+                    });
                 }).then(() => {
                     this.setTemplate();
                 });
