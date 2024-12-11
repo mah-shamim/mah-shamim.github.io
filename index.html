@@ -292,12 +292,14 @@
                                             <div class="timeline">
                                                 <template x-for="certificate in certifications">
                                                     <div class="timeline-item">
-                                                        <h4 class="item-title" x-text="certificate.title"></h4>
+                                                        <a :href="certificate.url" target="_blank" :title="certificate.name">
+                                                            <h4 class="item-title" x-text="certificate.title"></h4>
+                                                        </a>
                                                         <span class="item-period"
                                                               x-text="new Date(certificate.issuedDate).toLocaleDateString()"></span>
                                                         <span class="item-small" x-text="issuer"></span>
                                                         <p class="item-description mt-3"
-                                                           x-text="certificate.description"></p>
+                                                           x-html="certificate.description"></p>
                                                     </div>
                                                 </template>
                                             </div>
