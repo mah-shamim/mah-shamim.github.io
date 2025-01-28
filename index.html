@@ -435,7 +435,7 @@
                                               'lightbox': project.documentType == 'image'}"
                                                :href="project.url"
                                                :title="project.name">
-                                                <img :src="project.thumbnail" :alt="project.name">
+                                                <img :src="project.thumbnail" :alt="project.name" width="600" height="400">
                                                 <div>
                                                     <h5 class="name" x-html="project.name"></h5>
                                                     <small x-text="project.groups.toString()"></small>
