@@ -362,14 +362,14 @@
       "description": "SaaS Base User Module, Invoice Module, Customer Module, Supplier Module, Chat Module (thread based), Payment Module (Multi-currency), Order Module (Multi-currency)",
       "keywords": [
         "PHP",
-        "Laravel",
-        "jQuery",
-        "Bootstrap (Framework)",
-        "CSS3",
-        "MySQL",
-        "JQuery",
-        "Laravel",
-        "Docker"
+        " Laravel",
+        " jQuery",
+        " Bootstrap (Framework)",
+        " CSS3",
+        " MySQL",
+        " JQuery",
+        " Laravel",
+        " Docker"
       ],
       "url": "http://invoice.stvble.com",
       "thumbnail": "./images/portfolio/stvble-invoice.png",
@@ -386,14 +386,14 @@
       "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cronjobs Integration, MySQL Stored Procedures",
       "keywords": [
         "Laravel",
-        "REST APIs",
-        "API documentation generation",
-        "Stored Procedures",
-        "MySQL Event",
-        "CornJob"
+        " REST APIs",
+        " API documentation generation",
+        " Stored Procedures",
+        " MySQL Event",
+        " CornJob"
       ],
       "url": "http://internal.stvble.com",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/api.png",
       "position": 1,
       "documentType": "image",
       "groups": [
@@ -406,15 +406,15 @@
       "name": "INREMIT",
       "description": "Payment, Point Transfer, Remittance, Mobile Recharge, Mobile Data Plan, E-Wallet, Credit Card Point Transfer",
       "keywords": [
-        "Apache",
-        "PHP",
-        "Laravel",
-        "CURL",
-        "Rest API",
-        "Laravel-Excel",
-        "XML",
-        "DOM Document",
-        "DataTable"
+        " Apache",
+        " PHP",
+        " Laravel",
+        " CURL",
+        " Rest API",
+        " Laravel-Excel",
+        " XML",
+        " DOM Document",
+        " DataTable"
       ],
       "url": "https://inremit.co/",
       "thumbnail": "./images/portfolio/inremit.png",
@@ -431,18 +431,18 @@
       "description": "Payment, Point Transfer, Remittance, Mobile Recharge, Mobile Data Plan, E-Wallet, Early Wage Access, B2B Transaction, Credit Card Point Transfer, User KYC, Consolidated Sanction, Manual Refund, Google map API, IP address region black/white list and several reports",
       "keywords": [
         "Apache",
-        "PHP",
-        "Laravel",
-        "CURL",
-        "MySQL",
-        "JWT",
-        "Rest API",
-        "Laravel-Excel",
-        "XML",
-        "DOM Document",
-        "Push Notification",
-        "RBAC",
-        "DataTable"
+        " PHP",
+        " Laravel",
+        " CURL",
+        " MySQL",
+        " JWT",
+        " Rest API",
+        " Laravel-Excel",
+        " XML",
+        " DOM Document",
+        " Push Notification",
+        " RBAC",
+        " DataTable"
       ],
       "url": "https://bdmycash.com",
       "thumbnail": "./images/portfolio/mycash.png",
@@ -459,19 +459,18 @@
       "description": "- Vehicle Module: The system consists of vehicle financing, vehicle maintenance, vehicle telematics (tracking and diagnostics), driver, speed, fuel, health, and safety management.\n- HRM Module: User Management, Employee Lifecycle, Rewards & Recognition, Grievances Handling, Manpower Planning, Payroll, Attendance, Shift, General Setup\n- ORDER Module, Routes Module, Report Module",
       "keywords": [
         "Apache",
-        "PHP",
-        "Laravel",
-        "CURL",
-        "MySQL",
-        "JWT",
-        "Rest API",
-        "Laravel-Excel",
-        "Push Notification",
-        "RBAC",
-        "JQuery"
+        " PHP",
+        " Laravel",
+        " CURL",
+        " MySQL",
+        " JWT",
+        " Rest API",
+        " Laravel-Excel",
+        " Push Notification",
+        " JQuery"
       ],
       "url": "https://erp.gfltd.net/login",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/erp.png",
       "position": 4,
       "documentType": "video",
       "groups": [
@@ -485,15 +484,15 @@
       "description": "Cover, Report, Window, Underwriter, Coordinator, Lead Agent, Sub Agent, Trigger/Payment, Payout, Campaign, Setting, County, Partner, Partners Account.",
       "keywords": [
         "Apache",
-        "PHP",
-        "Codeigniter",
-        "MySQL",
-        "PHP-Excel",
-        "PHP-PDF",
-        "JQuery"
+        " PHP",
+        " Codeigniter",
+        " MySQL",
+        " PHP-Excel",
+        " PHP-PDF",
+        " JQuery"
       ],
       "url": "https://github.com/mah-shamim/takaful-live-stock.git",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/coding.png",
       "position": 5,
       "documentType": "video",
       "groups": [
@@ -507,12 +506,12 @@
       "description": "",
       "keywords": [
         "PHP",
-        "LARAVEL",
-        "MYSQL",
-        "VUE.JS"
+        " LARAVEL",
+        " MYSQL",
+        " VUE.JS"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/online-exam.jpg",
       "position": 6,
       "documentType": "video",
       "groups": [
@@ -526,12 +525,12 @@
       "description": "",
       "keywords": [
         "PHP",
-        "LARAVEL",
-        "MYSQL",
-        "VUE.JS"
+        " LARAVEL",
+        " MYSQL",
+        " VUE.JS"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/support-management-system.jpg",
       "position": 7,
       "documentType": "video",
       "groups": [
@@ -545,15 +544,15 @@
       "description": "Accounting & Finance Module (Inventory, Purchase, Sales), CRM Module (Salesman Visit Tracking, Institute Management (School, College, Coaching Center, Library, Working Schedule, Daily Working Report, TA/DA, Donation, Stakeholder), HRM Module (User Management, Employee Lifecycle, Rewards & Recognition, Grievances Handling, Manpower Planning, Payroll, Attendance, Shift, General Setup).",
       "keywords": [
         "Apache",
-        "PHP",
-        "CakePHP",
-        "MySQL",
-        "PHP-Excel",
-        "PHP-PDF",
-        "JQuery"
+        " PHP",
+        " CakePHP",
+        " MySQL",
+        " PHP-Excel",
+        " PHP-PDF",
+        " JQuery"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/erp.png",
       "position": 8,
       "documentType": "video",
       "groups": [
@@ -567,15 +566,15 @@
       "description": "Order/Delivery, Stock, Report, Purchase, TR Product, User Manage, Expenses, Customer Manage, Mortgaged, Bank Register",
       "keywords": [
         "Apache",
-        "PHP",
-        "CakePHP",
-        "MySQL",
-        "PHP-Excel",
-        "PHP-PDF",
-        "JQuery"
+        " PHP",
+        " CakePHP",
+        " MySQL",
+        " PHP-Excel",
+        " PHP-PDF",
+        " JQuery"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/coding.png",
       "position": 9,
       "documentType": "video",
       "groups": [
@@ -589,12 +588,12 @@
       "description": "Accounting & Finance, Admin (Procurement, Stationeries & Office Supply, Transportation, Cafeteria, Office Management, Event Management, Consultation & Messages) Module, HR, Payroll, Flight Operations Module with Log chart, Aircrafts Maintenance Module, Flying Academy (Register Office, Library, Academy), Control Panel Module.",
       "keywords": [
         "Apache",
-        "PHP",
-        "ORACAL",
-        "JavaScript."
+        " PHP",
+        " ORACAL",
+        " JavaScript."
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/erp.png",
       "position": 10,
       "documentType": "video",
       "groups": [
@@ -608,12 +607,12 @@
       "description": "Add, Edit, and Delete Member, classify library item according to their category, subject and class,  Borrow library item, return library item, Search, add edit and delete books, produce report for library item, sort library item, email to new member when an account is created or library item is issued and due to return, complete usage of keyboard, member and library item report generation, member login system, library item search for user without login, member and library item status, published library events, and many more...",
       "keywords": [
         "Apache",
-        "PHP",
-        "MySQL",
-        "JQuery"
+        " PHP",
+        " MySQL",
+        " JQuery"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/default.png",
+      "thumbnail": "./images/portfolio/online-exam.jpg",
       "position": 11,
       "documentType": "video",
       "groups": [

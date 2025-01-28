@@ -27,8 +27,16 @@
             display: none !important;
         }
 
-        #portfolio_grid {
+        #portfolio_grid, .portfolio-grid {
             height: 100% !important;
+        }
+        .portfolio-grid figure a div p {
+            position: relative;
+            display: block;
+            font-size: 10px;
+            margin: 10px 0;
+            color: #fff;
+            z-index: 2
         }
     </style>
 </head>
@@ -422,7 +430,7 @@
                                     </li>
                                     <template x-for="(group, slug) in user.projectGroups">
                                         <li>
-                                            <a class="filter btn btn-sm btn-link" :data-group="slug" x-text="group"></a>
+                                            <a class="filter btn btn-sm btn-link" :data-group="slug" x-html="group"></a>
                                         </li>
                                     </template>
                                 </ul>
@@ -438,6 +446,7 @@
                                                 <img :src="project.thumbnail" :alt="project.name" width="600" height="400">
                                                 <div>
                                                     <h5 class="name" x-html="project.name"></h5>
+                                                    <p x-html="project.keywords"></p>
                                                     <small x-text="project.groups.toString()"></small>
                                                     <i class="fa fa-file-text-o"></i>
                                                 </div>
