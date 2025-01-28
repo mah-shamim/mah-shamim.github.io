@@ -374,7 +374,7 @@
       "url": "http://invoice.stvble.com",
       "thumbnail": "./images/portfolio/stvble-invoice.png",
       "position": 0,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "Fintech"
       ],
@@ -393,9 +393,9 @@
         "CornJob"
       ],
       "url": "http://internal.stvble.com",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 1,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "Fintech"
       ],
@@ -471,7 +471,7 @@
         "JQuery"
       ],
       "url": "https://erp.gfltd.net/login",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 4,
       "documentType": "video",
       "groups": [
@@ -493,7 +493,7 @@
         "JQuery"
       ],
       "url": "https://github.com/mah-shamim/takaful-live-stock.git",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 5,
       "documentType": "video",
       "groups": [
@@ -512,7 +512,7 @@
         "VUE.JS"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 6,
       "documentType": "video",
       "groups": [
@@ -531,7 +531,7 @@
         "VUE.JS"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 7,
       "documentType": "video",
       "groups": [
@@ -553,7 +553,7 @@
         "JQuery"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 8,
       "documentType": "video",
       "groups": [
@@ -575,7 +575,7 @@
         "JQuery"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 9,
       "documentType": "video",
       "groups": [
@@ -594,7 +594,7 @@
         "JavaScript."
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 10,
       "documentType": "video",
       "groups": [
@@ -613,7 +613,7 @@
         "JQuery"
       ],
       "url": "",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/default.png",
       "position": 11,
       "documentType": "video",
       "groups": [
