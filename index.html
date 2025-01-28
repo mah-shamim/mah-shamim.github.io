@@ -422,7 +422,7 @@
                                         </li>
                                     </template>
                                 </ul>
-                                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+                                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3" style="height: 100% !important;">
                                     <template x-for="project in user.projects">
                                         <figure class="item" :data-groups='JSON.stringify(project.slugs)'>
                                             <a :class="{
