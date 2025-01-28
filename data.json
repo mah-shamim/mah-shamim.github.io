@@ -372,7 +372,7 @@
         "Docker"
       ],
       "url": "http://invoice.stvble.com",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/stvble-invoice.png",
       "position": 0,
       "documentType": "video",
       "groups": [
@@ -382,7 +382,7 @@
       "updatedAt": "2024-05-09T18:02:57.079Z"
     },
     {
-      "name": " STVBLE Internal Dashboard (Backend)",
+      "name": " STVBLE FX (Backend)",
       "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cronjobs Integration, MySQL Stored Procedures",
       "keywords": [
         "Laravel",
@@ -417,7 +417,7 @@
         "DataTable"
       ],
       "url": "https://inremit.co/",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/inremit.png",
       "position": 2,
       "documentType": "video",
       "groups": [
@@ -445,7 +445,7 @@
         "DataTable"
       ],
       "url": "https://bdmycash.com",
-      "thumbnail": "./images/portfolio/1.jpg",
+      "thumbnail": "./images/portfolio/mycash.png",
       "position": 3,
       "documentType": "video",
       "groups": [
