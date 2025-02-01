@@ -2,6 +2,7 @@ const data = function () {
     return {
         heading: "", // Initialize heading if required
         loaded: false,
+        selectedFilter: "all", // Track the selected filter
         user: {
             "template": null,
             "userFirstName": "",
@@ -51,6 +52,18 @@ const data = function () {
             }
         },
         googleMap: null,
+        // Method to check if a project should be visible based on the selected filter
+        isProjectVisible(project) {
+            if (this.selectedFilter === "all") {
+                return true;
+            }
+            return project.slugs.includes(this.selectedFilter);
+        },
+
+        // Method to handle filter selection
+        selectFilter(filter) {
+            this.selectedFilter = filter;
+        },
 
         init() {
             this.loadGoogleMaps(() => {

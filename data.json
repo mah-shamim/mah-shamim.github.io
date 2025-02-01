@@ -474,7 +474,7 @@
       "position": 4,
       "documentType": "video",
       "groups": [
-        "Management"
+        "ERP"
       ],
       "createdAt": "2024-04-11T18:12:16.989Z",
       "updatedAt": "2024-04-11T18:12:16.989Z"
@@ -491,7 +491,7 @@
         " PHP-PDF",
         " JQuery"
       ],
-      "url": "https://github.com/mah-shamim/takaful-live-stock.git",
+      "url": "",
       "thumbnail": "./images/portfolio/coding.png",
       "position": 5,
       "documentType": "video",

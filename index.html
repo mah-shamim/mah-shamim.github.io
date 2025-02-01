@@ -428,36 +428,43 @@
                             <div class="portfolio-content">
                                 <ul id="portfolio_filters" class="portfolio-filters">
                                     <li class="active">
-                                        <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
+                                        <a class="filter btn btn-sm btn-link"
+                                           :class="{ active: selectedFilter === 'all' }"
+                                           @click="selectFilter('all')"
+                                           data-group="all">All</a>
                                     </li>
                                     <template x-for="(group, slug) in user.projectGroups" :key="slug">
                                         <li>
-                                            <a class="filter btn btn-sm btn-link" :data-group="slug" x-text="group"></a>
+                                            <a class="filter btn btn-sm btn-link"
+                                               :class="{ active: selectedFilter === slug }"
+                                               @click="selectFilter(slug)"
+                                               :data-group="slug" x-text="group"></a>
                                         </li>
                                     </template>
                                 </ul>
-                                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3" style="height: 100% !important;">
-                                    <template x-for="project in user.projects">
-                                        <figure class="item" :data-groups='JSON.stringify(project.slugs)'>
-                                            <a
-                                                :class="{
-                                                    'ajax-page-load': project.documentType == 'page',
-                                                    'lightbox mfp-iframe': project.documentType == 'video',
-                                                    'lightbox': project.documentType == 'image'
-                                                }"
-                                                :href="project.url"
-                                                :title="project.name"
-                                            >
-                                                <img :src="project.thumbnail" :alt="project.name" width="600" height="400">
-                                                <div>
-                                                    <h5 class="name" x-text="project.name"></h5>
-                                                    <p x-text="project.keywords"></p>
-                                                    <small x-text="project.groups.toString()"></small>
-                                                    <i class="fa fa-file-text-o"></i>
-                                                </div>
-                                            </a>
-                                        </figure>
-                                    </template>
+                                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3"> <!--style="height: 100% !important;"-->
+                                    <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+                                        <template x-for="project in user.projects" :key="project.name">
+                                            <figure class="item"
+                                                    :data-groups='JSON.stringify(project.slugs)'
+                                                    x-show="isProjectVisible(project)">
+                                                <a :class="{
+                    'ajax-page-load': project.documentType == 'page',
+                    'lightbox mfp-iframe': project.documentType == 'video',
+                    'lightbox': project.documentType == 'image'
+                }"
+                                                   :href="project.url"
+                                                   :title="project.name">
+                                                    <img :src="project.thumbnail" :alt="project.name" width="600" height="400">
+                                                    <div>
+                                                        <h5 class="name" x-text="project.name"></h5>
+                                                        <p x-text="project.keywords"></p>
+                                                        <small x-text="project.groups.toString()"></small>
+                                                        <i class="fa fa-file-text-o"></i>
+                                                    </div>
+                                                </a>
+                                            </figure>
+                                        </template>
                                     <!--                                    <figure class="item" data-groups='["all", "video"]'>-->
                                     <!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
                                     <!--                                           title="Praesent Dolor Ex" class="lightbox mfp-iframe">-->
