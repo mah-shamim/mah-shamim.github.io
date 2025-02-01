@@ -1,5 +1,6 @@
 const data = function () {
     return {
+        heading: "", // Initialize heading if required
         loaded: false,
         user: {
             "template": null,
@@ -29,7 +30,7 @@ const data = function () {
             "education": [],
             "work": [],
             "projects": [],
-            "projectGroups": [],
+            "projectGroups": {},
             "skills": [],
             "links": [],
             "reviews": [],
@@ -49,8 +50,12 @@ const data = function () {
                 "banners": {}
             }
         },
+        googleMap: null,
 
         init() {
+            this.loadGoogleMaps(() => {
+                //this.initializeMap();
+            });
             return fetch("./data.json")
                 .then((response) => response.json())
                 .then((data) => {
@@ -59,35 +64,70 @@ const data = function () {
                     data.projects = this.resolveProjects(data.projects);
                     this.user = data;
                     this.$nextTick(() => {
-                        $('.text-rotation').owlCarousel({
-                            loop: true,
-                            dots: false,
-                            nav: false,
-                            margin: 0,
-                            items: 1,
-                            autoplay: true,
-                            autoplayHoverPause: false,
-                            autoplayTimeout: 3800,
-                            animateOut: 'zoomOut',
-                            animateIn: 'zoomIn'
-                        });
-                        $(".testimonials.owl-carousel").owlCarousel({
-                            nav: true,
-                            items: 3,
-                            loop: false,
-                            navText: false,
-                            margin: 25,
-                            responsive: {0: {items: 1}, 480: {items: 1}, 768: {items: 2}, 1200: {items: 2}},
-                            onInitialized: function (event) {
-                                // Remove index 0 dynamically
-                                $(".testimonials.owl-carousel .owl-item").eq(0).remove();
-                                $(".testimonials.owl-carousel").trigger('refresh.owl.carousel');
-                            }
-                        });
+                        this.initCarousels();
                     });
                 }).then(() => {
                     this.setTemplate();
                 });
+        },
+
+        loadGoogleMaps(callback) {
+            if (typeof google === "undefined") {
+                const script = document.createElement("script");
+                script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAWnZM7AYwXg_PZuM9bNDpf5maU5YFh-Bk`;
+                script.async = true;
+                script.defer = true;
+                script.onload = callback;
+                script.onerror = () => {
+                    this.mapError = "Failed to load Google Maps. Please check your internet connection.";
+                    console.error(this.mapError);
+                };
+                document.head.appendChild(script);
+            } else {
+                callback();
+            }
+        },
+
+        initializeMap() {
+            if (this.mapError) {
+                console.error(this.mapError);
+                return;
+            }
+
+            const mapContainer = document.getElementById("map");
+            if (mapContainer) {
+                try {
+                    this.googleMap = new google.maps.Map(mapContainer, {
+                        center: { lat: 37.7749, lng: -122.4194 }, // Example location (San Francisco)
+                        zoom: 10,
+                    });
+                } catch (error) {
+                    this.mapError = "Failed to initialize Google Maps.";
+                    console.error(this.mapError, error);
+                }
+            }
+        },
+        initCarousels() {
+            $('.text-rotation').owlCarousel({
+                loop: true,
+                dots: false,
+                nav: false,
+                margin: 0,
+                items: 1,
+                autoplay: true,
+                autoplayHoverPause: false,
+                autoplayTimeout: 3800,
+                animateOut: 'zoomOut',
+                animateIn: 'zoomIn'
+            });
+            $(".testimonials.owl-carousel").owlCarousel({
+                nav: true,
+                items: 3,
+                loop: false,
+                navText: false,
+                margin: 25,
+                responsive: { 0: { items: 1 }, 480: { items: 1 }, 768: { items: 2 }, 1200: { items: 2 } },
+            });
         },
 
         resolveCertificates: function (certifications) {
@@ -107,7 +147,7 @@ const data = function () {
             return entries;
         },
 
-        resolveProjectGroups: function (projects) {
+        /*resolveProjectGroups: function (projects) {
             let entries = [];
             projects.forEach((project) => {
                 for (group of project.groups) {
@@ -115,10 +155,21 @@ const data = function () {
                     entries[slug] = group;
                 }
             });
+            console.log(entries)
+            return entries;
+        },*/
+        resolveProjectGroups(projects) {
+            let entries = {}; // Fixed to use an object
+            projects.forEach((project) => {
+                for (const group of project.groups) { // Fixed `group` declaration
+                    let slug = this.slugify(group);
+                    entries[slug] = group;
+                }
+            });
             return entries;
         },
 
-        resolveProjects: function (projects) {
+        /*resolveProjects: function (projects) {
 
             let entries = [];
 
@@ -134,6 +185,18 @@ const data = function () {
             });
 
             return entries;
+        },*/
+
+        resolveProjects(projects) {
+            let entries = [];
+            projects.forEach((project) => {
+                project.slugs = ["all"];
+                for (const group of project.groups) { // Fixed `group` declaration
+                    project.slugs.push(this.slugify(group));
+                }
+                entries.push(project);
+            });
+            return entries;
         },
 
         slugify: function (words) {
@@ -141,7 +204,7 @@ const data = function () {
                 .replace(/[^\w-]+/g, '');
         },
 
-        positionSort: function (a, b) {
+        /*positionSort: function (a, b) {
             if (a.position < b.position) {
                 return -1;
             }
@@ -149,6 +212,9 @@ const data = function () {
                 return 1;
             }
             return 0;
+        },*/
+        positionSort(a, b) {
+            return a.position - b.position;
         },
         setTemplate: function() {
             document.getElementById('template-style')?.setAttribute('href', this.user.template ?? './css/main-blue.css');
