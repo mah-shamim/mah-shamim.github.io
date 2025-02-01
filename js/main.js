@@ -24,7 +24,7 @@
         }
     }
 
-    function contact_validation() {
+    /*function contact_validation() {
         $('#contact-form').validator();
         $('#contact-form').on('submit', function (e) {
             if (!e.isDefaultPrevented()) {
@@ -45,7 +45,7 @@
                 return false;
             }
         });
-    }
+    }*/
 
     $(function () {
         // contact_validation();

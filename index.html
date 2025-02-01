@@ -443,155 +443,28 @@
                                     </template>
                                 </ul>
                                 <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3"> <!--style="height: 100% !important;"-->
-                                    <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
-                                        <template x-for="project in user.projects" :key="project.name">
-                                            <figure class="item"
-                                                    :data-groups='JSON.stringify(project.slugs)'
-                                                    x-show="isProjectVisible(project)">
-                                                <a :class="{
-                    'ajax-page-load': project.documentType == 'page',
-                    'lightbox mfp-iframe': project.documentType == 'video',
-                    'lightbox': project.documentType == 'image'
-                }"
-                                                   :href="project.url"
-                                                   :title="project.name">
-                                                    <img :src="project.thumbnail" :alt="project.name" width="600" height="400">
-                                                    <div>
-                                                        <h5 class="name" x-text="project.name"></h5>
-                                                        <p x-text="project.keywords"></p>
-                                                        <small x-text="project.groups.toString()"></small>
-                                                        <i class="fa fa-file-text-o"></i>
-                                                    </div>
-                                                </a>
-                                            </figure>
-                                        </template>
-                                    <!--                                    <figure class="item" data-groups='["all", "video"]'>-->
-                                    <!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
-                                    <!--                                           title="Praesent Dolor Ex" class="lightbox mfp-iframe">-->
-                                    <!--                                            <img src="images/portfolio/2.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Video</small>-->
-                                    <!--                                                <i class="fa fa-video-camera"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
-                                    <!--                                        <a href="images/portfolio/full/3.jpg" class="lightbox"-->
-                                    <!--                                           title="Duis Eu Eros Viverra">-->
-                                    <!--                                            <img src="images/portfolio/3.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Illustration</small>-->
-                                    <!--                                                <i class="fa fa-image"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all", "media"]'>-->
-                                    <!--                                        <a class="ajax-page-load" href="portfolio-2.html">-->
-                                    <!--                                            <img src="images/portfolio/4.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Media</small>-->
-                                    <!--                                                <i class="fa fa-file-text-o"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all", "illustration"]'>-->
-                                    <!--                                        <a href="images/portfolio/full/5.jpg" class="lightbox"-->
-                                    <!--                                           title="Aliquam Condimentum Magna Rhoncus">-->
-                                    <!--                                            <img src="images/portfolio/5.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Illustration</small>-->
-                                    <!--                                                <i class="fa fa-image"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all", "media"]'>-->
-                                    <!--                                        <a class="ajax-page-load" href="portfolio-3.html">-->
-                                    <!--                                            <img src="images/portfolio/6.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Media</small>-->
-                                    <!--                                                <i class="fa fa-file-text-o"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all", "video"]'>-->
-                                    <!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
-                                    <!--                                           title="Nulla Facilisi" class="lightbox mfp-iframe">-->
-                                    <!--                                            <img src="images/portfolio/7.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Video</small>-->
-                                    <!--                                                <i class="fa fa-video-camera"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all",  "media"]'>-->
-                                    <!--                                        <a class="ajax-page-load" href="portfolio-4.html">-->
-                                    <!--                                            <img src="images/portfolio/8.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Media</small>-->
-                                    <!--                                                <i class="fa fa-file-text-o"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
-                                    <!--                                        <a href="images/portfolio/full/9.jpg" class="lightbox"-->
-                                    <!--                                           title="Mauris Neque Dolor">-->
-                                    <!--                                            <img src="images/portfolio/9.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Illustration</small>-->
-                                    <!--                                                <i class="fa fa-image"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all", "video"]'>-->
-                                    <!--                                        <a href="https://player.vimeo.com/video/97102654?autoplay=1"-->
-                                    <!--                                           title="Donec Lectus Arcu" class="lightbox mfp-iframe">-->
-                                    <!--                                            <img src="images/portfolio/10.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Video</small>-->
-                                    <!--                                                <i class="fa fa-video-camera"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all","illustration"]'>-->
-                                    <!--                                        <a href="images/portfolio/full/11.jpg" class="lightbox"-->
-                                    <!--                                           title="Duis Eu Eros Viverra">-->
-                                    <!--                                            <img src="images/portfolio/11.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Illustration</small>-->
-                                    <!--                                                <i class="fa fa-image"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
-
-                                    <!--                                    <figure class="item" data-groups='["all","media"]'>-->
-                                    <!--                                        <a class="ajax-page-load" href="portfolio-5.html">-->
-                                    <!--                                            <img src="images/portfolio/12.jpg" alt="">-->
-                                    <!--                                            <div>-->
-                                    <!--                                                <h5 class="name">Project Name</h5>-->
-                                    <!--                                                <small>Media</small>-->
-                                    <!--                                                <i class="fa fa-file-text-o"></i>-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </a>-->
-                                    <!--                                    </figure>-->
+                                    <template x-for="project in user.projects" :key="project.name">
+                                        <figure class="item"
+                                                :data-groups='JSON.stringify(project.slugs)'
+                                                x-show="isProjectVisible(project)">
+                                            <a :class="{
+                                                    'ajax-page-load': project.documentType == 'page',
+                                                    'lightbox mfp-iframe': project.documentType == 'video',
+                                                    'lightbox': project.documentType == 'image'
+                                                }"
+                                               :href="project.url"
+                                               :title="project.name"
+                                            >
+                                                <img :src="project.thumbnail" :alt="project.name" width="600" height="400">
+                                                <div>
+                                                    <h5 class="name" x-text="project.name"></h5>
+                                                    <p x-text="project.keywords"></p>
+                                                    <small x-text="project.groups.toString()"></small>
+                                                    <i class="fa fa-file-text-o"></i>
+                                                </div>
+                                            </a>
+                                        </figure>
+                                    </template>
                                 </div>
                             </div>
                         </div>
@@ -653,17 +526,14 @@
                                     <div class="block-title">
                                         <h3>Contact <span>Form</span></h3>
                                     </div>
-                                    <form id="contact-form" method="post"
-                                          action="https://lmpixels.com/demo/procard/contact_form/contact_form.php">
-
+                                    <form id="contact-form" x-data="contactForm()" @submit.prevent="sendEmail">
                                         <div class="messages"></div>
-
                                         <div class="controls">
                                             <div class="form-group form-group-with-icon">
                                                 <i class="fa fa-user"></i>
                                                 <label>Full Name</label>
-                                                <input id="form_name" type="text" name="name" class="form-control"
-                                                       placeholder required="required" data-error="Name is required.">
+                                                <input id="form_name" type="text" name="name" class="form-control" placeholder required
+                                                       x-model="formData.name">
                                                 <div class="form-control-border"></div>
                                                 <div class="help-block with-errors"></div>
                                             </div>
@@ -671,9 +541,8 @@
                                             <div class="form-group form-group-with-icon">
                                                 <i class="fa fa-envelope"></i>
                                                 <label>Email Address</label>
-                                                <input id="form_email" type="email" name="email" class="form-control"
-                                                       placeholder required="required"
-                                                       data-error="Valid email is required.">
+                                                <input id="form_email" type="email" name="email" class="form-control" placeholder required
+                                                       x-model="formData.email">
                                                 <div class="form-control-border"></div>
                                                 <div class="help-block with-errors"></div>
                                             </div>
@@ -681,15 +550,11 @@
                                             <div class="form-group form-group-with-icon">
                                                 <i class="fa fa-comment"></i>
                                                 <label>Message for Me</label>
-                                                <textarea id="form_message" name="message" class="form-control"
-                                                          placeholder rows="4" required="required"
-                                                          data-error="Please, leave me a message."></textarea>
+                                                <textarea id="form_message" name="message" class="form-control" placeholder rows="4" required
+                                                          x-model="formData.message"></textarea>
                                                 <div class="form-control-border"></div>
                                                 <div class="help-block with-errors"></div>
                                             </div>
-
-                                            <div class="g-recaptcha"
-                                                 data-sitekey="6LfC4sUqAAAAAD-JFJm61_XwirZ7oIBaNBC5Q-9y"></div>
 
                                             <input type="submit" class="button btn-send" value="Send message">
                                         </div>
@@ -707,12 +572,46 @@
     <div class="copyrights"
          x-text="'© ' + (new Date()).getFullYear() + ' All rights reserved.'"></div>
 </footer>
+
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <script defer src="//cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script src="./js/main.js"></script>
 <script src="./portfolio.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your Public Key
+    emailjs.init('xPXmyvs-oexXJmx-R');
 
+    // Alpine.js component for the contact form
+    function contactForm() {
+        return {
+            formData: {
+                name: '',
+                email: '',
+                message: ''
+            },
+            isLoading: false,
+            sendEmail() {
+                this.isLoading = true;
+
+                // Send email using EmailJS
+                emailjs.send('service_o4vd8wo', 'template_kh9oigt', this.formData)
+                    .then((response) => {
+                        alert('Message sent successfully!');
+                        this.formData = { name: '', email: '', message: '' }; // Reset form
+                    })
+                    .catch((error) => {
+                        alert('Failed to send message. Please try again.');
+                        console.error('EmailJS Error:', error);
+                    })
+                    .finally(() => {
+                        this.isLoading = false;
+                    });
+            }
+        };
+    }
+</script>
 <script data-cfasync="false" src="js/email-decode.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/pages-switcher.js"></script>
