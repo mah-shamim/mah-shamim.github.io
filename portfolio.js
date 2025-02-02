@@ -125,8 +125,8 @@ const data = function () {
             if (mapContainer) {
                 try {
                     this.googleMap = new google.maps.Map(mapContainer, {
-                        center: { lat: 37.7749, lng: -122.4194 }, // Example location (San Francisco)
-                        zoom: 10,
+                        center: { lat: 23.694861043671054, lng: 90.4682498002668 }, // Example location (San Francisco)
+                        zoom: 17,
                     });
                 } catch (error) {
                     this.mapError = "Failed to initialize Google Maps.";
