@@ -3,6 +3,7 @@ const data = function () {
         heading: "", // Initialize heading if required
         loaded: false,
         selectedFilter: "all", // Track the selected filter
+        selectedToolFilter: "all", // Track the selected filter
         user: {
             "template": null,
             "userFirstName": "",
@@ -60,14 +61,25 @@ const data = function () {
             return project.slugs.includes(this.selectedFilter);
         },
 
+        isToolVisible(tool) {
+            if (this.selectedToolFilter === "all") {
+                return true;
+            }
+            return tool.slugs.includes(this.selectedToolFilter);
+        },
+
         // Method to handle filter selection
         selectFilter(filter) {
             this.selectedFilter = filter;
         },
 
+        selectToolFilter(filter) {
+            this.selectedToolFilter = filter;
+        },
+
         init() {
             this.loadGoogleMaps(() => {
-                //this.initializeMap();
+                this.initializeMap();
             });
             return fetch("./data.json")
                 .then((response) => response.json())
@@ -75,6 +87,8 @@ const data = function () {
                     data.certifications = this.resolveCertificates(data.certifications);
                     data.projectGroups = this.resolveProjectGroups(data.projects);
                     data.projects = this.resolveProjects(data.projects);
+                    data.toolGroups = this.resolveToolGroups(data.tools);
+                    data.tools = this.resolveProjects(data.tools);
                     this.user = data;
                     this.$nextTick(() => {
                         this.initCarousels();
@@ -160,17 +174,6 @@ const data = function () {
             return entries;
         },
 
-        /*resolveProjectGroups: function (projects) {
-            let entries = [];
-            projects.forEach((project) => {
-                for (group of project.groups) {
-                    let slug = this.slugify(group);
-                    entries[slug] = group;
-                }
-            });
-            console.log(entries)
-            return entries;
-        },*/
         resolveProjectGroups(projects) {
             let entries = {}; // Fixed to use an object
             projects.forEach((project) => {
@@ -181,24 +184,6 @@ const data = function () {
             });
             return entries;
         },
-
-        /*resolveProjects: function (projects) {
-
-            let entries = [];
-
-            projects.forEach((project) => {
-
-                project.slugs = ['all'];
-
-                for (group of project.groups) {
-                    project.slugs.push(this.slugify(group));
-                }
-
-                entries.push(project);
-            });
-
-            return entries;
-        },*/
 
         resolveProjects(projects) {
             let entries = [];
@@ -212,20 +197,40 @@ const data = function () {
             return entries;
         },
 
+        resolveToolGroups(tools) {
+            let entries = {}; // Fixed to use an object
+            tools.forEach((tool) => {
+                // Check if the tool has a `groups` property and it is an array
+                if (tool.groups && Array.isArray(tool.groups)) {
+                    for (const group of tool.groups) { // Fixed `group` declaration
+                        let slug = this.slugify(group);
+                        entries[slug] = group;
+                    }
+                } else {
+                    // If the tool does not have a `groups` property, you can handle it here
+                    console.warn(`Tool "${tool.name}" does not have a valid groups property.`);
+                }
+            });
+            return entries;
+        },
+
+        resolveTools(tools) {
+            let entries = [];
+            tools.forEach((tool) => {
+                tool.slugs = ["all"];
+                for (const group of tool.groups) { // Fixed `group` declaration
+                    tool.slugs.push(this.slugify(group));
+                }
+                entries.push(tool);
+            });
+            return entries;
+        },
+
         slugify: function (words) {
             return words.toLowerCase().replace(/ /g, '-')
                 .replace(/[^\w-]+/g, '');
         },
 
-        /*positionSort: function (a, b) {
-            if (a.position < b.position) {
-                return -1;
-            }
-            if (a.position > b.position) {
-                return 1;
-            }
-            return 0;
-        },*/
         positionSort(a, b) {
             return a.position - b.position;
         },

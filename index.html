@@ -16,13 +16,14 @@
     <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="./css/main-blue.css" type="text/css" id="template-style">
+    <link rel="stylesheet" href="./css/custom.css" type="text/css">
     <link rel="stylesheet" href="./css/scholar-icons.css" type="text/css">
     <style>
         [x-cloak] {
             display: none !important;
         }
 
-        #portfolio_grid, .portfolio-grid {
+        #portfolio_grid, .portfolio-grid, .tool-grid, #tool_grid {
             height: 100% !important;
         }
         .portfolio-grid figure a div p {
@@ -69,6 +70,9 @@
                     </li>
                     <li>
                         <a class="pt-trigger" href="#portfolio">Projects</a>
+                    </li>
+                    <li>
+                        <a class="pt-trigger" href="#tool">Tools</a>
                     </li>
                     <li>
                         <a class="pt-trigger" href="#contact">Contact</a>
@@ -353,69 +357,56 @@
                                     </div>
                                 </template>
                             </div>
-                            <!--<div class="row">
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="block-title">
-                                        <h3>Clients</h3>
-                                    </div>
-
-                                    <template x-for="client in user.clients">
-                                        <div class="col-sm-4 col-md-2 subpage-block">
-                                            <div class="client-block">
-                                                <a :href="client.url" target="_blank" :title="client.name">
-                                                    <img :src="client.imageUrl"
-                                                         :alt="client.name" class="mCS_img_loaded">
-                                                </a>
-                                            </div>
+                            <template x-if="user.clients && user.clients.length > 0">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="block-title">
+                                            <h3>Clients</h3>
                                         </div>
-                                    </template>
-                                </div>
-                            </div>-->
-                            <div class="row">
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="block-title">
-                                        <h3>Tools</h3>
-                                    </div>
 
-                                    <template x-for="tool in user.tools">
-                                        <div class="col-sm-4 col-md-2 subpage-block">
-                                            <div class="client-block">
-                                                <a :href="tool.url" target="_blank" :title="tool.name">
-                                                    <img :src="tool.imageUrl"
-                                                         :alt="tool.name" class="mCS_img_loaded">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </template>
-                                </div>
-                            </div>
-                            <!--<div class="row">
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="block-title">
-                                        <h3>Testimonials</h3>
-                                    </div>
-                                    <div class="testimonials owl-carousel block">
-                                        <template x-for="review in user.reviews">
-                                            <div class="testimonial-item">
-                                                <div class="testimonial-credits">
-                                                    <div class="testimonial-picture">
-                                                        <img :src="review.imageUrl" :alt="review.client">
-                                                    </div>
-                                                    <div class="testimonial-author-info">
-                                                        <p class="testimonial-author" x-text="review.client"></p>
-                                                        <p class="testimonial-firm" x-text="review.designation"></p>
-                                                    </div>
-                                                </div>
-                                                <div class="testimonial-content">
-                                                    <div class="testimonial-text">
-                                                        <p x-html="review.content"></p>
-                                                    </div>
+                                        <template x-for="client in user.clients">
+                                            <div class="col-sm-4 col-md-2 subpage-block">
+                                                <div class="client-block">
+                                                    <a :href="client.url" target="_blank" :title="client.name">
+                                                        <img :src="client.imageUrl"
+                                                             :alt="client.name" class="mCS_img_loaded">
+                                                    </a>
                                                 </div>
                                             </div>
                                         </template>
                                     </div>
                                 </div>
-                            </div>-->
+                            </template>
+
+                            <template x-if="user.reviews && user.reviews.length > 0">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="block-title">
+                                            <h3>Testimonials</h3>
+                                        </div>
+                                        <div class="testimonials owl-carousel block">
+                                            <template x-for="review in user.reviews">
+                                                <div class="testimonial-item">
+                                                    <div class="testimonial-credits">
+                                                        <div class="testimonial-picture">
+                                                            <img :src="review.imageUrl" :alt="review.client">
+                                                        </div>
+                                                        <div class="testimonial-author-info">
+                                                            <p class="testimonial-author" x-text="review.client"></p>
+                                                            <p class="testimonial-firm" x-text="review.designation"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-content">
+                                                        <div class="testimonial-text">
+                                                            <p x-html="review.content"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
                         </div>
                     </div>
                 </section>
@@ -470,6 +461,57 @@
                         </div>
                     </div>
                 </section>
+                <section class="pt-page" data-id="tool">
+                    <div class="section-inner custom-page-content">
+                        <div class="page-header color-1">
+                            <h2>Tools</h2>
+                        </div>
+                        <div class="page-content">
+                            <div class="tool-content">
+                                <ul id="tool_filters" class="tool-filters">
+                                    <li class="active">
+                                        <a class="filter btn btn-sm btn-link"
+                                           :class="{ active: selectedToolFilter === 'all' }"
+                                           @click="selectToolFilter('all')"
+                                           data-group="all">All</a>
+                                    </li>
+                                    <template x-for="(group, slug) in user.toolGroups" :key="slug">
+                                        <li>
+                                            <a class="filter btn btn-sm btn-link"
+                                               :class="{ active: selectedToolFilter === slug }"
+                                               @click="selectToolFilter(slug)"
+                                               :data-group="slug" x-text="group"></a>
+                                        </li>
+                                    </template>
+                                </ul>
+                                <div id="tool_grid" class="tool-grid tool-masonry masonry-grid-12" > <!--style="height: 100% !important;"-->
+                                    <template x-for="tool in user.tools" :key="tool.name">
+                                        <div class="col-sm-4 col-md-2 subpage-block"
+                                             :data-groups='JSON.stringify(tool.slugs)'
+                                             x-show="isToolVisible(tool)">
+                                            <div class="client-block">
+                                                <a :href="tool.url" target="_blank" :title="tool.name">
+                                                    <img :src="tool.imageUrl"
+                                                         :alt="tool.name" class="mCS_img_loaded">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <!--<template x-for="tool in user.tools" :key="tool.name">
+                                        <figure class="item"
+                                                :data-groups='JSON.stringify(tool.slugs)'
+                                                x-show="isToolVisible(tool)">
+                                            <a :href="tool.url" target="_blank" :title="tool.name">
+                                                <img :src="tool.imageUrl"
+                                                     :alt="tool.name" class="mCS_img_loaded">
+                                            </a>
+                                        </figure>
+                                    </template>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="pt-page" data-id="contact">
                     <div class="section-inner custom-page-content">
                         <div class="page-header color-1">
@@ -491,7 +533,7 @@
                                             <i class="fa fa-map-marker"></i>
                                         </div>
                                         <div class="ci-text">
-                                            <h5>36/2, Nawabyousuf Road, Nayabazar, Dhaka, Bangladesh</h5>
+                                            <h5 x-text="user.userAddress"></h5>
                                         </div>
                                     </div>
                                     <div class="contact-info-block">
@@ -499,9 +541,7 @@
                                             <i class="fa fa-envelope"></i>
                                         </div>
                                         <div class="ci-text">
-                                            <h5>
-                                                mah.shamim@gmail.com
-                                            </h5>
+                                            <h5 x-text="user.userEmail"></h5>
                                         </div>
                                     </div>
                                     <div class="contact-info-block">
@@ -509,7 +549,7 @@
                                             <i class="fa fa-phone"></i>
                                         </div>
                                         <div class="ci-text">
-                                            <h5>+8801614747054</h5>
+                                            <h5 x-text="user.userPhoneNumber"></h5>
                                         </div>
                                     </div>
                                     <div class="contact-info-block">
@@ -517,7 +557,12 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                         <div class="ci-text">
-                                            <h5>Freelance Available</h5>
+                                            <template x-if="user.freelanceAvailable">
+                                                <h5>Freelance Available</h5>
+                                            </template>
+                                            <template x-if="!user.freelanceAvailable">
+                                                <h5>Freelance Not Available</h5>
+                                            </template>
                                         </div>
                                     </div>
                                 </div>
@@ -622,17 +667,8 @@
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
-<!--<script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWnZM7AYwXg_PZuM9bNDpf5maU5YFh-Bk"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-<script type="text/javascript" src="js/jquery.googlemap.js"></script>-->
 <!-- Keep only this script for Google Maps -->
 <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWnZM7AYwXg_PZuM9bNDpf5maU5YFh-Bk"></script>
-<!--<script src="preview/lmpixels-demo-panel.js"></script>-->
-<!--<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
-        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
-        data-cf-beacon='{"rayId":"6ff840e74f63ab56","version":"2021.12.0","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","si":100}'
-        crossorigin="anonymous"></script>-->
 </body>
 </html>

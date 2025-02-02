@@ -1062,8 +1062,58 @@
       "description": "Ensuring the highest quality through comprehensive testing and validation processes."
     }
   ],
-  "reviews": [],
-  "clients": [],
+  "reviews": [
+    {
+      "client": "Maria Richardson",
+      "designation": "Lindsley's Lumber",
+      "imageUrl": "./images/testimonials/testimonial_photo_1.jpg",
+      "content": "\"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros.\nSed sed ipsum sed massa.\""
+    },
+    {
+      "client": "John Doe",
+      "designation": "Apple Inc.",
+      "imageUrl": "./images/testimonials/testimonial_photo_2.jpg",
+      "content": "\"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros.\nSed sed ipsum sed massa.\""
+    },
+    {
+      "client": "George McQueen",
+      "designation": "Harmony House",
+      "imageUrl": "./images/testimonials/testimonial_photo_3.jpg",
+      "content": "\"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros.\nSed sed ipsum sed massa.\""
+    }
+  ],
+  "clients": [
+    {
+      "name": "STVBLE",
+      "imageUrl": "./images/clients/stvble.svg",
+      "url": "https://stvbleglobal.com/"
+    },
+    {
+      "name": "IN Remit",
+      "imageUrl": "./images/clients/in-remit.png",
+      "url": "https://inremit.co/"
+    },
+    {
+      "name": "MYCASH MONEY",
+      "imageUrl": "./images/clients/my-cash-money.svg",
+      "url": "https://bdmycash.com/"
+    },
+    {
+      "name": "MYCASH ONLINE",
+      "imageUrl": "./images/clients/my-cash-online.png",
+      "url": "#"
+    },
+    {
+      "name": "VIVACOM",
+      "imageUrl": "./images/clients/client_5.png",
+      "url": "#"
+    },
+    {
+      "name": "SnT",
+      "imageUrl": "./images/clients/client_6.png",
+      "url": "#"
+    }
+  ],
   "tools": [
     {
       "name": "Terraform",
@@ -1097,6 +1147,42 @@
       "type": "Continuous Integration/Continuous Deployment (CI/CD) Tools",
       "imageUrl": "./images/tools/jenkins.png",
       "url": "https://www.jenkins.io/",
+      "groups": [
+        "Build/Deploy"
+      ]
+    },
+    {
+      "name": "GitLab CI/CD",
+      "type": "Continuous Integration/Continuous Deployment (CI/CD) Tools",
+      "imageUrl": "./images/tools/jenkins.png",
+      "url": "https://www.jenkins.io/",
+      "groups": [
+        "Build/Deploy"
+      ]
+    },
+    {
+      "name": "GitHub Action",
+      "type": "Continuous Integration/Continuous Deployment (CI/CD) Tools",
+      "imageUrl": "./images/tools/jenkins.png",
+      "url": "https://www.jenkins.io/",
+      "groups": [
+        "Build/Deploy"
+      ]
+    },
+    {
+      "name": "CircleCI",
+      "type": "Continuous Integration/Continuous Deployment (CI/CD) Tools",
+      "imageUrl": "./images/tools/jenkins.png",
+      "url": "https://www.jenkins.io/",
+      "groups": [
+        "Build/Deploy"
+      ]
+    },
+    {
+      "name": "Travis CI",
+      "type": "Continuous Integration/Continuous Deployment (CI/CD) Tools",
+      "imageUrl": "./images/tools/jenkins.png",
+      "url": "https://www.travis-ci.com/",
       "groups": [
         "Build/Deploy"
       ]
@@ -1210,6 +1296,24 @@
       ]
     },
     {
+      "name": "JSON",
+      "type": "File Formats and Configuration Tools",
+      "imageUrl": "./images/tools/yaml.png",
+      "url": "https://yaml.org/",
+      "groups": [
+        "Config/Docs"
+      ]
+    },
+    {
+      "name": "Markdown",
+      "type": "File Formats and Configuration Tools",
+      "imageUrl": "./images/tools/yaml.png",
+      "url": "https://yaml.org/",
+      "groups": [
+        "Config/Docs"
+      ]
+    },
+    {
       "name": "LaTeX",
       "type": "File Formats and Configuration Tools",
       "imageUrl": "./images/tools/la-te-x.png",
@@ -1220,6 +1324,24 @@
     },
     {
       "name": "PHPStorm",
+      "type": "Integrated Development Environments (IDEs)",
+      "imageUrl": "./images/tools/php-storm.png",
+      "url": "https://www.jetbrains.com/phpstorm/",
+      "groups": [
+        "IDE"
+      ]
+    },
+    {
+      "name": "VS Code",
+      "type": "Integrated Development Environments (IDEs)",
+      "imageUrl": "./images/tools/php-storm.png",
+      "url": "https://www.jetbrains.com/phpstorm/",
+      "groups": [
+        "IDE"
+      ]
+    },
+    {
+      "name": "Sublime Text",
       "type": "Integrated Development Environments (IDEs)",
       "imageUrl": "./images/tools/php-storm.png",
       "url": "https://www.jetbrains.com/phpstorm/",

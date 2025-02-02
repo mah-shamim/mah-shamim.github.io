@@ -24,6 +24,26 @@
         }
     }
 
+    function tool_init() {
+        var tool_grid = $('#tool_grid'), tool_filter = $('#tool_filters');
+        if (tool_grid) {
+            tool_grid.shuffle({speed: 450, itemSelector: 'div'});
+            $('.site-main-menu').on("click", "a", function (e) {
+                tool_grid.shuffle('update');
+            });
+            tool_filter.on("click", ".filter", function (e) {
+                tool_grid.shuffle('update');
+                e.preventDefault();
+                $('#tool_filters .filter').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                tool_grid.shuffle('shuffle', $(this).attr('data-group'));
+                setTimeout(function () {
+                    subpages_resize();
+                }, 500);
+            });
+        }
+    }
+
     /*function contact_validation() {
         $('#contact-form').validator();
         $('#contact-form').on('submit', function (e) {
@@ -86,6 +106,13 @@
             portfolio_init(this);
         });
         $(' #portfolio_grid > figure ').each(function () {
+            $(this).hoverdir();
+        });
+        var $tool_container = $(".tool_grid");
+        $tool_container.imagesLoaded(function () {
+            tool_init(this);
+        });
+        $(' #tool_grid > div ').each(function () {
             $(this).hoverdir();
         });
         var $container = $(".blog-masonry");
