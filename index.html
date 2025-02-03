@@ -445,6 +445,7 @@
                                                 }"
                                                :href="project.url"
                                                :title="project.name"
+                                               x-bind:target="project.documentType === 'link' ? '_blank' : null"
                                             >
                                                 <img :src="project.thumbnail" :alt="project.name" width="600" height="400">
                                                 <div>

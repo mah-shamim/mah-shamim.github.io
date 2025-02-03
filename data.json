@@ -374,7 +374,7 @@
       "url": "http://invoice.stvble.com",
       "thumbnail": "./images/portfolio/stvble-invoice.png",
       "position": 0,
-      "documentType": "image",
+      "documentType": "link",
       "groups": [
         "Fintech"
       ],
@@ -395,7 +395,7 @@
       "url": "http://internal.stvble.com",
       "thumbnail": "./images/portfolio/api.png",
       "position": 1,
-      "documentType": "image",
+      "documentType": "link",
       "groups": [
         "Fintech"
       ],
@@ -419,7 +419,7 @@
       "url": "https://inremit.co/",
       "thumbnail": "./images/portfolio/inremit.png",
       "position": 2,
-      "documentType": "image",
+      "documentType": "link",
       "groups": [
         "Fintech"
       ],
@@ -447,7 +447,7 @@
       "url": "https://bdmycash.com",
       "thumbnail": "./images/portfolio/mycash.png",
       "position": 3,
-      "documentType": "video",
+      "documentType": "link",
       "groups": [
         "Fintech"
       ],
@@ -472,7 +472,7 @@
       "url": "https://erp.gfltd.net/login",
       "thumbnail": "./images/portfolio/erp.png",
       "position": 4,
-      "documentType": "video",
+      "documentType": "link",
       "groups": [
         "ERP"
       ],
@@ -494,7 +494,7 @@
       "url": "",
       "thumbnail": "./images/portfolio/coding.png",
       "position": 5,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "Management"
       ],
@@ -513,7 +513,7 @@
       "url": "",
       "thumbnail": "./images/portfolio/online-exam.jpg",
       "position": 6,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "Education"
       ],
@@ -532,7 +532,7 @@
       "url": "",
       "thumbnail": "./images/portfolio/support-management-system.jpg",
       "position": 7,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "Support"
       ],
@@ -554,7 +554,7 @@
       "url": "",
       "thumbnail": "./images/portfolio/erp.png",
       "position": 8,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "ERP"
       ],
@@ -576,7 +576,7 @@
       "url": "",
       "thumbnail": "./images/portfolio/coding.png",
       "position": 9,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "Management"
       ],
@@ -595,7 +595,7 @@
       "url": "",
       "thumbnail": "./images/portfolio/erp.png",
       "position": 10,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "ERP"
       ],
@@ -614,7 +614,7 @@
       "url": "",
       "thumbnail": "./images/portfolio/online-exam.jpg",
       "position": 11,
-      "documentType": "video",
+      "documentType": "image",
       "groups": [
         "Management"
       ],
