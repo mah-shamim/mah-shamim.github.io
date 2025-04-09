@@ -260,7 +260,7 @@
       "updatedAt": "2024-04-11T17:33:15.820Z"
     },
     {
-      "description": "",
+      "description": "- Directed development of financial platforms with complex integrations (remittance, payment gateway).\n- Implemented scalable architecture using Docker, AWS, and Laravel.\n- Conducted peer reviews and collaborated with QA for automated pipelines.",
       "endDate": "Aug, 2022",
       "currentJob": false,
       "role": "Technical Lead",
