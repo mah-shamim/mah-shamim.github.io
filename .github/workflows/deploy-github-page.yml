@@ -1,9 +1,7 @@
 name: Deploy Github Page
 on:
   push:
-    branches:
-      - master
-      - alpinejs
+    branches: [master, alpinejs]
 jobs:
   build:
   deploy:
