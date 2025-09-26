@@ -144,60 +144,6 @@
       "updatedAt": "2024-04-08T18:47:00.652Z"
     },
     {
-      "title": "Post Graduate Program in DevOps",
-      "description": "Continuous Integration using Jenkins,\nConfiguration Management using Ansible,\nContinuous Deployment using Docker,\nContainer Orchestration using Kubernetes,\nContinuous Monitoring and DevOps on AWS\n",
-      "issuedBy": "Edureka",
-      "url": "",
-      "position": 15,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:57:34.152Z"
-    },
-    {
-      "title": "AWS Masters Certification Program",
-      "description": "AWS Masters Certification Program",
-      "issuedBy": "Edureka",
-      "url": "",
-      "position": 16,
-      "issuedDate": "2024-04-11",
-      "updatedAt": "2024-04-11T18:57:59.320Z"
-    },
-    {
-      "title": "CI/CD For Beginners",
-      "description": "CI/CD Pipeline Fundamentals, Jenkins Exploration, Continuous Delivery vs. Continuous Deployment, ",
-      "issuedBy": "Simplilearn",
-      "url": "https://simpli-web.app.link/e/I74CsGLqIIb",
-      "position": 12,
-      "issuedDate": "2022-09-03",
-      "updatedAt": "2022-09-03T18:50:40.731Z"
-    },
-    {
-      "title": "SQL Injection For Beginners",
-      "description": "Error-based SQL Injection, Blind SQL Injection",
-      "issuedBy": "Simplilearn",
-      "url": "https://simpli-web.app.link/e/5Ct79L1qIIb",
-      "position": 13,
-      "issuedDate": "2022-09-09",
-      "updatedAt": "2022-09-09T18:52:04.765Z"
-    },
-    {
-      "title": "Introduction to Software Testing",
-      "description": "Fundamentals of Software Testing, Testing Techniques and Methodologies, Test Planning and Execution, Automated Testing Tools",
-      "issuedBy": "Simplilearn",
-      "url": "https://simpli-web.app.link/e/qedTxmmGmOb",
-      "position": 14,
-      "issuedDate": "2022-11-09",
-      "updatedAt": "2022-11-09T18:52:04.765Z"
-    },
-    {
-      "title": "Introduction to JMeter",
-      "description": "JMeter installation, Load testing using JMeter, API Testing with JMeter",
-      "issuedBy": "Simplilearn",
-      "url": "https://simpli-web.app.link/e/0NoSnONJeOb",
-      "position": 15,
-      "issuedDate": "2024-11-04",
-      "updatedAt": "2024-11-05T18:52:04.765Z"
-    },
-    {
       "title": "Certified DevOps Engineer",
       "description": "",
       "issuedBy": "Page Cloud Academy",
@@ -214,6 +160,69 @@
       "position": 17,
       "issuedDate": "2022-06-14",
       "updatedAt": "2024-04-11T18:57:59.320Z"
+    },
+    {
+      "title": "Post Graduate Program in DevOps",
+      "description": "- DevOps Fundamentals\n- Source Code Management using GIT\n- Continuous Integration using Jenkins\n- Configuration Management using Ansible\n- Continuous Deployment using Docker\n- Container Orchestration using Kubernetes\n- Continuous Monitoring and DevOps on AWS\n",
+      "issuedBy": "Edureka",
+      "url": "https://drive.google.com/file/d/1RC1zAiRldbY3_1ZbKICbJcrQqmuUsf3a/view?usp=sharing",
+      "position": 15,
+      "issuedDate": "2025-08-26",
+      "updatedAt": "2025-09-26T18:57:34.152Z"
+    },
+    {
+      "title": "AWS Masters Certification Program",
+      "description": "- AWS Solution Architect Certification Training\n- Migrating Applications to AWS Training\n- AWS SysOps Certification Training for Administrators\n- AWS Developer Certification Training\n- AWS Certified DevOps Engineer\n - Professional Exam\n",
+      "issuedBy": "Edureka",
+      "url": "#",
+      "position": 16,
+      "issuedDate": "",
+      "updatedAt": "2025-09-26T18:57:59.320Z"
+    },
+    {
+      "title": "Automation Testing Engineer Masters Program",
+      "description": "- Software Testing Fundamentals Course\n- Selenium Course\n- Continuous Testing in DevOps\n- Performance Testing Using JMeter\n- Mobile App Testing Using Appium\n",
+      "issuedBy": "Edureka",
+      "url": "#",
+      "position": 17,
+      "issuedDate": "",
+      "updatedAt": "2025-09-26T18:57:59.320Z"
+    },
+    {
+      "title": "CI/CD For Beginners",
+      "description": "- CI/CD Pipeline Fundamentals\n- Jenkins Exploration\n- Continuous Delivery vs. Continuous Deployment\n",
+      "issuedBy": "Simplilearn",
+      "url": "https://simpli-web.app.link/e/I74CsGLqIIb",
+      "position": 12,
+      "issuedDate": "2022-09-03",
+      "updatedAt": "2025-09-26T18:50:40.731Z"
+    },
+    {
+      "title": "SQL Injection For Beginners",
+      "description": "- Error-based SQL Injection\n- Blind SQL Injection\n",
+      "issuedBy": "Simplilearn",
+      "url": "https://simpli-web.app.link/e/5Ct79L1qIIb",
+      "position": 13,
+      "issuedDate": "2022-09-09",
+      "updatedAt": "2025-09-26T18:52:04.765Z"
+    },
+    {
+      "title": "Introduction to Software Testing",
+      "description": "- Fundamentals of Software Testing\n- Testing Techniques and Methodologies\n- Test Planning and Execution\n- Automated Testing Tools\n",
+      "issuedBy": "Simplilearn",
+      "url": "https://simpli-web.app.link/e/qedTxmmGmOb",
+      "position": 14,
+      "issuedDate": "2022-11-09",
+      "updatedAt": "2025-09-26T18:52:04.765Z"
+    },
+    {
+      "title": "Introduction to JMeter",
+      "description": "- JMeter installation\n- Load testing using JMeter\n- API Testing with JMeter",
+      "issuedBy": "Simplilearn",
+      "url": "https://simpli-web.app.link/e/0NoSnONJeOb",
+      "position": 15,
+      "issuedDate": "2024-11-04",
+      "updatedAt": "2025-09-26T18:52:04.765Z"
     }
   ],
   "education": [
