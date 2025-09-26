@@ -1,14 +1,12 @@
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Build
-        run: echo "Add your build commands here"
+name: Deploy Github Page
+on:
+  push:
+    branches:
+      - master
+      - alpinejs
 
+jobs:
   deploy:
-    needs: build
     permissions:
       pages: write
     environment:
@@ -17,6 +15,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Deploying Run
         id: deployment
         uses: actions/deploy-pages@v4
