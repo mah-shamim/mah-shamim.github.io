@@ -18,7 +18,7 @@
   ],
   "freelanceAvailable": true,
   "userEmail": "mah.shamim@gmail.com",
-  "userAddress": "36/2, Nawab Yousuf Road, Nayabazar, Dhaka, Bangladesh",
+  "userAddress": "36/2, Nawab Yousuf Road, Nayabazar,\n Dhaka, Bangladesh",
   "userPhoneNumber": "+880-1614-747054",
   "userIntroduction": "Hello! I’m Ariful Haque.<br>To work in a highly innovative and challenging atmosphere where there is an opportunity of self-assessment and self-improvement in both individual and group based work. That will ultimately lead to the further development of the higher educational sector of the world.",
   "createdAt": "2024-04-11T17:14:47.969Z",
@@ -257,7 +257,7 @@
   ],
   "work": [
     {
-      "description": "- Conducting day-to-day project coordination, planning, and implementation across multiple teams\n- Create functional and technical application documents\n- Design, coding, code review, unit test, integration test, deployment(Digital Ocean, AWS), CI/CD, and release process management\n- Performance analysis and improvement in large scale and high traffic application\n- Software architecting, design REST API\n- Inter team communication and decision making with other tech teams, product teams\n- Design highly available and scalable services\n- Troubleshoot and solve production issues\n- Mentor new team members to ease onboarding",
+      "description": "- <b>Led fintech platform development</b> (LebuPay, STABLE FX) using Laravel, Vue.js, and AWS, achieving <b>30% latency reduction</b> via Redis caching and SQL optimization. Delivered <b>15+ annual features</b> through cross-team coordination.\n- <b>Managed Agile teams</b> (8+ developers) to design REST APIs, Jenkins CI/CD pipelines, and Docker deployments, reducing downtime by <b>40%</b> with AWS EC2 automation.\n- <b>Built scalable microservices</b> handling <b>50K+ daily transactions</b>, improving system uptime to <b>99.95%</b> and cutting AWS infrastructure costs by <b>25%</b>.\n- <b>Improved code quality</b> via OWASP Top 10 compliance, 300+ automated tests, and GitHub PR reviews, reducing post-release defects by <b>65%</b>.\n- <b>Resolved critical outages</b> (avg. <b><15 mins</b>) like database deadlocks and API throttling, maintaining <b>99.8% uptime</b> for payment systems.\n- <b>Authored 50+ technical documents</b> (API specs, deployment guides), accelerating onboarding efficiency by <b>30%</b> for 15+ hires.\n- <b>Mentored 5 junior developers</b>, halving their ramp-up time and boosting team productivity by <b>20%</b>.",
       "endDate": "",
       "currentJob": false,
       "role": "Lead Developer",
@@ -269,7 +269,7 @@
       "updatedAt": "2024-04-11T17:33:15.820Z"
     },
     {
-      "description": "",
+      "description": "- Directed development of financial platforms with complex integrations (remittance, payment gateway).\n- Implemented scalable architecture using Docker, AWS, and Laravel.\n- Conducted peer reviews and collaborated with QA for automated pipelines.",
       "endDate": "Aug, 2022",
       "currentJob": false,
       "role": "Technical Lead",
