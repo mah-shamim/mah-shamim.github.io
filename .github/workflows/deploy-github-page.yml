@@ -4,7 +4,6 @@ on:
     branches:
       - master
       - alpinejs
-
 jobs:
   deploy:
     permissions:
@@ -13,5 +12,6 @@ jobs:
       name: github-pages
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Deploying Run
+        id: deployment
+        uses: actions/deploy-pages@v4
