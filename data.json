@@ -392,7 +392,7 @@
     },
     {
       "name": " STVBLE FX (Backend)",
-      "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cronjobs Integration, MySQL Stored Procedures",
+      "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cron jobs Integration, MySQL Stored Procedures",
       "keywords": [
         "Laravel",
         " REST APIs",
@@ -476,7 +476,7 @@
         " Rest API",
         " Laravel-Excel",
         " Push Notification",
-        " JQuery"
+        " Jquery"
       ],
       "url": "https://erp.gfltd.net/login",
       "thumbnail": "./images/portfolio/erp.png",
@@ -494,11 +494,11 @@
       "keywords": [
         "Apache",
         " PHP",
-        " Codeigniter",
+        " CodeIgniter",
         " MySQL",
         " PHP-Excel",
         " PHP-PDF",
-        " JQuery"
+        " Jquery"
       ],
       "url": "",
       "thumbnail": "./images/portfolio/coding.png",
@@ -558,7 +558,7 @@
         " MySQL",
         " PHP-Excel",
         " PHP-PDF",
-        " JQuery"
+        " Jquery"
       ],
       "url": "",
       "thumbnail": "./images/portfolio/erp.png",
@@ -580,7 +580,7 @@
         " MySQL",
         " PHP-Excel",
         " PHP-PDF",
-        " JQuery"
+        " Jquery"
       ],
       "url": "",
       "thumbnail": "./images/portfolio/coding.png",
@@ -598,7 +598,7 @@
       "keywords": [
         "Apache",
         " PHP",
-        " ORACAL",
+        " ORACLE",
         " JavaScript."
       ],
       "url": "",

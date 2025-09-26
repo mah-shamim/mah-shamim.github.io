@@ -392,7 +392,7 @@
     },
     {
       "name": " STVBLE FX (Backend)",
-      "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cronjobs Integration, MySQL Stored Procedures",
+      "description": "API documentation generation, Role-based User Module, Xe Currency Data API Integration, Provider Module, Client Module, Route Module, Rate Module, Cron jobs Integration, MySQL Stored Procedures",
       "keywords": [
         "Laravel",
         " REST APIs",
@@ -594,11 +594,11 @@
     },
     {
       "name": "Arirang Aviation Ltd (sister concern of Youngone group)",
-      "description": "Accounting & Finance, Admin (Procurement, Stationeries & Office Supply, Transportation, Cafeteria, Office Management, Event Management, Consultation & Messages) Module, HR, Payroll, Flight Operations Module with Log chart, Aircrafts Maintenance Module, Flying Academy (Register Office, Library, Academy), Control Panel Module.",
+      "description": "Accounting & Finance, Admin (Procurement, Stationer & Office Supply, Transportation, Cafeteria, Office Management, Event Management, Consultation & Messages) Module, HR, Payroll, Flight Operations Module with Log chart, Aircraft Maintenance Module, Flying Academy (Register Office, Library, Academy), Control Panel Module.",
       "keywords": [
         "Apache",
         " PHP",
-        " ORACAL",
+        " ORACLE",
         " JavaScript."
       ],
       "url": "",
